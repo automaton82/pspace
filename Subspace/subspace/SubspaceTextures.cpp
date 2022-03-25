@@ -1,0 +1,105 @@
+#include "SubspaceTextures.h"
+
+TextureAnimated subspaceTextures[TEX_NumTextures];
+
+// TODO: put in the texture data
+
+void loadSubspaceTextures(const string& path)
+{
+	string zoneStr = "graphics/";
+	bool doStretch = false;
+	
+	subspaceTextures[TEX_BG01].load(zoneStr + "bg01.bm2", doStretch);
+	subspaceTextures[TEX_BG02].load(zoneStr + "bg02.bm2", doStretch);
+	subspaceTextures[TEX_BG03].load(zoneStr + "bg03.bm2", doStretch);
+	subspaceTextures[TEX_BG04].load(zoneStr + "bg04.bm2", doStretch);
+	subspaceTextures[TEX_BG05].load(zoneStr + "bg05.bm2", doStretch);
+	subspaceTextures[TEX_BG06].load(zoneStr + "bg06.bm2", doStretch);
+	subspaceTextures[TEX_BG07].load(zoneStr + "bg07.bm2", doStretch);
+	subspaceTextures[TEX_BG08].load(zoneStr + "bg08.bm2", doStretch);
+	subspaceTextures[TEX_BG09].load(zoneStr + "bg09.bm2", doStretch);
+	subspaceTextures[TEX_BG10].load(zoneStr + "bg10.bm2", doStretch);
+	subspaceTextures[TEX_BG11].load(zoneStr + "bg11.bm2", doStretch);
+	subspaceTextures[TEX_BG12].load(zoneStr + "bg12.bm2", doStretch);
+	subspaceTextures[TEX_BG13].load(zoneStr + "bg13.bm2", doStretch);
+	subspaceTextures[TEX_BG14].load(zoneStr + "bg14.bm2", doStretch);
+	subspaceTextures[TEX_BombFlash].load(zoneStr + "bombflsh.bm2", doStretch);
+	subspaceTextures[TEX_Bombs].load(zoneStr + "bombs.bm2", doStretch);
+	subspaceTextures[TEX_Bullets].load(zoneStr + "bullets.bm2", doStretch);
+	subspaceTextures[TEX_Damage].load(zoneStr + "damage.bm2", doStretch);
+	subspaceTextures[TEX_Disp].load(zoneStr + "disp.bm2", doStretch);
+	subspaceTextures[TEX_DropFlag].load(zoneStr + "dropflag.bm2", doStretch);
+	subspaceTextures[TEX_EmpBurst].load(zoneStr + "empburst.bm2", doStretch);
+	subspaceTextures[TEX_EnergyFont].load(zoneStr + "engyfont.bm2", doStretch);
+	subspaceTextures[TEX_Exhaust].load(zoneStr + "exhaust.bm2", doStretch);
+	subspaceTextures[TEX_Explode0].load(zoneStr + "explode0.bm2", doStretch);
+	subspaceTextures[TEX_Explode1].load(zoneStr + "explode1.bm2", doStretch);
+	subspaceTextures[TEX_Explode2].load(zoneStr + "explode2.bm2", doStretch);
+	subspaceTextures[TEX_Flag].load(zoneStr + "flag.bm2", doStretch);
+	subspaceTextures[TEX_Goal].load(zoneStr + "goal.bm2", doStretch);
+	subspaceTextures[TEX_Gradient].load(zoneStr + "gradient.bm2", doStretch);
+	subspaceTextures[TEX_HealthBar].load(zoneStr + "hlthbar.bm2", doStretch);
+	subspaceTextures[TEX_HugeFont].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_HugeFontF].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_IconDoor].load(zoneStr + "icondoor.bm2", doStretch);
+	subspaceTextures[TEX_Icons].load(zoneStr + "Icons.bm2", doStretch);
+	subspaceTextures[TEX_JunkJavelin].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkLeviathan].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkNightwasp].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkShark].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkSpider].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkTerrier].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkWarbird].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JunkWeasel].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_JavelinRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_King].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_KingEx].load(zoneStr + "kingex.bm2", doStretch);
+	subspaceTextures[TEX_LargeFont].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_LargeFontF].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Led].load(zoneStr + "led.bm2", doStretch);
+	subspaceTextures[TEX_LeviathanRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_MenuText].load(zoneStr + "menutext.bm2", doStretch);	
+	subspaceTextures[TEX_Mines].load(zoneStr + "mines.bm2", doStretch);
+	subspaceTextures[TEX_NightwaspRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Over1].load(zoneStr + "over1.bm2", doStretch);
+	subspaceTextures[TEX_Over2].load(zoneStr + "over2.bm2", doStretch);
+	subspaceTextures[TEX_Over3].load(zoneStr + "over3.bm2", doStretch);
+	subspaceTextures[TEX_Over4].load(zoneStr + "over4.bm2", doStretch);
+	subspaceTextures[TEX_Over5].load(zoneStr + "over5.bm2", doStretch);
+	subspaceTextures[TEX_Powerball].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Prizes].load(zoneStr + "prizes.bm2", doStretch);
+	subspaceTextures[TEX_RadarH].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_RadarV].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Repel].load(zoneStr + "repel.bm2", doStretch);
+	subspaceTextures[TEX_Rocket].load(zoneStr + "rocket.bm2", doStretch);
+	subspaceTextures[TEX_Shield].load(zoneStr + "shield.bm2", doStretch);
+	subspaceTextures[TEX_Ships].load(zoneStr + "ships.bm2", doStretch);
+	subspaceTextures[TEX_Shrapnel].load(zoneStr + "shrapnel.bm2", doStretch);
+	subspaceTextures[TEX_SharkRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_ShortFont].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Spark].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_SpecFont].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Spectate].load(zoneStr + "spectate.bm2", doStretch);
+	subspaceTextures[TEX_SpiderRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_SSShield].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Star01].load(zoneStr + "star01.bm2", doStretch);
+	subspaceTextures[TEX_Star02].load(zoneStr + "star02.bm2", doStretch);
+	subspaceTextures[TEX_Star03].load(zoneStr + "star03.bm2", doStretch);
+	subspaceTextures[TEX_Star04].load(zoneStr + "star04.bm2", doStretch);
+	subspaceTextures[TEX_Star05].load(zoneStr + "star05.bm2", doStretch);
+	subspaceTextures[TEX_Star06].load(zoneStr + "star06.bm2", doStretch);
+	subspaceTextures[TEX_Star07].load(zoneStr + "star07.bm2", doStretch);
+	subspaceTextures[TEX_Super].load(zoneStr + "super.bm2", doStretch);
+	subspaceTextures[TEX_TallFont].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_TallFontF].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_TerrierRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Tiles].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Trail].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Turret].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Turret2].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Wall].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_Warp].load(zoneStr + "warp.bm2", doStretch);
+	subspaceTextures[TEX_WarpPoint].load(zoneStr + "warppnt.bm2", doStretch);
+	subspaceTextures[TEX_WarbirdRoll].load(zoneStr + ".bm2", doStretch);
+	subspaceTextures[TEX_WeaselRoll].load(zoneStr + ".bm2", doStretch);	
+}

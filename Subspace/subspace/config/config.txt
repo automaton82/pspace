@@ -1,0 +1,36 @@
+; Configuration file
+
+;my zone
+zonedir = myzone
+ip = 192.168.1.106
+port = 7100
+
+;MONKEY BOY WORLD
+;ip = 68.36.188.38 
+;port = 8200
+
+;grelminar's asss test zone
+;zonedir = asss test zone
+;ip = 216.34.65.183
+;port = 8200
+
+; Login
+username = imabot
+password = imabot
+arena = 1;
+ship = 0;
+
+; Offline stuff
+defaultMap = zones/alpha2.lvl
+noconnect = 0;
+
+; Configurable options
+lines = 10;
+namelen = 12;	
+nametags = 2;		
+showRadar = 1;
+statBoxSize = 15;
+targetBounty = 10;
+
+; Testing
+lvzFile = zones/xmas2.lvz, zones/_bon.lvz, zones/_com.lvz, zones/_sco.lvz, zones/ec_411.lvz, zones/ec_bm2.lvz, zones/ec_obj.lvz, zones/ec_shi.lvz

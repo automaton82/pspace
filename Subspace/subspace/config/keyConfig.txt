@@ -1,0 +1,45 @@
+; Subspace key configuration file
+
+; Weapons
+FireBrick	= f4
+FireBomb	= tab
+FireBullet	= ctrl
+FireBurst	= shift+delete
+FireDecoy	= f5
+FireMine	= shift+tab
+FirePortal	= shift+insert
+FireRepel	= shift+ctrl
+FireRocket	= f3
+FireThor	= f6
+
+; Movement
+MoveForward	= up
+MoveBackward	= down
+TurnLeft	= left
+TurnRight	= right
+FastForward	= shift+up
+FastBackward	= shift+down
+FastLeft	= shift+left
+FastRight	= shift+right;
+
+; Toggles
+ToggleAntiwarp	= shift+end
+ToggleCloak	= shift+home
+ToggleMultifire	= delete
+ToggleStealth	= home
+ToggleXRadar	= end
+
+; Misc
+Attach		= f7
+Warp		= insert
+
+; Menu
+ToggleHelp	= f1
+ToggleStatBox	= f2
+ToggleBigRadar	= f8
+
+; Chat
+ScrollUp	= pageup
+ScrollDown	= pagedown
+ScrollUpFast	= shift+pageup
+ScrollDownFast	= shift+pagedown

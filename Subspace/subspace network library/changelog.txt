@@ -1,0 +1,12 @@
+
+10/17/2004: started implementing command design pattern for network messages
+	SubspaceGameProtocol - make command structures passed around by pointers
+
+10/11/2004: started this document
+
+TODO:
+	SubspaceCoreProtocol - make list of outbound packets a list of pointers
+	SubspaceReliableManager - make this keep the pointers to packets
+	Subspace Logging - packet, game, error, info - look at outputstreamdecorator too
+	sendPacketReliable - stores the packet
+	sendPacket - shouldn't store the packet

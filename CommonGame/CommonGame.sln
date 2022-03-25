@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonGame", "CommonGame.vcproj", "{325D7DFB-0123-4034-8847-BB3933EB3CB0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "png", "..\libpng\png.vcproj", "{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\zlib\zlib.vcproj", "{8B4312D8-0121-4352-AD5F-A863FF2A5723}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{325D7DFB-0123-4034-8847-BB3933EB3CB0}.0 = {DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}
+		{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}.0 = {8B4312D8-0121-4352-AD5F-A863FF2A5723}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{325D7DFB-0123-4034-8847-BB3933EB3CB0}.Debug.ActiveCfg = Debug|Win32
+		{325D7DFB-0123-4034-8847-BB3933EB3CB0}.Debug.Build.0 = Debug|Win32
+		{325D7DFB-0123-4034-8847-BB3933EB3CB0}.Release.ActiveCfg = Release|Win32
+		{325D7DFB-0123-4034-8847-BB3933EB3CB0}.Release.Build.0 = Release|Win32
+		{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}.Debug.ActiveCfg = Debug|Win32
+		{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}.Debug.Build.0 = Debug|Win32
+		{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}.Release.ActiveCfg = Release|Win32
+		{DD13B72A-CF94-40CD-B5EF-ECE36ADEF1BB}.Release.Build.0 = Release|Win32
+		{8B4312D8-0121-4352-AD5F-A863FF2A5723}.Debug.ActiveCfg = Debug|Win32
+		{8B4312D8-0121-4352-AD5F-A863FF2A5723}.Debug.Build.0 = Debug|Win32
+		{8B4312D8-0121-4352-AD5F-A863FF2A5723}.Release.ActiveCfg = Release|Win32
+		{8B4312D8-0121-4352-AD5F-A863FF2A5723}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
