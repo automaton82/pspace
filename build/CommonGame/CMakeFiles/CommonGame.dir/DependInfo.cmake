@@ -60,6 +60,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/runner/work/pspace/pspace/CommonGame/Positionable.cpp" "CommonGame/CMakeFiles/CommonGame.dir/Positionable.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/Positionable.cpp.o.d"
   "/home/runner/work/pspace/pspace/CommonGame/RepeatingBackground.cpp" "CommonGame/CMakeFiles/CommonGame.dir/RepeatingBackground.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/RepeatingBackground.cpp.o.d"
   "/home/runner/work/pspace/pspace/CommonGame/Rotatable.cpp" "CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.o.d"
+  "/home/runner/work/pspace/pspace/CommonGame/SDLGLObject.cpp" "CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o.d"
   "/home/runner/work/pspace/pspace/CommonGame/Sizable.cpp" "CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o.d"
   "/home/runner/work/pspace/pspace/CommonGame/Socket.cpp" "CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o.d"
   "/home/runner/work/pspace/pspace/CommonGame/SocketUDP.cpp" "CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o" "gcc" "CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o.d"

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 #include <math.h>
-#include <windows.h>
+#include "Platform.h"
 
 #ifndef _Bitmap_
 #define _Bitmap_

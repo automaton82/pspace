@@ -3,6 +3,9 @@
 #ifndef _DATATYPES_H_
 #define _DATATYPES_H_
 
+#include "Platform.h"
+
+#ifdef PLATFORM_WINDOWS
 typedef unsigned __int64 Uint64;
 typedef unsigned __int32 Uint32;
 typedef unsigned __int16 Uint16;
@@ -24,6 +27,31 @@ typedef unsigned __int8 BYTE;
 typedef unsigned __int16 Word;
 typedef unsigned __int32 DWord;
 typedef unsigned char Uchar;
+#else // PLATFORM_LINUX
+#include <stdint.h>
+
+typedef uint64_t Uint64;
+typedef uint32_t Uint32;
+typedef uint16_t Uint16;
+typedef uint8_t Uint8;
+typedef unsigned int Uint;
+
+typedef int64_t Sint64;
+typedef int32_t Sint32;
+typedef int16_t Sint16;
+typedef int8_t Sint8;
+
+typedef int64_t Int64;
+typedef int32_t Int32;
+typedef int16_t Int16;
+typedef int8_t Int8;
+
+typedef uint8_t Byte;
+typedef uint8_t BYTE;
+typedef uint16_t Word;
+typedef uint32_t DWord;
+typedef unsigned char Uchar;
+#endif
 
 typedef unsigned long Ulong;
 

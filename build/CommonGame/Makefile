@@ -1378,6 +1378,30 @@ Rotatable.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.s
 .PHONY : Rotatable.cpp.s
 
+SDLGLObject.o: SDLGLObject.cpp.o
+.PHONY : SDLGLObject.o
+
+# target to build an object file
+SDLGLObject.cpp.o:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o
+.PHONY : SDLGLObject.cpp.o
+
+SDLGLObject.i: SDLGLObject.cpp.i
+.PHONY : SDLGLObject.i
+
+# target to preprocess a source file
+SDLGLObject.cpp.i:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.i
+.PHONY : SDLGLObject.cpp.i
+
+SDLGLObject.s: SDLGLObject.cpp.s
+.PHONY : SDLGLObject.s
+
+# target to generate assembly for a file
+SDLGLObject.cpp.s:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.s
+.PHONY : SDLGLObject.cpp.s
+
 Sizable.o: Sizable.cpp.o
 .PHONY : Sizable.o
 
@@ -2335,6 +2359,9 @@ help:
 	@echo "... Rotatable.o"
 	@echo "... Rotatable.i"
 	@echo "... Rotatable.s"
+	@echo "... SDLGLObject.o"
+	@echo "... SDLGLObject.i"
+	@echo "... SDLGLObject.s"
 	@echo "... Sizable.o"
 	@echo "... Sizable.i"
 	@echo "... Sizable.s"

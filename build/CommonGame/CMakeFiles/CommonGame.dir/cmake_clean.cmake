@@ -103,6 +103,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/CommonGame.dir/RepeatingBackground.cpp.o.d"
   "CMakeFiles/CommonGame.dir/Rotatable.cpp.o"
   "CMakeFiles/CommonGame.dir/Rotatable.cpp.o.d"
+  "CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o"
+  "CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o.d"
   "CMakeFiles/CommonGame.dir/Sizable.cpp.o"
   "CMakeFiles/CommonGame.dir/Sizable.cpp.o.d"
   "CMakeFiles/CommonGame.dir/Socket.cpp.o"

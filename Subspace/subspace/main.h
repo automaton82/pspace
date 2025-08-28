@@ -1,6 +1,9 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#include "Platform.h"
+
+#ifdef PLATFORM_WINDOWS
 #define WIN32_LEAN_AND_MEAN
 #define STRICT
 
@@ -13,15 +16,16 @@
 //Window
 LRESULT CALLBACK WndProc(HWND, UINT,WPARAM, LPARAM);
 
-//static HWND g_hWnd=NULL;		// Holds Our Window Handle
-//static HINSTANCE g_hInstance;		// Holds The Instance Of The Application
-
 //Display
 bool CreateGLWindow(char* title, int width, int height, int bits);
 void DrawGLScene();
 void KillGLWindow();							// Properly Kill The Window
 void ReSizeGLScene(int width, int height);		// Resize And Initialize The GL Window
 bool InitGL();
+
+#else // PLATFORM_LINUX
+#include "SDLMain.h"
+#endif
 
 #include "InputEvent.h"
 

@@ -800,10 +800,24 @@ CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CommonGame.dir/Rotatable.cpp.s"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/pspace/pspace/CommonGame/Rotatable.cpp -o CMakeFiles/CommonGame.dir/Rotatable.cpp.s
 
+CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
+CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o: /home/runner/work/pspace/pspace/CommonGame/SDLGLObject.cpp
+CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o"
+	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o -MF CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o.d -o CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/SDLGLObject.cpp
+
+CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CommonGame.dir/SDLGLObject.cpp.i"
+	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/pspace/pspace/CommonGame/SDLGLObject.cpp > CMakeFiles/CommonGame.dir/SDLGLObject.cpp.i
+
+CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CommonGame.dir/SDLGLObject.cpp.s"
+	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/pspace/pspace/CommonGame/SDLGLObject.cpp -o CMakeFiles/CommonGame.dir/SDLGLObject.cpp.s
+
 CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Sizable.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o -MF CMakeFiles/CommonGame.dir/Sizable.cpp.o.d -o CMakeFiles/CommonGame.dir/Sizable.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Sizable.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.i: cmake_force
@@ -817,7 +831,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Socket.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o -MF CMakeFiles/CommonGame.dir/Socket.cpp.o.d -o CMakeFiles/CommonGame.dir/Socket.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Socket.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.i: cmake_force
@@ -831,7 +845,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o: /home/runner/work/pspace/pspace/CommonGame/SocketUDP.cpp
 CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o -MF CMakeFiles/CommonGame.dir/SocketUDP.cpp.o.d -o CMakeFiles/CommonGame.dir/SocketUDP.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/SocketUDP.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.i: cmake_force
@@ -845,7 +859,7 @@ CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o: /home/runner/work/pspace/pspace/CommonGame/SortedDisplayManager.cpp
 CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o -MF CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o.d -o CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/SortedDisplayManager.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.i: cmake_force
@@ -859,7 +873,7 @@ CommonGame/CMakeFiles/CommonGame.dir/SortedDisplayManager.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Sound.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.o -MF CMakeFiles/CommonGame.dir/Sound.cpp.o.d -o CMakeFiles/CommonGame.dir/Sound.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Sound.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.i: cmake_force
@@ -873,7 +887,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Sound.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Sound.old.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.o -MF CMakeFiles/CommonGame.dir/Sound.old.cpp.o.d -o CMakeFiles/CommonGame.dir/Sound.old.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Sound.old.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.i: cmake_force
@@ -887,7 +901,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Sound.old.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o: /home/runner/work/pspace/pspace/CommonGame/SoundManager.cpp
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.o -MF CMakeFiles/CommonGame.dir/SoundManager.cpp.o.d -o CMakeFiles/CommonGame.dir/SoundManager.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/SoundManager.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.i: cmake_force
@@ -901,7 +915,7 @@ CommonGame/CMakeFiles/CommonGame.dir/SoundManager.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o: /home/runner/work/pspace/pspace/CommonGame/SoundManager.old.cpp
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o -MF CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o.d -o CMakeFiles/CommonGame.dir/SoundManager.old.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/SoundManager.old.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.i: cmake_force
@@ -915,7 +929,7 @@ CommonGame/CMakeFiles/CommonGame.dir/SoundManager.old.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Sprite.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.o -MF CMakeFiles/CommonGame.dir/Sprite.cpp.o.d -o CMakeFiles/CommonGame.dir/Sprite.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Sprite.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.i: cmake_force
@@ -929,7 +943,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Sprite.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o: /home/runner/work/pspace/pspace/CommonGame/StreamDecorator.cpp
 CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o -MF CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o.d -o CMakeFiles/CommonGame.dir/StreamDecorator.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/StreamDecorator.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.i: cmake_force
@@ -943,7 +957,7 @@ CommonGame/CMakeFiles/CommonGame.dir/StreamDecorator.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextBox.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.o -MF CMakeFiles/CommonGame.dir/TextBox.cpp.o.d -o CMakeFiles/CommonGame.dir/TextBox.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextBox.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.i: cmake_force
@@ -957,7 +971,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextBox.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextBuffer.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.o -MF CMakeFiles/CommonGame.dir/TextBuffer.cpp.o.d -o CMakeFiles/CommonGame.dir/TextBuffer.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextBuffer.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.i: cmake_force
@@ -971,7 +985,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextBuffer.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextMenuObject.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o -MF CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o.d -o CMakeFiles/CommonGame.dir/TextMenuObject.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextMenuObject.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.i: cmake_force
@@ -985,7 +999,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextMenuObject.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextTable.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.o -MF CMakeFiles/CommonGame.dir/TextTable.cpp.o.d -o CMakeFiles/CommonGame.dir/TextTable.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextTable.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.i: cmake_force
@@ -999,7 +1013,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextTable.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextWindow.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.o -MF CMakeFiles/CommonGame.dir/TextWindow.cpp.o.d -o CMakeFiles/CommonGame.dir/TextWindow.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextWindow.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.i: cmake_force
@@ -1013,7 +1027,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextWindow.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Texture.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.o -MF CMakeFiles/CommonGame.dir/Texture.cpp.o.d -o CMakeFiles/CommonGame.dir/Texture.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Texture.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.i: cmake_force
@@ -1027,7 +1041,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Texture.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextureAnimated.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o -MF CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o.d -o CMakeFiles/CommonGame.dir/TextureAnimated.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextureAnimated.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.i: cmake_force
@@ -1041,7 +1055,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextureAnimated.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextureData.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.o -MF CMakeFiles/CommonGame.dir/TextureData.cpp.o.d -o CMakeFiles/CommonGame.dir/TextureData.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextureData.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.i: cmake_force
@@ -1055,7 +1069,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextureData.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextureDigits.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.o -MF CMakeFiles/CommonGame.dir/TextureDigits.cpp.o.d -o CMakeFiles/CommonGame.dir/TextureDigits.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextureDigits.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.i: cmake_force
@@ -1069,7 +1083,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextureDigits.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextureFont.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.o -MF CMakeFiles/CommonGame.dir/TextureFont.cpp.o.d -o CMakeFiles/CommonGame.dir/TextureFont.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextureFont.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.i: cmake_force
@@ -1083,7 +1097,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextureFont.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TextureManager.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.o -MF CMakeFiles/CommonGame.dir/TextureManager.cpp.o.d -o CMakeFiles/CommonGame.dir/TextureManager.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TextureManager.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.i: cmake_force
@@ -1097,7 +1111,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TextureManager.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Texturizable.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.o -MF CMakeFiles/CommonGame.dir/Texturizable.cpp.o.d -o CMakeFiles/CommonGame.dir/Texturizable.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Texturizable.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.i: cmake_force
@@ -1111,7 +1125,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Texturizable.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Thread.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.o -MF CMakeFiles/CommonGame.dir/Thread.cpp.o.d -o CMakeFiles/CommonGame.dir/Thread.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Thread.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.i: cmake_force
@@ -1125,7 +1139,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Thread.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Tile.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.o -MF CMakeFiles/CommonGame.dir/Tile.cpp.o.d -o CMakeFiles/CommonGame.dir/Tile.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Tile.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.i: cmake_force
@@ -1139,7 +1153,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Tile.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TileMap.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.o -MF CMakeFiles/CommonGame.dir/TileMap.cpp.o.d -o CMakeFiles/CommonGame.dir/TileMap.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TileMap.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.i: cmake_force
@@ -1153,7 +1167,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TileMap.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TimeProfiler.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o -MF CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o.d -o CMakeFiles/CommonGame.dir/TimeProfiler.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TimeProfiler.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.i: cmake_force
@@ -1167,7 +1181,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TimeProfiler.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TimeStream.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.o -MF CMakeFiles/CommonGame.dir/TimeStream.cpp.o.d -o CMakeFiles/CommonGame.dir/TimeStream.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TimeStream.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.i: cmake_force
@@ -1181,7 +1195,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TimeStream.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o: /home/runner/work/pspace/pspace/CommonGame/TimedTextBox.cpp
 CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o -MF CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o.d -o CMakeFiles/CommonGame.dir/TimedTextBox.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/TimedTextBox.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.i: cmake_force
@@ -1195,7 +1209,7 @@ CommonGame/CMakeFiles/CommonGame.dir/TimedTextBox.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Timer.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.o -MF CMakeFiles/CommonGame.dir/Timer.cpp.o.d -o CMakeFiles/CommonGame.dir/Timer.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Timer.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.i: cmake_force
@@ -1209,7 +1223,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Timer.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o: /home/runner/work/pspace/pspace/CommonGame/Vector.cpp
 CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.o -MF CMakeFiles/CommonGame.dir/Vector.cpp.o.d -o CMakeFiles/CommonGame.dir/Vector.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/Vector.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.i: cmake_force
@@ -1223,7 +1237,7 @@ CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o: /home/runner/work/pspace/pspace/CommonGame/WinUtil.cpp
 CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o -MF CMakeFiles/CommonGame.dir/WinUtil.cpp.o.d -o CMakeFiles/CommonGame.dir/WinUtil.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/WinUtil.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.i: cmake_force
@@ -1237,7 +1251,7 @@ CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o: /home/runner/work/pspace/pspace/CommonGame/WindowManager.cpp
 CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.o -MF CMakeFiles/CommonGame.dir/WindowManager.cpp.o.d -o CMakeFiles/CommonGame.dir/WindowManager.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/WindowManager.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.i: cmake_force
@@ -1251,7 +1265,7 @@ CommonGame/CMakeFiles/CommonGame.dir/WindowManager.cpp.s: cmake_force
 CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/flags.make
 CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o: /home/runner/work/pspace/pspace/CommonGame/WindowObject.cpp
 CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o: CommonGame/CMakeFiles/CommonGame.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o -MF CMakeFiles/CommonGame.dir/WindowObject.cpp.o.d -o CMakeFiles/CommonGame.dir/WindowObject.cpp.o -c /home/runner/work/pspace/pspace/CommonGame/WindowObject.cpp
 
 CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.i: cmake_force
@@ -1316,6 +1330,7 @@ CommonGame_OBJECTS = \
 "CMakeFiles/CommonGame.dir/Positionable.cpp.o" \
 "CMakeFiles/CommonGame.dir/RepeatingBackground.cpp.o" \
 "CMakeFiles/CommonGame.dir/Rotatable.cpp.o" \
+"CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o" \
 "CMakeFiles/CommonGame.dir/Sizable.cpp.o" \
 "CMakeFiles/CommonGame.dir/Socket.cpp.o" \
 "CMakeFiles/CommonGame.dir/SocketUDP.cpp.o" \
@@ -1405,6 +1420,7 @@ CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/Pointf.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/Positionable.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/RepeatingBackground.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.o
+CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o
@@ -1440,7 +1456,7 @@ CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/WindowManager.c
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/WindowObject.cpp.o
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/build.make
 CommonGame/libCommonGame.a: CommonGame/CMakeFiles/CommonGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Linking CXX static library libCommonGame.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Linking CXX static library libCommonGame.a"
 	cd /home/runner/work/pspace/pspace/build/CommonGame && $(CMAKE_COMMAND) -P CMakeFiles/CommonGame.dir/cmake_clean_target.cmake
 	cd /home/runner/work/pspace/pspace/build/CommonGame && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CommonGame.dir/link.txt --verbose=$(VERBOSE)
 

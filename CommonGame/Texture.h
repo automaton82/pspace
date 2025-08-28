@@ -8,8 +8,7 @@
 #include <math.h>
 using std::string;
 
-//#include <GL/gl.h>
-#include <GL/glaux.h>
+#include "Platform.h"
 
 #include "Point.h"
 #include "TextureData.h"

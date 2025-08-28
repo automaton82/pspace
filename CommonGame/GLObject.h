@@ -1,8 +1,10 @@
 #ifndef _GLOBJECT_H_
 #define _GLOBJECT_H_
 
-#include <windows.h>
+#include "Platform.h"
 
+#ifdef PLATFORM_WINDOWS
+#include <windows.h>
 //#include <gl/gl.h>
 //#include <gl/glu.h>
 #include <gl/glaux.h>
@@ -45,5 +47,14 @@ private:
 };
 
 static GLObject& glObject = *Singleton<GLObject>::instance();
+
+#else // PLATFORM_LINUX
+
+#include "SDLGLObject.h"
+// Use SDL implementation as GLObject
+typedef SDLGLObject GLObject;
+#define glObject sdlGLObject
+
+#endif
 
 #endif

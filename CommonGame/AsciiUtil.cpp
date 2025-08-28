@@ -4,6 +4,8 @@
 #include <iostream>
 #include <math.h>
 #include <stdarg.h>
+#include <cstring>
+#include <sstream>
 
 #define max(a, b)  (((a) > (b)) ? (a) : (b)) 
 
@@ -56,24 +58,40 @@ bool isWhiteSpace(char c)
 
 string itoa(int number, int radix)
 {
-	char buffer[255];
+	std::ostringstream buffer;
+	
+	if(radix == 10) {
+		buffer << number;
+	} else if(radix == 16) {
+		buffer << std::hex << number;
+	} else if(radix == 8) {
+		buffer << std::oct << number;
+	} else {
+		// For other radixes, use a simple conversion
+		buffer << number; // fallback to decimal
+	}
 
-	::itoa(number, buffer, radix);
-
-	return buffer;
+	return buffer.str();
 }
 
 string itoaFixed(int number, int width, int radix)
 {
 	assert(width > 0);
 
-	char buffer[255];
 	string val, retval;
-	//int i;
-
-	::itoa(number, buffer, radix);
-
-	val = buffer;
+	
+	std::ostringstream buffer;
+	if(radix == 10) {
+		buffer << number;
+	} else if(radix == 16) {
+		buffer << std::hex << number;
+	} else if(radix == 8) {
+		buffer << std::oct << number;
+	} else {
+		buffer << number; // fallback to decimal
+	}
+	
+	val = buffer.str();
 
 	retval = filledString( max(0, width-(int)val.size()), '0') + val.substr(0, width);
 	/*for(i = 0; i < width - (int)val.size(); ++i)
@@ -230,7 +248,7 @@ bool matchesIn(char c, const string& matches)
 {
 	size_t i = matches.find(c);
 
-	return (i != string.npos);	
+	return (i != std::string::npos);	
 }
 
 vector<string> tokenize(const string& s, const string& separator)

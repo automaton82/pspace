@@ -17,14 +17,15 @@ template <class T>
 class Singleton
 {
 private:
-	Singleton() :
-	{}
+	Singleton() 
+	{
+	}
 
 protected:
 	~Singleton()
 	{
-		if(inst)
-			delete inst;
+		// The static instance is managed by the instance() method
+		// Don't delete it here as it's not owned by this instance
 	}
 
 public:

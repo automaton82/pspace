@@ -1,6 +1,7 @@
 #include "BmpObject.h"
 
 #include "GLObject.h"	//for auxDIBImageLoad()
+#include <algorithm>    // for std::max
 
 BmpObject::BmpObject() : 
 	width_(0), height_(0),
@@ -77,7 +78,7 @@ void BmpObject::scaleAlpha()
 			unsigned long index = ((i * (width_+newPad) + j) * 4);
 			
 			//max
-			data_[index + 3] = (char)max(max(data_[index + 0], data_[index + 1]), data_[index + 2]);
+			data_[index + 3] = (char)std::max(std::max(data_[index + 0], data_[index + 1]), data_[index + 2]);
 
 			//avg
 			//data_[index + 3] = (char)((data_[index + 0] + data_[index + 1] + data_[index + 2]) / 3);

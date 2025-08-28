@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/subspace.dir/InputCommands.cpp.o.d"
   "CMakeFiles/subspace.dir/PlayerManager.cpp.o"
   "CMakeFiles/subspace.dir/PlayerManager.cpp.o.d"
+  "CMakeFiles/subspace.dir/SDLMain.cpp.o"
+  "CMakeFiles/subspace.dir/SDLMain.cpp.o.d"
   "CMakeFiles/subspace.dir/StatBoxModes.cpp.o"
   "CMakeFiles/subspace.dir/StatBoxModes.cpp.o.d"
   "CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o"

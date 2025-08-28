@@ -250,6 +250,30 @@ PlayerManager.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/PlayerManager.cpp.s
 .PHONY : PlayerManager.cpp.s
 
+SDLMain.o: SDLMain.cpp.o
+.PHONY : SDLMain.o
+
+# target to build an object file
+SDLMain.cpp.o:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o
+.PHONY : SDLMain.cpp.o
+
+SDLMain.i: SDLMain.cpp.i
+.PHONY : SDLMain.i
+
+# target to preprocess a source file
+SDLMain.cpp.i:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.i
+.PHONY : SDLMain.cpp.i
+
+SDLMain.s: SDLMain.cpp.s
+.PHONY : SDLMain.s
+
+# target to generate assembly for a file
+SDLMain.cpp.s:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.s
+.PHONY : SDLMain.cpp.s
+
 StatBoxModes.o: StatBoxModes.cpp.o
 .PHONY : StatBoxModes.o
 
@@ -2530,6 +2554,9 @@ help:
 	@echo "... PlayerManager.o"
 	@echo "... PlayerManager.i"
 	@echo "... PlayerManager.s"
+	@echo "... SDLMain.o"
+	@echo "... SDLMain.i"
+	@echo "... SDLMain.s"
 	@echo "... StatBoxModes.o"
 	@echo "... StatBoxModes.i"
 	@echo "... StatBoxModes.s"

@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/runner/work/pspace/pspace/Subspace/subspace/InputCommandReceiver.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/InputCommandReceiver.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/InputCommandReceiver.cpp.o.d"
   "/home/runner/work/pspace/pspace/Subspace/subspace/InputCommands.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/InputCommands.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/InputCommands.cpp.o.d"
   "/home/runner/work/pspace/pspace/Subspace/subspace/PlayerManager.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/PlayerManager.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/PlayerManager.cpp.o.d"
+  "/home/runner/work/pspace/pspace/Subspace/subspace/SDLMain.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o.d"
   "/home/runner/work/pspace/pspace/Subspace/subspace/StatBoxModes.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o.d"
   "/home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSort.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o.d"
   "/home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSortExtended.cpp" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o" "gcc" "Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o.d"

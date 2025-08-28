@@ -142,10 +142,24 @@ Subspace/subspace/CMakeFiles/subspace.dir/PlayerManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/subspace.dir/PlayerManager.cpp.s"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/pspace/pspace/Subspace/subspace/PlayerManager.cpp -o CMakeFiles/subspace.dir/PlayerManager.cpp.s
 
+Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
+Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SDLMain.cpp
+Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o"
+	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o -MF CMakeFiles/subspace.dir/SDLMain.cpp.o.d -o CMakeFiles/subspace.dir/SDLMain.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SDLMain.cpp
+
+Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/subspace.dir/SDLMain.cpp.i"
+	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/pspace/pspace/Subspace/subspace/SDLMain.cpp > CMakeFiles/subspace.dir/SDLMain.cpp.i
+
+Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/subspace.dir/SDLMain.cpp.s"
+	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/pspace/pspace/Subspace/subspace/SDLMain.cpp -o CMakeFiles/subspace.dir/SDLMain.cpp.s
+
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxModes.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o -MF CMakeFiles/subspace.dir/StatBoxModes.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxModes.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxModes.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.i: cmake_force
@@ -159,7 +173,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSort.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o -MF CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSort.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.i: cmake_force
@@ -173,7 +187,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSortExtended.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o -MF CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSortExtended.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.i: cmake_force
@@ -187,7 +201,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.s: cmake
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSortPoints.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o -MF CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPlayerSortPoints.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.i: cmake_force
@@ -201,7 +215,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortPoints.cpp.s: cmake_f
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPointSort.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o -MF CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxPointSort.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxPointSort.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.i: cmake_force
@@ -215,7 +229,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPointSort.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxTeamSort.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o -MF CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxTeamSort.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.i: cmake_force
@@ -229,7 +243,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamSort.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxTeamStats.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o -MF CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o.d -o CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/StatBoxTeamStats.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.i: cmake_force
@@ -243,7 +257,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/StatBoxTeamStats.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBackground.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBackground.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBackground.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBackground.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.i: cmake_force
@@ -257,7 +271,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBackground.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBall.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBall.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBall.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBall.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.i: cmake_force
@@ -271,7 +285,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBall.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBanner.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBanner.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBanner.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBanner.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.i: cmake_force
@@ -285,7 +299,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBanner.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBomb.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBomb.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBomb.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBomb.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.i: cmake_force
@@ -299,7 +313,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBomb.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBrick.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBrick.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBrick.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBrick.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.i: cmake_force
@@ -313,7 +327,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBrick.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBullet.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBullet.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBullet.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBullet.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.i: cmake_force
@@ -327,7 +341,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBullet.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBurstBullet.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o -MF CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceBurstBullet.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.i: cmake_force
@@ -341,7 +355,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceBurstBullet.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChat.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChat.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChat.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChat.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.i: cmake_force
@@ -355,7 +369,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChat.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatAdpater.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatAdpater.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.i: cmake_force
@@ -369,7 +383,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatAdpater.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatBox.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChatBox.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatBox.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.i: cmake_force
@@ -383,7 +397,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBox.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatBuffer.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatBuffer.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.i: cmake_force
@@ -397,7 +411,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatBuffer.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatDatabase.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatDatabase.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.i: cmake_force
@@ -411,7 +425,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatDatabase.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatStream.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o -MF CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceChatStream.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceChatStream.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.i: cmake_force
@@ -425,7 +439,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceChatStream.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceColors.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.o -MF CMakeFiles/subspace.dir/SubspaceColors.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceColors.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceColors.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.i: cmake_force
@@ -439,7 +453,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceColors.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceCommand.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.o -MF CMakeFiles/subspace.dir/SubspaceCommand.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceCommand.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceCommand.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.i: cmake_force
@@ -453,7 +467,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceCommand.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConnection.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.o -MF CMakeFiles/subspace.dir/SubspaceConnection.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceConnection.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConnection.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.i: cmake_force
@@ -467,7 +481,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConnection.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsole.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.o -MF CMakeFiles/subspace.dir/SubspaceConsole.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceConsole.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsole.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.i: cmake_force
@@ -481,7 +495,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsole.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleCommandReceiver.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o -MF CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleCommandReceiver.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.i: cmake_force
@@ -495,7 +509,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommandReceiver.cpp.s: 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.i: cmake_force
@@ -509,7 +523,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleCommands.cpp.s: cmake_f
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleInput.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o -MF CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceConsoleInput.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.i: cmake_force
@@ -523,7 +537,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceConsoleInput.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceDecoy.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o -MF CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceDecoy.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceDecoy.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.i: cmake_force
@@ -537,7 +551,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceDecoy.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceEmpExplosion.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o -MF CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceEmpExplosion.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.i: cmake_force
@@ -551,7 +565,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEmpExplosion.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceEvent.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.o -MF CMakeFiles/subspace.dir/SubspaceEvent.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceEvent.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceEvent.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.i: cmake_force
@@ -565,7 +579,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceEvent.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExhaust.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o -MF CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceExhaust.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExhaust.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.i: cmake_force
@@ -579,7 +593,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExhaust.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExplosion.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o -MF CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceExplosion.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExplosion.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.i: cmake_force
@@ -593,7 +607,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosion.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExplosionSmall.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o -MF CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceExplosionSmall.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.i: cmake_force
@@ -607,7 +621,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceExplosionSmall.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceFlag.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.o -MF CMakeFiles/subspace.dir/SubspaceFlag.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceFlag.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceFlag.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.i: cmake_force
@@ -621,7 +635,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlag.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceFlash.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.o -MF CMakeFiles/subspace.dir/SubspaceFlash.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceFlash.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceFlash.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.i: cmake_force
@@ -635,7 +649,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceFlash.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameInput.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o -MF CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceGameInput.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameInput.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.i: cmake_force
@@ -649,7 +663,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameInput.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameManager.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o -MF CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceGameManager.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameManager.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.i: cmake_force
@@ -663,7 +677,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameManager.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameObject.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o -MF CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceGameObject.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGameObject.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.i: cmake_force
@@ -677,7 +691,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGameObject.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGlobal.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o -MF CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceGlobal.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceGlobal.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.i: cmake_force
@@ -691,7 +705,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceGlobal.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHelp.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.o -MF CMakeFiles/subspace.dir/SubspaceHelp.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceHelp.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHelp.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.i: cmake_force
@@ -705,7 +719,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHelp.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHelp.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.i: cmake_force
@@ -719,7 +733,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHelp.old.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHud.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.o -MF CMakeFiles/subspace.dir/SubspaceHud.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceHud.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHud.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.i: cmake_force
@@ -733,7 +747,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHud.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceHud.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHud.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.i: cmake_force
@@ -747,7 +761,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHud.old.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHudCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceHudCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.i: cmake_force
@@ -761,7 +775,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceHudCommands.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLVZManager.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o -MF CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLVZManager.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.i: cmake_force
@@ -775,7 +789,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLVZManager.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLifeBar.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o -MF CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLifeBar.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.i: cmake_force
@@ -789,7 +803,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLifeBar.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLoginAdapter.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o -MF CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceLoginAdapter.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.i: cmake_force
@@ -803,7 +817,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceLoginAdapter.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMap.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMap.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMap.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMap.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.i: cmake_force
@@ -817,7 +831,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMap.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenu.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMenu.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMenu.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenu.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.i: cmake_force
@@ -831,7 +845,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenu.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenu.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.i: cmake_force
@@ -845,7 +859,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenu.old.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuCommandReceiver.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuCommandReceiver.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.i: cmake_force
@@ -859,7 +873,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommandReceiver.cpp.s: cma
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.i: cmake_force
@@ -873,7 +887,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuCommands.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuInput.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMenuInput.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.i: cmake_force
@@ -887,7 +901,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMenuInput.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMultiBullet.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o -MF CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceMultiBullet.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.i: cmake_force
@@ -901,7 +915,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceMultiBullet.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceNetworkHandler.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o -MF CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceNetworkHandler.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.i: cmake_force
@@ -915,7 +929,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceNetworkHandler.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePRNG.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.o -MF CMakeFiles/subspace.dir/SubspacePRNG.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePRNG.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePRNG.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.i: cmake_force
@@ -929,7 +943,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePRNG.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer-toggles.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer-toggles.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.i: cmake_force
@@ -943,7 +957,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-toggles.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer-upgrades.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer-upgrades.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.i: cmake_force
@@ -957,7 +971,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer-upgrades.cpp.s: cmake_f
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayer.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayer.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayer.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.i: cmake_force
@@ -971,7 +985,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayer.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerAdapter.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerAdapter.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.i: cmake_force
@@ -985,7 +999,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerAdapter.cpp.s: cmake_for
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.i: cmake_force
@@ -999,7 +1013,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerCommands.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerDatabase.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o -MF CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePlayerDatabase.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.i: cmake_force
@@ -1013,7 +1027,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePlayerDatabase.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePortal.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.o -MF CMakeFiles/subspace.dir/SubspacePortal.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePortal.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePortal.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.i: cmake_force
@@ -1027,7 +1041,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePortal.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePrize.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.o -MF CMakeFiles/subspace.dir/SubspacePrize.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePrize.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePrize.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.i: cmake_force
@@ -1041,7 +1055,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrize.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePrizeGenerator.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o -MF CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o.d -o CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspacePrizeGenerator.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.i: cmake_force
@@ -1055,7 +1069,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspacePrizeGenerator.cpp.s: cmake_fo
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceRadar.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.o -MF CMakeFiles/subspace.dir/SubspaceRadar.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceRadar.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceRadar.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.i: cmake_force
@@ -1069,7 +1083,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRadar.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceReliableManager.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o -MF CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceReliableManager.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.i: cmake_force
@@ -1083,7 +1097,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceReliableManager.cpp.s: cmake_f
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceRepel.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.o -MF CMakeFiles/subspace.dir/SubspaceRepel.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceRepel.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceRepel.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.i: cmake_force
@@ -1097,7 +1111,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceRepel.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceShipExplosion.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o -MF CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceShipExplosion.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.i: cmake_force
@@ -1111,7 +1125,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShipExplosion.cpp.s: cmake_for
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceShrapnel.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o -MF CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceShrapnel.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.i: cmake_force
@@ -1125,7 +1139,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceShrapnel.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceSound.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.o -MF CMakeFiles/subspace.dir/SubspaceSound.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceSound.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceSound.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.i: cmake_force
@@ -1139,7 +1153,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSound.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceSpecialEffect.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o -MF CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceSpecialEffect.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.i: cmake_force
@@ -1153,7 +1167,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceSpecialEffect.cpp.s: cmake_for
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBox.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o -MF CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceStatBox.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBox.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.i: cmake_force
@@ -1167,7 +1181,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBox.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBox.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.i: cmake_force
@@ -1181,7 +1195,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBox.old.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBoxModes.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o -MF CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceStatBoxModes.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.i: cmake_force
@@ -1195,7 +1209,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceStatBoxModes.cpp.s: cmake_forc
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTextBox.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o -MF CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceTextBox.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTextBox.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.i: cmake_force
@@ -1209,7 +1223,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextBox.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTextures.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.o -MF CMakeFiles/subspace.dir/SubspaceTextures.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceTextures.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTextures.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.i: cmake_force
@@ -1223,7 +1237,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTextures.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceThor.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.o -MF CMakeFiles/subspace.dir/SubspaceThor.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceThor.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceThor.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.i: cmake_force
@@ -1237,7 +1251,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceThor.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTile.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.o -MF CMakeFiles/subspace.dir/SubspaceTile.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceTile.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceTile.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.i: cmake_force
@@ -1251,7 +1265,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceTile.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserActionReceiver.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o -MF CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserActionReceiver.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.i: cmake_force
@@ -1265,7 +1279,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActionReceiver.cpp.s: cmak
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserActions.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o -MF CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceUserActions.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserActions.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.i: cmake_force
@@ -1279,7 +1293,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserActions.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserAdapter.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o -MF CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUserAdapter.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.i: cmake_force
@@ -1293,7 +1307,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUserAdapter.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUtil.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.o -MF CMakeFiles/subspace.dir/SubspaceUtil.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceUtil.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceUtil.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.i: cmake_force
@@ -1307,7 +1321,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceUtil.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceWeapon.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o -MF CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceWeapon.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceWeapon.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.i: cmake_force
@@ -1321,7 +1335,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceWeapon.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-ClientCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-ClientCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.i: cmake_force
@@ -1335,7 +1349,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ClientCommands.cpp.s: cma
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Collisions.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Collisions.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.i: cmake_force
@@ -1349,7 +1363,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.cpp.s: cmake_f
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Collisions.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Collisions.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.i: cmake_force
@@ -1363,7 +1377,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Collisions.old.cpp.s: cma
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Network.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-Network.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.i: cmake_force
@@ -1377,7 +1391,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-Network.old.cpp.s: cmake_
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-ServerCommands.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone-ServerCommands.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.i: cmake_force
@@ -1391,7 +1405,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone-ServerCommands.cpp.s: cma
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.i: cmake_force
@@ -1405,7 +1419,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone.old.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o -MF CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o.d -o CMakeFiles/subspace.dir/SubspaceZone.old.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/SubspaceZone.old.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.i: cmake_force
@@ -1419,7 +1433,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/SubspaceZone.old.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/algorithms.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.o -MF CMakeFiles/subspace.dir/algorithms.cpp.o.d -o CMakeFiles/subspace.dir/algorithms.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/algorithms.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.i: cmake_force
@@ -1433,7 +1447,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/algorithms.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/main-game.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.o -MF CMakeFiles/subspace.dir/main-game.cpp.o.d -o CMakeFiles/subspace.dir/main-game.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/main-game.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.i: cmake_force
@@ -1447,7 +1461,7 @@ Subspace/subspace/CMakeFiles/subspace.dir/main-game.cpp.s: cmake_force
 Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/flags.make
 Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o: /home/runner/work/pspace/pspace/Subspace/subspace/main.cpp
 Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o: Subspace/subspace/CMakeFiles/subspace.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.o -MF CMakeFiles/subspace.dir/main.cpp.o.d -o CMakeFiles/subspace.dir/main.cpp.o -c /home/runner/work/pspace/pspace/Subspace/subspace/main.cpp
 
 Subspace/subspace/CMakeFiles/subspace.dir/main.cpp.i: cmake_force
@@ -1465,6 +1479,7 @@ subspace_OBJECTS = \
 "CMakeFiles/subspace.dir/InputCommandReceiver.cpp.o" \
 "CMakeFiles/subspace.dir/InputCommands.cpp.o" \
 "CMakeFiles/subspace.dir/PlayerManager.cpp.o" \
+"CMakeFiles/subspace.dir/SDLMain.cpp.o" \
 "CMakeFiles/subspace.dir/StatBoxModes.cpp.o" \
 "CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o" \
 "CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o" \
@@ -1568,6 +1583,7 @@ bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/InputCommandListener.cpp
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/InputCommandReceiver.cpp.o
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/InputCommands.cpp.o
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/PlayerManager.cpp.o
+bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/SDLMain.cpp.o
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/StatBoxModes.cpp.o
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSort.cpp.o
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/StatBoxPlayerSortExtended.cpp.o
@@ -1675,7 +1691,7 @@ bin/subspace: /usr/lib/x86_64-linux-gnu/libpng.so
 bin/subspace: /usr/lib/x86_64-linux-gnu/libz.so
 bin/subspace: /usr/lib/x86_64-linux-gnu/libopenal.so
 bin/subspace: Subspace/subspace/CMakeFiles/subspace.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Linking CXX executable ../../bin/subspace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Linking CXX executable ../../bin/subspace"
 	cd /home/runner/work/pspace/pspace/build/Subspace/subspace && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/subspace.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
