@@ -183,7 +183,7 @@ void SubspaceChatBuffer::cacheChunk(const Chunk& c)
 		offset = str.find_first_of(whitespace, offset);	
 	}
 	
-	offset = min(str.size(), offset);	//check for bad offsets - if no whitespace is found
+	offset = std::min(str.size(), offset);	//check for bad offsets - if no whitespace is found
 
 	if(offset-lastOffset > 0)	//leftover word
 	{

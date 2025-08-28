@@ -12,12 +12,12 @@ void calcDistanceStep(const TileMap& map, double time, const Vector& vel, Vector
 	//ignore z component
 	if(fabs(vel.x_) > fabs(vel.y_))	
 	{						//larger increment is in x
-		increments.x_ = min(map.getTileWidth() - TOLERANCE, fabs(vel.x_*time)) * sign(vel.x_);
+		increments.x_ = std::min(map.getTileWidth() - TOLERANCE, fabs(vel.x_*time)) * sign(vel.x_);
 		increments.y_ = vel.y_/vel.x_ * increments.x_;
 	}
 	else
 	{						//larger increment is in y
-		increments.y_ = min(map.getTileHeight() - TOLERANCE, fabs(vel.y_*time)) * sign(vel.y_);
+		increments.y_ = std::min(map.getTileHeight() - TOLERANCE, fabs(vel.y_*time)) * sign(vel.y_);
 		increments.x_ = vel.x_/vel.y_ * increments.y_;
 	}
 }
@@ -44,14 +44,14 @@ bool checkMapCollision(const TileMap& map, double timestep, const Vector& oldPos
 
     while(moveDist.x_ + moveDist.y_ > TOLERANCE)
 	{														//check every increment (largest is a whole tile)
-		xDist = min(fabs(moveDist.x_), map.getTileWidth() - TOLERANCE);		//move maximum of 1 tile
+		xDist = std::min(fabs(moveDist.x_), map.getTileWidth() - TOLERANCE);		//move maximum of 1 tile
 			
 		if(oldVelocity.x_ == 0)		//calculate time to tile
 			xTime = DBL_MAX;
 		else
 			xTime = fabs(xDist / oldVelocity.x_);
 				
-		yDist = min(fabs(moveDist.y_), map.getTileHeight() - TOLERANCE);
+		yDist = std::min(fabs(moveDist.y_), map.getTileHeight() - TOLERANCE);
 		
 		if(oldVelocity.y_ == 0)
 			yTime = DBL_MAX;

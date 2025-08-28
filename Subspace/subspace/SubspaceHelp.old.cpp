@@ -51,7 +51,7 @@ void SubspaceHelp::setPage(Uint page)
 {
 	assert(page < pages_.size());
 
-	currentPage_ = min(pages_.size()-1, max(0, page));	//make sure page is in range
+	currentPage_ = std::min(pages_.size()-1, std::max(0, page));	//make sure page is in range
 }
 
 Uint SubspaceHelp::size() const
@@ -302,7 +302,7 @@ void SubspaceHelp::parseLine(const string& l)
 		offset = line.find_first_of(newStateChar, offset);
 	}
 
-	offset = min(line.size(), offset);	//check for bad offsets
+	offset = std::min(line.size(), offset);	//check for bad offsets
 	if(offset-lastOffset > 0)	//leftover word
 		cacheChunk(Chunk(line.substr(lastOffset, offset-lastOffset), currentColor_));
 }

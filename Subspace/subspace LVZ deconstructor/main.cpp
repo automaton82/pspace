@@ -7,7 +7,7 @@ int main(int argc, char** argv)
 {
 	if(argc < 2)
 	{
-		cout << "Usage: " << argv[0] << " <input-file>" << endl;
+		cout << "Usage: " << argv[0] << " <input-file>" << std::endl;
 		return 0;
 	}
 

@@ -41,7 +41,7 @@ bool SocketUDP::close()
 
 	if(result == SOCKET_ERROR)
 	{
-		cerr << "Error: Socket.close(): " << getLastWindowsError() << endl;
+		cerr << "Error: Socket.close(): " << getLastWindowsError() << std::endl;
 		return false;
 	}
 	else
@@ -56,7 +56,7 @@ bool SocketUDP::open(const string& defaultHost, Uint16 defaultPort)
 	{		
 		if(!windowsSocketInit())
 		{
-			cerr << "Error: SocketUDP.windowsSocket(): " << getLastWindowsError() << endl;
+			cerr << "Error: SocketUDP.windowsSocket(): " << getLastWindowsError() << std::endl;
 			return false;
 		}
 		isWindowsSocketInit_ = true;
@@ -121,7 +121,7 @@ bool SocketUDP::receiveData(char* buffer, int bufferSize, int* bytesReceived)
 
 	if(result == SOCKET_ERROR || result < 0)
 	{
-		cout << "Error- Socket.receiveData(): " << getLastWindowsError() << endl;
+		cout << "Error- Socket.receiveData(): " << getLastWindowsError() << std::endl;
 
 		if(bytesReceived) *bytesReceived = 0;
 		return false;
@@ -159,7 +159,7 @@ bool SocketUDP::waitForData(unsigned int timeout)
 	}
 	else		//error occured
 	{
-		cerr << "Error: Socket.waitForData(): " << getLastWindowsError() << endl;
+		cerr << "Error: Socket.waitForData(): " << getLastWindowsError() << std::endl;
 	}
 
 	return false;

@@ -22,7 +22,7 @@ void SubspaceTextBox::clearHeader()
 
 double SubspaceTextBox::getDisplayHeight() const
 {
-	Uint lines = min(linesDisplayed_, this->size());
+	Uint lines = std::min(linesDisplayed_, this->size());
 	double size = font_.getFontHeight() * lines + padTop_+padBottom_+borderWidth_;
 
 	if(header_.size() > 0)
@@ -47,7 +47,7 @@ double SubspaceTextBox::getHeaderDisplayHeight() const
 
 double SubspaceTextBox::getLineDisplayHeight(Uint line) const
 {
-	Uint displayLines = min(size(), linesDisplayed_);
+	Uint displayLines = std::min(size(), linesDisplayed_);
 	Uint displayLine = displayLines-1 - line + lineDisplayOffset_;
 	double size = font_.getFontHeight() * displayLine + padBottom_+borderWidth_/2.0;
 
@@ -100,7 +100,7 @@ void SubspaceTextBox::draw() const
 	
 void SubspaceTextBox::drawBackground() const
 {
-	double drawWidth = min(lineWidth_, maxWidth_) * font_.getFrameWidth();
+	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight =  getDisplayHeight();
 
 	glColor4d(backgroundColor_.r_, backgroundColor_.g_, backgroundColor_.b_, backgroundColor_.a_);
@@ -118,7 +118,7 @@ void SubspaceTextBox::drawBackground() const
 
 void SubspaceTextBox::drawBorder() const
 {
-	double drawWidth = min(lineWidth_, maxWidth_) * font_.getFrameWidth();
+	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight = getDisplayHeight();
 
 	glColor4d(borderColor_.r_, borderColor_.g_, borderColor_.b_, borderColor_.a_);
@@ -141,7 +141,7 @@ void SubspaceTextBox::drawHeader() const
 	if(header_.size() == 0)
 		return;
 
-	//string head = AsciiUtil::fixedWidthString(header_, min(maxWidth_, lineWidth_), AsciiUtil::leftJustified);
+	//string head = AsciiUtil::fixedWidthString(header_, std::min(maxWidth_, lineWidth_), AsciiUtil::leftJustified);
 
 	glTranslated(padLeft_ + borderWidth_/2.0, getDisplayHeight() - borderWidth_/2.0 - headerPadTop_ - font_.getFontHeight(), 0);
 	//font_.displayString(head.c_str(), COLOR_Green);
@@ -154,7 +154,7 @@ void SubspaceTextBox::drawSeparator() const
 	if(header_.size() == 0)
 		return;
 
-	double drawWidth = min(lineWidth_, maxWidth_) * font_.getFrameWidth();
+	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight = getDisplayHeight() - font_.getFontHeight() - headerPadTop_-headerPadBottom_ - separatorWidth_/2.0;
 
 	glColor4d(borderColor_.r_, borderColor_.g_, borderColor_.b_, borderColor_.a_);

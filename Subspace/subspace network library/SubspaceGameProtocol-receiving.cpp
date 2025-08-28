@@ -10,7 +10,7 @@ void SubspaceGameProtocol::onPacket(SubspacePacket& p)
 {
 	if(p.getByte(0) == 0)
 	{
-		//packetout << "SubspaceGameProtocol::handleReceivedPackets - Error: Core packet in main protocol" << endl;
+		//packetout << "SubspaceGameProtocol::handleReceivedPackets - Error: Core packet in main protocol" << std::endl;
 		return;
 	}
 
@@ -116,7 +116,7 @@ void SubspaceGameProtocol::onPlayerEntering(SubspacePacket& p)
 		PacketLog::log("queue: Player[%d] = %s\n", cmd->p.playerID, tmp.c_str());
 
 		//this->log("Player entering: %s (%d)", data.info.name.c_str(), data.info.playerID);
-		//debugout << "Player entering: " << data.info.name << " (" << data.info.playerID << ")" << endl;
+		//debugout << "Player entering: " << data.info.name << " (" << data.info.playerID << ")" << std::endl;
 	
 		remaining = others;
 	}

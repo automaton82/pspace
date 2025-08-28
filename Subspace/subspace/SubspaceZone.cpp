@@ -1259,7 +1259,7 @@ Uint SubspaceZone::getNumPrizesMax() const
 
 	long total = IMULHIDWORD(arenaSettings_.PrizeFactor * getNumPlayers(), cosmicPrize);
 	total = (total >> 6) + (((Uint32)total) >> 31);
-	total = min(total, 256);
+	total = std::min(total, 256);
 
 	long created = total - getNumPrizes();
 

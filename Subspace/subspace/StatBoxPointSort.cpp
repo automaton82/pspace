@@ -20,7 +20,7 @@ void StatBoxPointSort::init(const SubspacePlayerMap& playerMap, const SubspacePl
 	pointSort(textBox_, players_, playerMap, myPlayer);
 
 	topDisplayIndex_ = 0;
-	bottomDisplayIndex_ = min(statBoxSize_-1, textBox_.size()-1);	
+	bottomDisplayIndex_ = std::min(statBoxSize_-1, textBox_.size()-1);	
 	textBox_.setLinesDisplayed(statBoxSize_);
 }
 

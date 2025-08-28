@@ -7,7 +7,16 @@
 #include <cstring>
 #include <sstream>
 
-#define max(a, b)  (((a) > (b)) ? (a) : (b)) 
+#include "AsciiUtil.h"
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <sstream>
+#include <algorithm>
+
+// Remove this problematic macro definition - we'll use std::max instead
+// #define max(a, b)  (((a) > (b)) ? (a) : (b)) 
 
 namespace AsciiUtil
 {
@@ -93,7 +102,7 @@ string itoaFixed(int number, int width, int radix)
 	
 	val = buffer.str();
 
-	retval = filledString( max(0, width-(int)val.size()), '0') + val.substr(0, width);
+	retval = filledString( std::max(0, width-(int)val.size()), '0') + val.substr(0, width);
 	/*for(i = 0; i < width - (int)val.size(); ++i)
 	{												//insert zeros
 		retval += '0';

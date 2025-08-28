@@ -18,6 +18,6 @@ void StatBoxPlayerSortPoints::init(const SubspacePlayerMap& playerMap, const Sub
 	playerSort(textBox_, players_, playerMap, myPlayer, true);
 
 	topDisplayIndex_ = 0;
-	bottomDisplayIndex_ = min(statBoxSize_-1, textBox_.size()-1);	
+	bottomDisplayIndex_ = std::min(statBoxSize_-1, textBox_.size()-1);	
 	textBox_.setLinesDisplayed(statBoxSize_);
 }

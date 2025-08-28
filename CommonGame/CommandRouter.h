@@ -15,7 +15,7 @@ public:
 	
 	void handleCommand(CommandType* command, CommandGenerator<ListenerType>* from = 0)
 	{
-		cout << "Routing command..." << endl;
+		cout << "Routing command..." << std::endl;
 		ListenerList::iterator i;
 		for(i = listeners_.begin(); i != listeners_.end(); ++i)
 		{

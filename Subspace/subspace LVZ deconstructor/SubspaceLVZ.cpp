@@ -44,7 +44,7 @@ bool SubspaceLVZ::load(const string& filename, const string& outputPath, bool sa
 	file = fopen(filename.c_str(), "rb");
 	if(!file)
 	{	
-		cout << "Failed to open file \"" << filename << "\"." << endl;
+		cout << "Failed to open file \"" << filename << "\"." << std::endl;
 		return false;
 	}
 
@@ -55,12 +55,12 @@ bool SubspaceLVZ::load(const string& filename, const string& outputPath, bool sa
 	bytesRead = fread((char*)&fileHeader, 1, sizeof(fileHeader), file);
 	if(bytesRead != sizeof(fileHeader))
 	{
-		cout << "Invalid file header." << endl;
+		cout << "Invalid file header." << std::endl;
 		return false;
 	}
 	if(!fileHeader.fileType == contTypeName.u)
 	{
-		cout << "Not an LVZ file." << endl;
+		cout << "Not an LVZ file." << std::endl;
 		return false;
 	}
 	
@@ -111,7 +111,7 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 	size_t bytesRead = fread((char*)&fileObject, 1, sizeof(fileObject), file);
 	if(bytesRead != sizeof(fileObject))
 	{
-		cout << "Invalid compressed header." << endl;
+		cout << "Invalid compressed header." << std::endl;
 		return false;
 	}
 	if(verbose_)
@@ -119,7 +119,7 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 		cout << "File object: compressed=" << fileObject.compressedSize 
 				<< "  decompressed=" << fileObject.decompressedSize 
 				<< "  timestamp=" << fileObject.timestamp 
-				<< endl;
+				<< std::endl;
 	}
 
 	// read filename
@@ -136,9 +136,9 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 	if(verbose_)
 	{
 		if(filename.size() > 0)
-			cout << "Filename: " << filename << endl;
+			cout << "Filename: " << filename << std::endl;
 		else
-			cout << "Script object." << endl;
+			cout << "Script object." << std::endl;
 	}
 
 	// read compressed data
@@ -146,7 +146,7 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 	bytesRead = fread((char*)compressedData, 1, fileObject.compressedSize, file);
 	if(bytesRead != fileObject.compressedSize)
 	{
-		cout << "Invalid compressed data." << endl;
+		cout << "Invalid compressed data." << std::endl;
 		return false;
 	}
 
@@ -166,7 +166,7 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 
 	if(size != fileObject.decompressedSize)
 	{
-		cout << "Incorrect decompressed: size=" << size << ", decompressedSize=" << fileObject.decompressedSize << endl;
+		cout << "Incorrect decompressed: size=" << size << ", decompressedSize=" << fileObject.decompressedSize << std::endl;
 		return false;
 	}
 
@@ -182,7 +182,7 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 
 		if(b1 == filename_.npos) b1 = filename_.length();
 		if(b2 == filename_.npos) b2 = filename_.length();
-		size_t nameStart = min(b1, b2);
+		size_t nameStart = std::min(b1, b2);
 
 		if(nameStart == filename_.npos)
 			nameStart = 0;
@@ -220,7 +220,7 @@ size_t SubspaceLVZ::loadCLVObject(unsigned char* data)
 		mapObjects_.push_back( *map );
 
 		if(verbose_)
-			cout << "Map object: [" << map->objectID << "] (" << map->xCoord << "," << map->yCoord << "), image[" << map->imageID << "] " << endl;		
+			cout << "Map object: [" << map->objectID << "] (" << map->xCoord << "," << map->yCoord << "), image[" << map->imageID << "] " << std::endl;		
 	}
 	else
 	{
@@ -231,7 +231,7 @@ size_t SubspaceLVZ::loadCLVObject(unsigned char* data)
 			cout << "Screen object: [" << screen->objectID << "] (" 
 				<< screen->xType << "," << screen->yType << ":" 
 				<< screen->xCoord << "," << screen->yCoord 
-				<< "), image[" << screen->imageID << "] " << endl;
+				<< "), image[" << screen->imageID << "] " << std::endl;
 		}
 	}
 
@@ -256,7 +256,7 @@ size_t SubspaceLVZ::loadImageObject(unsigned char* data)
 		c = data[offset++];
 	}
 	if(verbose_)
-		cout << "Image object: [" << imgID++ << "] " << filename << endl;
+		cout << "Image object: [" << imgID++ << "] " << filename << std::endl;
 
 	imageFiles_.push_back(filename);
 
@@ -271,11 +271,11 @@ bool SubspaceLVZ::loadScriptObject(unsigned char* data, size_t size)
 	offset += sizeof(LVZScriptHeader);
 
 	if(verbose_)
-		cout << scriptHeader->numObjects << " objects, " << scriptHeader->numImages << " images." << endl;
+		cout << scriptHeader->numObjects << " objects, " << scriptHeader->numImages << " images." << std::endl;
 
     if(scriptHeader->objectType == objectTypeCLV1.u)
 	{
-		cout << "CLV1 objects found." << endl;
+		cout << "CLV1 objects found." << std::endl;
 		for(int i=0; i < scriptHeader->numObjects; ++i)
 		{
 			objSize = loadCLVObject(&data[offset]);
@@ -287,7 +287,7 @@ bool SubspaceLVZ::loadScriptObject(unsigned char* data, size_t size)
 	}
 	else if(scriptHeader->objectType == objectTypeCLV2.u)
 	{
-		cout << "CLV2 objects found." << endl;
+		cout << "CLV2 objects found." << std::endl;
 		for(int i=0; i < scriptHeader->numObjects; ++i)
 		{
 			objSize = loadCLVObject(&data[offset]);
@@ -299,7 +299,7 @@ bool SubspaceLVZ::loadScriptObject(unsigned char* data, size_t size)
 	}
 	else
 	{
-		cout << "Unknown LVZ script type: " << scriptHeader->objectType << endl;
+		cout << "Unknown LVZ script type: " << scriptHeader->objectType << std::endl;
 		return false;
 	}
 
@@ -308,7 +308,7 @@ bool SubspaceLVZ::loadScriptObject(unsigned char* data, size_t size)
 	{
 		cout << (char)data[k];
 	}
-	cout << endl;*/
+	cout << std::endl;*/
 
 	for(int j=0; j < scriptHeader->numImages; ++j)
 	{
@@ -328,7 +328,7 @@ bool SubspaceLVZ::saveData(const string& filename, unsigned char* data, size_t s
 	file = fopen(filename.c_str(), "wb");
 	if(!file)
 	{
-		cout << "Failed to save file \"" << filename << "\"." << endl;
+		cout << "Failed to save file \"" << filename << "\"." << std::endl;
 		return false;
 	}
 
@@ -336,12 +336,12 @@ bool SubspaceLVZ::saveData(const string& filename, unsigned char* data, size_t s
 	bytesWritten = fwrite(data, 1, size, file);
 	if(bytesWritten != size)
 	{
-		cout << "Error writing to file \"" << filename << "\"." << endl;
+		cout << "Error writing to file \"" << filename << "\"." << std::endl;
 		fclose(file);
 		return false;
 	}
 
-	cout << "Saved file \"" << filename << "\"." << endl;
+	cout << "Saved file \"" << filename << "\"." << std::endl;
 
 	fclose(file);
 	return true;
@@ -371,7 +371,7 @@ bool SubspaceLVZ::uncompressLVZ(unsigned char* compressedData, size_t compressed
 
 	if(status < Z_OK)
 	{
-		cout << "Error decompressing data." << endl;
+		cout << "Error decompressing data." << std::endl;
 		return false;
 	}
 	

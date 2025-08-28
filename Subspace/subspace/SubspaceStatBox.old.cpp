@@ -158,9 +158,9 @@ void SubspaceStatBox::selectPlayerIndex(Uint index)
 		else if(index+teamOffset > currentIndex+statBoxSize_)	//scroll down
 		{
 			int tempIndex = (int)index-(int)statBoxSize_+1;
-			tempIndex = max(0, tempIndex);
+			tempIndex = std::max(0, tempIndex);
 			pages_[mode_].setLinesDisplayed(tempIndex+teamOffset, statBoxSize_);	
-			topPlayerIndex_ = max(0, (int)index - (int)statBoxSize_);
+			topPlayerIndex_ = std::max(0, (int)index - (int)statBoxSize_);
 		}
 		else
 		{
@@ -172,9 +172,9 @@ void SubspaceStatBox::selectPlayerIndex(Uint index)
 				index = pagePlayers_[mode_].size()-1;
 
 				teamOffset = getPlayerTeamIndex(mode_, pagePlayers_[mode_][index])+1;
-				int startLine = max(0, (int)index+(int)teamOffset-(int)min(statBoxSize_, pages_[mode_].size())+1);
+				int startLine = std::max(0, (int)index+(int)teamOffset-(int)std::min(statBoxSize_, pages_[mode_].size())+1);
 				pages_[mode_].setLinesDisplayed(startLine, statBoxSize_);	
-				topPlayerIndex_ = max(0, (int)index - (int)statBoxSize_);
+				topPlayerIndex_ = std::max(0, (int)index - (int)statBoxSize_);
 			}
 			/*else if(statBoxSize_ != 1)
 				pages_[mode_].setLinesDisplayed(topPlayerIndex_+teamOffset, statBoxSize_);	*/

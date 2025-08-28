@@ -48,7 +48,7 @@ double SubspaceZone::handleMapCollisionsHelper(double time, const Vector& oldPos
 
     while(moveDist.x_ + moveDist.y_ > TOLERANCE)
 	{														//check every increment (largest is a whole tile)
-		xDist = min(fabs(moveDist.x_), SubspaceMap::tileWidth - TOLERANCE);		//move maximum of 1 tile
+		xDist = std::min(fabs(moveDist.x_), SubspaceMap::tileWidth - TOLERANCE);		//move maximum of 1 tile
 		incs.x_ = xDist * sign(newVelocity.x_);
 			
 		if(newVelocity.x_ == 0)
@@ -56,7 +56,7 @@ double SubspaceZone::handleMapCollisionsHelper(double time, const Vector& oldPos
 		else
 			xTime = fabs(xDist / newVelocity.x_);
 				
-		yDist = min(fabs(moveDist.y_), SubspaceMap::tileHeight - TOLERANCE);
+		yDist = std::min(fabs(moveDist.y_), SubspaceMap::tileHeight - TOLERANCE);
 		incs.y_ = yDist * sign(newVelocity.y_);
 		
 		if(newVelocity.y_ == 0)
@@ -341,13 +341,13 @@ void SubspaceZone::calcDistanceStep(double time, const Vector& vel, Vector& incr
 	//ignore z component in subspace
 	if(fabs(vel.x_) > fabs(vel.y_))	
 	{						//larger increment is in x
-		increments.x_ = min(SubspaceMap::tileWidth - TOLERANCE, fabs(vel.x_*time)) * sign(vel.x_);
+		increments.x_ = std::min(SubspaceMap::tileWidth - TOLERANCE, fabs(vel.x_*time)) * sign(vel.x_);
 		//increments.x_ = vel.x_*time;
 		increments.y_ = vel.y_/vel.x_ * increments.x_;
 	}
 	else
 	{						//larger increment is in y
-		increments.y_ = min(SubspaceMap::tileHeight - TOLERANCE, fabs(vel.y_*time)) * sign(vel.y_);
+		increments.y_ = std::min(SubspaceMap::tileHeight - TOLERANCE, fabs(vel.y_*time)) * sign(vel.y_);
 		//increments.y_ = vel.y_*time;
 		increments.x_ = vel.x_/vel.y_ * increments.y_;
 	}
@@ -373,7 +373,7 @@ double SubspaceZone::calcDistanceToTile(double pos, double vel, double tileSize)
 	/*if(dist == 0)
 		dist = tileSize - dist;*/
 		
-	//dist = min(fabs(fmod(pos, tileSize)), tileSize - fabs(fmod(pos, tileSize)) );
+	//dist = std::min(fabs(fmod(pos, tileSize)), tileSize - fabs(fmod(pos, tileSize)) );
 
 	return dist;
 }
@@ -440,7 +440,7 @@ void SubspaceZone::handleMapObjectCollisions()
 				}
 				else
 				{
-					debugout << "Unknown object type" << endl;
+					debugout << "Unknown object type" << std::endl;
 				}
 			}
 		}

@@ -19,7 +19,7 @@ void StatBoxTeamStats::init(const SubspacePlayerMap& playerMap, const SubspacePl
 	teamStatistics(textBox_, players_, playerMap, myPlayer);
 	
 	topDisplayIndex_ = 0;
-	bottomDisplayIndex_ = min(statBoxSize_-1, textBox_.size()-1);
+	bottomDisplayIndex_ = std::min(statBoxSize_-1, textBox_.size()-1);
 	textBox_.setLinesDisplayed(statBoxSize_);
 	//textBox_.etHeader(itoa(players_.size()), COLOR_Green);
 }

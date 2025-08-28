@@ -131,12 +131,12 @@ void SubspaceHud::init()
 	/*string helpfile = "config/Commands.hlp";
 	if(!help_->load(helpfile))
 	{
-		//debugout << "Failed to load help file \"" << helpfile << "\"" << endl;
+		//debugout << "Failed to load help file \"" << helpfile << "\"" << std::endl;
 		printf("Failed to load help file \"%s\"\n", helpfile.c_str());
 	}
 	else
 	{
-		//debugout << "Loaded help file \"" << helpfile << "\"" << endl;
+		//debugout << "Loaded help file \"" << helpfile << "\"" << std::endl;
 		printf("Loaded help file \"%s\"\n", helpfile.c_str());
 	}*/
 }

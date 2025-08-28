@@ -105,12 +105,12 @@ void SubspaceHud::init()
 	string helpfile = "config/Commands.hlp";
 	if(!helpBox_.load(helpfile))
 	{
-		debugout << "Failed to load help file \"" << helpfile << "\"" << endl;
+		debugout << "Failed to load help file \"" << helpfile << "\"" << std::endl;
 		//printf("Failed to load help file \"%s\"\n", helpfile.c_str());
 	}
 	else
 	{
-		debugout << "Loaded help file \"" << helpfile << "\"" << endl;
+		debugout << "Loaded help file \"" << helpfile << "\"" << std::endl;
 		//printf("Loaded help file \"%s\"\n", helpfile.c_str());
 	}
 }
@@ -159,7 +159,7 @@ void SubspaceHud::scrollDown()
 
 void SubspaceHud::scrollUpFast()
 {
-	Uint scroll = min(selectedIndex_, subspaceGlobal.getVar("statBoxSize")-1);
+	Uint scroll = std::min(selectedIndex_, subspaceGlobal.getVar("statBoxSize")-1);
 	if(scroll > selectedIndex_)
 		selectedIndex_ = 0;
 	else
@@ -172,7 +172,7 @@ void SubspaceHud::scrollUpFast()
 
 void SubspaceHud::scrollDownFast()
 {
-	Uint scroll = min(statBox_.size(), subspaceGlobal.getVar("statBoxSize")-1);
+	Uint scroll = std::min(statBox_.size(), subspaceGlobal.getVar("statBoxSize")-1);
 	if(selectedIndex_+scroll >= statBox_.size())
 		selectedIndex_ = statBox_.size()-1;
 	else
@@ -184,7 +184,7 @@ void SubspaceHud::scrollDownFast()
 
 void SubspaceHud::setStatboxSize(Uint size)
 {
-	size = max(1, min(50, size));
+	size = std::max(1, std::min(50, size));
 
 	statBox_.setBoxSize(size);
 }
@@ -228,7 +228,7 @@ void SubspaceHud::initInfoBox(Uint mode)
 
 	statBox_.setMode(mode-1);
 	Uint val = subspaceGlobal.getVar("statBoxSize");
-	val = max(1, min(50, val));
+	val = std::max(1, std::min(50, val));
 	statBox_.setBoxSize(val);
 
 	if(players_ && player_)
@@ -317,7 +317,7 @@ void SubspaceHud::infoBoxPlayerSort(bool showPoints)
 	newBox.setWidth(12+1);
 	if(showPoints)
 		newBox.setWidth(20+1);
-	newBox.setHeight(min(20, team.size()+others.size()+1+1));
+	newBox.setHeight(std::min(20, team.size()+others.size()+1+1));
 
 	newBox.setBackgroundColor(Color(0.05, 0.1, 0.05, 0.9));
 
@@ -388,7 +388,7 @@ void SubspaceHud::infoBoxPointSort()
 	}
 	
 	newBox.setWidth(12+12+1);
-	newBox.setHeight(min(20, playerList.size()+1));
+	newBox.setHeight(std::min(20, playerList.size()+1));
 
 	newBox.setBackgroundColor(Color(0.05, 0.1, 0.05, 0.9));
 
@@ -472,7 +472,7 @@ void SubspaceHud::infoBoxTeamSort()
 	newBox.setColumnHeader(0, fixedWidthString(fwStrings), centered, COLOR_Green);
 	
 	newBox.setWidth(21);
-	newBox.setHeight(min(20, numPlayers+numTeams+1));
+	newBox.setHeight(std::min(20, numPlayers+numTeams+1));
 
 	newBox.setBackgroundColor(Color(0.05, 0.1, 0.05, 0.9));
 
@@ -572,7 +572,7 @@ void SubspaceHud::infoBoxPlayerExtendedSort()
 	newBox.setColumnHeader(0, fixedWidthString(fwStrings), leftJustified, COLOR_Green);
 	
 	newBox.setWidth(42);
-	newBox.setHeight(min(20, team.size()+others.size()+1+1));
+	newBox.setHeight(std::min(20, team.size()+others.size()+1+1));
 
 	newBox.setBackgroundColor(Color(0.05, 0.1, 0.05, 0.9));
 
@@ -655,7 +655,7 @@ void SubspaceHud::infoBoxTeamStatistics()
 	newBox.setColumnHeader(0, fixedWidthString(fwStrings), leftJustified, COLOR_Green);
 		
 	newBox.setWidth(34);
-	newBox.setHeight(min(20, numTeams+1));
+	newBox.setHeight(std::min(20, numTeams+1));
 
 	newBox.setBackgroundColor(Color(0.05, 0.1, 0.05, 0.9));
 
@@ -746,8 +746,8 @@ void SubspaceHud::initRadar()
 	if(width==0 && height==0)
 		return;
 
-	width = min(SubspaceMap::maxTileX, width);
-	height = min(SubspaceMap::maxTileY, height);
+	width = std::min(SubspaceMap::maxTileX, width);
+	height = std::min(SubspaceMap::maxTileY, height);
 
 	char* pixels = new char[width * height * 4];
 	//memset(pixels, 0, width*height*4);
@@ -846,7 +846,7 @@ void SubspaceHud::initRadar()
 		}
 	}
 
-	debugout << "done." << endl;
+	debugout << "done." << std::endl;
 	//printf("done.\n");
 
 	radarTextureData_.loadFromMemory(pixels, width, height, false);
@@ -928,7 +928,7 @@ void SubspaceHud::setMessageLines(Uint lines)
 		//format the name
 		for(n=strlen(chatMessage.sender.c_str()); n < nameWidth_; ++n)		//append spaces to short names
 			name += ' ';
-		for(n=0; n < min(strlen(chatMessage.sender.c_str()), nameWidth_); ++n)
+		for(n=0; n < std::min(strlen(chatMessage.sender.c_str()), nameWidth_); ++n)
 			name += chatMessage.sender[n];
 
 		//set header
@@ -1289,10 +1289,10 @@ void SubspaceHud::drawInfoBox() const
 			glEnable(GL_TEXTURE_2D);
 			glColor4d(1.0, 1.0, 1.0, 1.0);		//TODO: change this stuff to use map variables
 			//map_->setDrawRange(pos.x_/16-drawWidth,  pos.y_/16-drawHeight, drawWidth*2, drawHeight*2);
-			int xstart = max(0, pos.x_/16-drawWidth);
-			int ystart = max(0, pos.y_/16-drawHeight);
-			int xend = max(0, pos.x_/16+drawWidth);
-			int yend = max(0, pos.y_/16+drawHeight);
+			int xstart = std::max(0, pos.x_/16-drawWidth);
+			int ystart = std::max(0, pos.y_/16-drawHeight);
+			int xend = std::max(0, pos.x_/16+drawWidth);
+			int yend = std::max(0, pos.y_/16+drawHeight);
 
 			map_->setDrawRange(xstart, ystart, xend, yend);
 			//map_->setDrawRange(pos.x_/16-drawWidth,  pos.y_/16-drawHeight, pos.x_/16+drawWidth, pos.y_/16+drawHeight);
@@ -1382,11 +1382,11 @@ void SubspaceHud::drawRadar() const
 			//xPos = floor(xPos);
 			//yPos = floor(yPos);
 
-			xPos = max(0, (double)xPos - radarDisplayWidth_/2.0);
-			yPos = max(0, (double)yPos - radarDisplayHeight_/2.0);
+			xPos = std::max(0, (double)xPos - radarDisplayWidth_/2.0);
+			yPos = std::max(0, (double)yPos - radarDisplayHeight_/2.0);
 
-			xPos = min(SubspaceMap::maxTileX-radarDisplayWidth_, xPos);
-			yPos = min(SubspaceMap::maxTileY-radarDisplayHeight_, yPos);
+			xPos = std::min(SubspaceMap::maxTileX-radarDisplayWidth_, xPos);
+			yPos = std::min(SubspaceMap::maxTileY-radarDisplayHeight_, yPos);
 		}
 
 		double w = (double)SubspaceMap::maxTileX;
@@ -1426,8 +1426,8 @@ void SubspaceHud::drawRadarInfo() const
 			objectToTileCoords(player_->getSubspacePosition(), &xPos, &yPos);
 		}
 
-		xPos = min(1024, max(0, xPos));
-		yPos = min(1024, max(0, yPos));
+		xPos = std::min(1024, std::max(0, xPos));
+		yPos = std::min(1024, std::max(0, yPos));
 
 		//coordinates
 		string coordStr;

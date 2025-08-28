@@ -77,7 +77,7 @@ bool Socket::sendData(const char* buffer, int bufferSize)
 
 	if(result == SOCKET_ERROR)
 	{
-		cout << "Error: Socket.sendData(): " << getLastWindowsError() << endl;
+		cout << "Error: Socket.sendData(): " << getLastWindowsError() << std::endl;
 		return false;
 	}
 	else 
@@ -101,7 +101,7 @@ bool Socket::receiveData(char* buffer, int bufferSize, int* bytesReceived)
 	if(result == SOCKET_ERROR || result < 0)
 	{
 		string error = getLastWindowsError();
-		cout << "Error: Socket.receiveData(): " << getLastWindowsError() << endl;
+		cout << "Error: Socket.receiveData(): " << getLastWindowsError() << std::endl;
 
 		if(bytesReceived) *bytesReceived = 0;
 		return false;

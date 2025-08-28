@@ -63,7 +63,7 @@ SubspaceZone::~SubspaceZone()
 	
 	//TODO: delete object lists and such
 	//printf("Deconstructing zone...\n");
-	//debugout << "Deconstructing zone..." << endl;
+	//debugout << "Deconstructing zone..." << std::endl;
 }
 
 void SubspaceZone::init()
@@ -797,11 +797,11 @@ void SubspaceZone::initFlag(int flagID)
 {
 	if(flags_.find(flagID) != flags_.end())
 	{
-		debugout << "Flag " << flagID << " already exists." << endl;
+		debugout << "Flag " << flagID << " already exists." << std::endl;
 	}
 	else
 	{
-		debugout << "Created flag " << flagID << endl;
+		debugout << "Created flag " << flagID << std::endl;
 
 		flags_[flagID] = new SubspaceFlag();
 		flags_[flagID]->setFlagID(flagID);
@@ -819,7 +819,7 @@ void SubspaceZone::initFlags()
 		//debugout << (*i).first << " ";
 		debugout.write(printfString("%d ", (*i).first));
 	}
-	debugout << "." << endl;
+	debugout << "." << std::endl;
 }
 
 void SubspaceZone::updateFlagTeams()
@@ -867,7 +867,7 @@ void SubspaceZone::playerGotFlag(int playerID, int flagID)
 
 	if(flagID >= (int)flags_.size())
 	{
-		debugout << "Error: invalid flag id [" << flagID << "]" << endl;
+		debugout << "Error: invalid flag id [" << flagID << "]" << std::endl;
 		return;
 	}
 	
@@ -898,7 +898,7 @@ void SubspaceZone::playerGotFlag(int playerID, int flagID)
 		flag->setIsMyTeamFlag(player->getTeam() == getMyPlayer()->getTeam());
 		player->giveFlag(flag);
 
-		debugout << "Player [" << playerID << "] received flag [" << flagID << "]" << endl;
+		debugout << "Player [" << playerID << "] received flag [" << flagID << "]" << std::endl;
 	}
 }
 
@@ -947,7 +947,7 @@ void SubspaceZone::playerRequestFlag(int playerID, int flagID)
 	initFlag(flagID);	
 	SubspaceFlag* flag = flags_[flagID];
 
-	debugout << "Player [" << playerID << "] requested flag [" << flagID << "]" << endl;
+	debugout << "Player [" << playerID << "] requested flag [" << flagID << "]" << std::endl;
 
 	if(!flag->isActive() || flag->isCarried())
 		return;
@@ -993,12 +993,12 @@ void SubspaceZone::initBall(int ballID)
 {
 	if(balls_[ballID])
 	{
-		debugout << "Ball " << ballID << " already exists." << endl;
+		debugout << "Ball " << ballID << " already exists." << std::endl;
 		//printf("Ball %d already exists.", ballID);
 	}
 	else
 	{
-		debugout << "Created ball " << ballID << endl;
+		debugout << "Created ball " << ballID << std::endl;
 		//printf("Created ball %d\n", ballID);
 		balls_[ballID] = new SubspaceBall();
 		balls_[ballID]->setBallID(ballID);
@@ -1030,7 +1030,7 @@ void SubspaceZone::setBall(int ballID, int ownerID, const Vector& position, cons
 
 	SubspacePlayer* player = getPlayer(ownerID);
 
-	//debugout << "Ball [" << ballID << "] carried by " << ownerID << ", at (" << position.x_ << "," << position.y_ << "):(" << velocity.x_ << "," << velocity.y_ << "); time: " << timestamp << endl;
+	//debugout << "Ball [" << ballID << "] carried by " << ownerID << ", at (" << position.x_ << "," << position.y_ << "):(" << velocity.x_ << "," << velocity.y_ << "); time: " << timestamp << std::endl;
 	
 	//debugout.write(printfString("Ball [%d] carried by %d, at (%f,%f):(%f,%f); time: %d\n", ballID, ownerID, position.x_, position.y_, velocity.x_, velocity.y_, timestamp));
 	//printf("Ball [%d] carried by %d, at (%f,%f):(%f,%f); time: %d\n", ballID, ownerID, position.x_, position.y_, velocity.x_, velocity.y_, timestamp);
@@ -1089,7 +1089,7 @@ void SubspaceZone::updatePrizes(double time)
 	prizeGenerator_.setPopulation(getNumPlayers());
 
 	//TODO: make this use an actual timer
-	Uint16 delay = max(arenaSettings_.PrizeDelay, 1);
+	Uint16 delay = std::max(arenaSettings_.PrizeDelay, 1);
 	int iterations = (GetTickCount() / 10 - lastPrizeUpdate_) / delay;
 	for(int i=0; i < iterations; ++i)
 	{
@@ -1126,7 +1126,7 @@ void SubspaceZone::spawnPrize(Vector* pos)
 	{
 		//displayManager_[MapItemLayer].addObject(p);
 
-		//debugout << "Spawned prize [" << p->getPrizeType() << "] at (" << x << "," << y << ")" << endl;
+		//debugout << "Spawned prize [" << p->getPrizeType() << "] at (" << x << "," << y << ")" << std::endl;
 		//printf("Spawned prize [%d] at (%d, %d)\n", p->getPrizeType(), x, y);
 		++numPrizes_;
 	}
@@ -1166,7 +1166,7 @@ Uint SubspaceZone::getNumPrizesMax() const
 
 	long total = IMULHIDWORD(arenaSettings_.PrizeFactor * getNumPlayers(), cosmicPrize);
 	total = (total >> 6) + (((Uint32)total) >> 31);
-	total = min(total, 256);
+	total = std::min(total, 256);
 
 	long created = total - getNumPrizes();
 
@@ -1507,7 +1507,7 @@ void SubspaceZone::createTurret(int requesterID, int destinationID)
 
 	requester->setTurretParent(destination);
 	
-	debugout << "Turret link created: " << requesterID << " on " << destinationID << endl;
+	debugout << "Turret link created: " << requesterID << " on " << destinationID << std::endl;
 }
 
 void SubspaceZone::destroyTurret(int playerID)
@@ -1515,10 +1515,10 @@ void SubspaceZone::destroyTurret(int playerID)
 	SubspacePlayer* player = getPlayer(playerID);
 	
 	if(!player)
-		debugout << "Invalid turret destruction: player [" << playerID << "]" << endl;
+		debugout << "Invalid turret destruction: player [" << playerID << "]" << std::endl;
 	else
 	{
-		debugout << "Destroy turret link on player [" << playerID << "]" << endl;
+		debugout << "Destroy turret link on player [" << playerID << "]" << std::endl;
 		//player->setTurretParent(0);	
 		if(getMyPlayer()->getTurretParent() == player)
 			requestTurret((Uint16)-1);
@@ -1529,7 +1529,7 @@ void SubspaceZone::destroyTurret(int playerID)
 
 void SubspaceZone::requestTurret(int playerID)
 {
-	debugout << "Requested attach to player [" << playerID << "]" << endl;
+	debugout << "Requested attach to player [" << playerID << "]" << std::endl;
 
 	SubspacePlayer* p = getPlayer(playerID);
 	if(p && p->getTeam() != getMyPlayer()->getTeam())
@@ -1684,13 +1684,13 @@ void SubspaceZone::draw()
 	int drawWidth = 70;
 	int drawHeight = drawWidth * 3 / 4;
 
-	double xtemp = max(0, (int)playerCamera.getPosition().x_/SubspaceMap::tileWidth*SubspaceMap::tileWidth-(double)(drawWidth*SubspaceMap::tileWidth));	//weird, but only draw tiles every tileWidth/height
-	double ytemp = max(0, (int)playerCamera.getPosition().y_/SubspaceMap::tileHeight*SubspaceMap::tileHeight-(double)(drawHeight*SubspaceMap::tileHeight));
+	double xtemp = std::max(0, (int)playerCamera.getPosition().x_/SubspaceMap::tileWidth*SubspaceMap::tileWidth-(double)(drawWidth*SubspaceMap::tileWidth));	//weird, but only draw tiles every tileWidth/height
+	double ytemp = std::max(0, (int)playerCamera.getPosition().y_/SubspaceMap::tileHeight*SubspaceMap::tileHeight-(double)(drawHeight*SubspaceMap::tileHeight));
 	
-	int xstart = max(-1, (int)playerCamera.getPosition().x_/16-drawWidth);
-	int xend = max(-1, (int)playerCamera.getPosition().x_/16+drawWidth);
-	int ystart = max(-1, (int)playerCamera.getPosition().y_/16-drawHeight);
-	int yend = max(-1, (int)playerCamera.getPosition().y_/16+drawHeight);
+	int xstart = std::max(-1, (int)playerCamera.getPosition().x_/16-drawWidth);
+	int xend = std::max(-1, (int)playerCamera.getPosition().x_/16+drawWidth);
+	int ystart = std::max(-1, (int)playerCamera.getPosition().y_/16-drawHeight);
+	int yend = std::max(-1, (int)playerCamera.getPosition().y_/16+drawHeight);
 	//map_.setDrawRange(temp.getPosition().x_/16-drawWidth,  temp.getPosition().y_/16-drawHeight, drawWidth*2, drawHeight*2);
 	//map_.setDrawRange((int)(temp.getPosition().x_/16)-(int)drawWidth,  (int)(temp.getPosition().y_/16)-(int)drawHeight, (int)temp.getPosition().x_/16+drawWidth, (int)temp.getPosition().y_/16+(int)drawHeight);
 

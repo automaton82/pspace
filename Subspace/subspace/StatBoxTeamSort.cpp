@@ -37,7 +37,7 @@ void StatBoxTeamSort::init(const SubspacePlayerMap& playerMap, const SubspacePla
 	numPlayers_ = playerMap.size();
 
 	topDisplayIndex_ = 0;
-	bottomDisplayIndex_ = min(statBoxSize_-1, textBox_.size()-1);
+	bottomDisplayIndex_ = std::min(statBoxSize_-1, textBox_.size()-1);
 	textBox_.setLinesDisplayed(statBoxSize_);
 	//textBox_.etHeader(itoa(players_.size()), COLOR_Green);
 }
@@ -118,7 +118,7 @@ void StatBoxTeamSort::increaseSize()
 
 void StatBoxTeamSort::pageDown()
 {
-	selectedPlayerIndex_ = max(selectedPlayerIndex_+textBox_.getLinesDisplayed(), textBox_.getLinesDisplayed());		// correction for integer wrapping around
+	selectedPlayerIndex_ = std::max(selectedPlayerIndex_+textBox_.getLinesDisplayed(), textBox_.getLinesDisplayed());		// correction for integer wrapping around
 	if(players_[selectedPlayerIndex_].getId() == INVALID_ID)			//hit header, move to next
 		--selectedPlayerIndex_;
 
@@ -152,7 +152,7 @@ void StatBoxTeamSort::pageUp()
 		topDisplayIndex_ = selectedPlayerIndex_;
 	}
 
-	bottomDisplayIndex_ = min(topDisplayIndex_ + textBox_.getLinesDisplayed(), textBox_.size()-1);
+	bottomDisplayIndex_ = std::min(topDisplayIndex_ + textBox_.getLinesDisplayed(), textBox_.size()-1);
 
 	textBox_.setLineDisplayOffset(topDisplayIndex_);
 }

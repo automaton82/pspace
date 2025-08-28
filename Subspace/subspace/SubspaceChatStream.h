@@ -53,7 +53,7 @@ public:
 	SubspaceChatStream& operator<< (SubspaceChatStream& (*pf)(SubspaceChatStream&)) { (*pf)(*this); return (*this); }
 	
 	//Manipulators
-	friend SubspaceChatStream& endl(SubspaceChatStream& s)	{ s.put('\n'); s.flush(); return s; }
+	friend SubspaceChatStream& std::endl(SubspaceChatStream& s)	{ s.put('\n'); s.flush(); return s; }
 	friend SubspaceChatStream& ends(SubspaceChatStream& s)	{ s.flush(); return s; }
 
 public:

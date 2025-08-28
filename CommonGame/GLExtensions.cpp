@@ -21,7 +21,7 @@ bool initWGLExtensions(bool verbose)
 	wglGetExtensionsStringARB = (PFNWGLGETEXTENSIONSSTRINGARBPROC)wglGetProcAddress(“wglGetExtensionsStringARB”);
 	if(wglGetExtrensionsStringARB == 0)
 	{
-		cout << "Error: wglGetExtensionsStringARB not supported." << endl;
+		cout << "Error: wglGetExtensionsStringARB not supported." << std::endl;
 		return false;
 	}
 
@@ -29,18 +29,18 @@ bool initWGLExtensions(bool verbose)
 
 	if(verbose)
 	{
-		cout << "Supported extensions: " << endl;
-		cout << extensionsStr << endl;
+		cout << "Supported extensions: " << std::endl;
+		cout << extensionsStr << std::endl;
 	}
 
 #define checkWGLSupport(funcName, funcType) \
 	if(!isExtSupported(extensionsStr, funcName) && !isExtSupported(glExtStr, funcName)) \
-		if(verbose) cout << "Extension string not found, " << funcName << endl; \
+		if(verbose) cout << "Extension string not found, " << funcName << std::endl; \
 	funcName = (funcType)wglGetProcAddress("funcName"); \
 	if(funcName == 0) \
-		if(verbose) cout << "Extension not supported, " << funcName << endl; \
+		if(verbose) cout << "Extension not supported, " << funcName << std::endl; \
 	else \
-		if(verbose) cout << "Extension found, " << funcName << endl;
+		if(verbose) cout << "Extension found, " << funcName << std::endl;
 
 	//pbuffer related stuff
 

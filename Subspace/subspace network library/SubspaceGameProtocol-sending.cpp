@@ -37,10 +37,10 @@ void SubspaceGameProtocol::doServerArenaLogin(const string& arenaName, Uint8 sta
 	SubspacePacket p = arenaLogin(startShip, 1, resX, resY, num, name);		//TODO: make resolution not hardcoded
 
 	//this->log("Logging in to arena \"%s\" (%d)", arenaName.c_str(), arenaNumber);
-	//debugout << "Logging in to arena \"" << name << "\" (" << num << ")" << endl;
+	//debugout << "Logging in to arena \"" << name << "\" (" << num << ")" << std::endl;
 
 	printf("PACKET: Packet Sent, 0x01: Arena Login\n");
-	//packetout << "PACKET: Packet sent, 0x01: Arena Login" << endl;
+	//packetout << "PACKET: Packet sent, 0x01: Arena Login" << std::endl;
 	coreProtocol_.sendPacketReliable(p);
 }
 
@@ -208,9 +208,9 @@ void SubspaceGameProtocol::doServerChecksumData(Uint32 arenaSettingsChecksum, Ui
 	s2cFastCurrent_ = coreProtocol_.getPacketsReceived();
 	Uint16 reliableReceived = coreProtocol_.getReliableReceivedPackets();
 
-	//packetout << "Slow total: " << s2cSlowTotal_ << ", Fast Total: " << s2cFastTotal_ << ", Slow Current: " << s2cSlowCurrent_ << ", Fast Current: " << s2cFastCurrent_ << endl;
-	//packetout << "Reliable received: " << reliableReceived << endl;
-	//packetout << "Weapon count: " << s2cWeaponCount_ << endl;
+	//packetout << "Slow total: " << s2cSlowTotal_ << ", Fast Total: " << s2cFastTotal_ << ", Slow Current: " << s2cSlowCurrent_ << ", Fast Current: " << s2cFastCurrent_ << std::endl;
+	//packetout << "Reliable received: " << reliableReceived << std::endl;
+	//packetout << "Weapon count: " << s2cWeaponCount_ << std::endl;
 	/*printf("Slow total: %d, Fast Total: %d, Slow Current: %d, Fast Current: %d\n", s2cSlowTotal_, s2cFastTotal_, s2cSlowCurrent_, s2cFastCurrent_);
 	printf("Reliable received: %d\n", reliableReceived);
 	printf("Weapon count: %d\n", s2cWeaponCount_);*/
