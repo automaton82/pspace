@@ -1,6 +1,7 @@
 #ifndef _INPUTCOMMANDLISTENER_H_
 #define _INPUTCOMMANDLISTENER_H_
 
+#include "../../CommonGame/CommandListenerBase.h"
 #include "InputEvent.h"
 
 #include "InputCommands.h"

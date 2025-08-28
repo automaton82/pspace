@@ -1,8 +1,7 @@
 #include "HeightMap.h"
+#include "Platform.h"
 
 #include <assert.h>
-
-#include <gl/glaux.h>
 
 HeightMap::HeightMap() : 
 	//scale_(1, 1, 0.1), 

@@ -1,6 +1,9 @@
 //David Millman
 
 #include "TextTable.h"
+#include <algorithm>
+using std::min;
+using std::max;
 
 TextTable::TextTable() :
 	numRows_(0), numCols_(0), displayWidth_(0), displayHeight_(0), rowWidth_(0), columnHeight_(0), 

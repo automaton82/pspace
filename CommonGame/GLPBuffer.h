@@ -1,10 +1,7 @@
 #ifndef _GLPBUFFER_H_
 #define _GLPBUFFER_H_
 
-#include <windows.h>
-
-#include <gl/glaux.h>
-
+#include "Platform.h"
 #include "DataTypes.h"
 
 class GLPBuffer

@@ -2,9 +2,7 @@
 //Computer Graphics
 
 #include "Material.h"
-
-#include <windows.h>
-#include <gl/gl.h>
+#include "Platform.h"
 
 Material::Material()
 {

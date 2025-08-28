@@ -1,9 +1,8 @@
 #include "SoundManager.h"
 
-#include <al/al.h>
-#include <al/alc.h>
-#include <al/alu.h>
-#include <al/alut.h>
+#include <AL/al.h>
+#include <AL/alc.h>
+#include <AL/alut.h>
 
 #include <assert.h>
 
@@ -24,7 +23,7 @@ SoundManager::~SoundManager()
 
 bool SoundManager::init()
 {
-	device_ = alcOpenDevice((ALubyte*)"DirectSound3D");
+	device_ = alcOpenDevice("DirectSound3D");
 	if(!device_)
 		return false;
 

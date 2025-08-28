@@ -28,7 +28,7 @@ public:
 
 	template <class CommandType> void invokeCommand(CommandType* command)
 	{
-		ListenerList::iterator i;
+		typename ListenerList::iterator i;
 		for(i = listeners_.begin(); i != listeners_.end(); ++i)
 		{
 			(*i)->handleCommand(command, this);

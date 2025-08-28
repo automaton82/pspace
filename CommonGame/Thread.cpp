@@ -3,7 +3,6 @@
 #include "Thread.h"
 
 #include <iostream>
-#include "WinUtil.h"
 
 Thread::Thread() : 
 	threadId_(0), threadHandle_(0), 

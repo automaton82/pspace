@@ -1,6 +1,6 @@
 #include "Tile.h"
+#include "Platform.h"
 
-#include <gl/glaux.h>
 #include "GameDisplayManager.h"
 
 Tile::Tile()

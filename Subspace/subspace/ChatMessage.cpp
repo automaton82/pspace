@@ -1,6 +1,6 @@
 #include "ChatMessage.h"
 
-#include "AsciiUtil.h"
+#include "../../CommonGame/AsciiUtil.h"
 #include "SubspaceSettings.h"
 
 ChatMessage::ChatMessage()

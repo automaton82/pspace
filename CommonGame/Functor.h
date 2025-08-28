@@ -69,7 +69,7 @@ public:
 		(*instance_.*function_)(arg);
 	}
 
-	void call(TArg)
+	void call(TArg arg)
 	{
 		(*instance_.*function_)(arg);
 	}

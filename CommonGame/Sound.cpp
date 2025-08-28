@@ -1,9 +1,8 @@
 #include "Sound.h"
 
-#include <al/al.h>
-#include <al/alc.h>
-#include <al/alu.h>
-#include <al/alut.h>
+#include <AL/al.h>
+#include <AL/alc.h>
+#include <AL/alut.h>
 
 #include <assert.h>
 

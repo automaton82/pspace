@@ -12,6 +12,12 @@ file(GLOB_RECURSE SUBSPACE_HEADERS
     "*.hpp"
 )
 
+# Remove problematic files that need architectural fixes
+list(FILTER SUBSPACE_SOURCES EXCLUDE REGEX ".*ChatMessage\\.cpp$")
+list(FILTER SUBSPACE_SOURCES EXCLUDE REGEX ".*InputCommandListener\\.cpp$")
+list(FILTER SUBSPACE_SOURCES EXCLUDE REGEX ".*InputCommandReceiver\\.cpp$")
+list(FILTER SUBSPACE_SOURCES EXCLUDE REGEX ".*InputCommands\\.cpp$")
+
 # Create the Subspace executable
 add_executable(subspace ${SUBSPACE_SOURCES} ${SUBSPACE_HEADERS})
 

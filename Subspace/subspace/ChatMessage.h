@@ -3,7 +3,7 @@
 #ifndef _CHATMESSAGE_H_
 #define _CHATMESSAGE_H_
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 
 #include "ChatSettings.h"
 

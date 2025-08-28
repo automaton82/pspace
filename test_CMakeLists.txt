@@ -1,0 +1,34 @@
+# Test SDL2 program CMakeLists.txt
+cmake_minimum_required(VERSION 3.16)
+
+project(test_sdl2)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find packages (reuse the ones from parent)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(SDL2 REQUIRED sdl2)
+find_package(OpenGL REQUIRED)
+
+# Create executable
+add_executable(test_sdl2 test_sdl2.cpp)
+
+# Include directories
+target_include_directories(test_sdl2 PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${SDL2_INCLUDE_DIRS}
+    ${OpenGL_INCLUDE_DIRS}
+)
+
+# Link libraries
+target_link_libraries(test_sdl2 PRIVATE
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${CMAKE_DL_LIBS}
+)
+
+# Compiler flags
+target_compile_options(test_sdl2 PRIVATE ${SDL2_CFLAGS_OTHER})

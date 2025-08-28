@@ -1,4 +1,6 @@
 #include "TileMap.h"
+#include <algorithm>
+using std::min;
 
 TileMap::TileMap(double tileWidth, double tileHeight) :
 	width_(0), height_(0),

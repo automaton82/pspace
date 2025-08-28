@@ -1,6 +1,7 @@
 #include "PngObject.h"
 
 #include <assert.h>
+#include <cstring>
 
 #include "png.h"
 
@@ -107,7 +108,7 @@ bool PngObject::readPngFile(FILE* file)
 	infoPtr = png_create_info_struct(pngPtr);
 	if(!infoPtr)
 	{
-		png_destroy_read_struct(&pngPtr, png_infopp_NULL, png_infopp_NULL);
+		png_destroy_read_struct(&pngPtr, NULL, NULL);
 		return false;
 	}
 
@@ -119,7 +120,7 @@ bool PngObject::readPngFile(FILE* file)
 
 	if(setjmp(png_jmpbuf(pngPtr)))	//0 on success, non-zero on failure
 	{
-        png_destroy_read_struct(&pngPtr, &infoPtr, png_infopp_NULL);
+        png_destroy_read_struct(&pngPtr, &infoPtr, NULL);
 		return false;
 	}
 
@@ -130,7 +131,7 @@ bool PngObject::readPngFile(FILE* file)
 	int filler = 0xffff;
 	png_set_filler(pngPtr, filler, PNG_FILLER_AFTER);	//add alpha channel
 
-	png_read_png(pngPtr, infoPtr, pngTransforms, png_voidp_NULL);
+	png_read_png(pngPtr, infoPtr, pngTransforms, NULL);
 
 	width_ = png_get_image_width(pngPtr, infoPtr);
 	height_ = png_get_image_height(pngPtr, infoPtr);
@@ -156,7 +157,7 @@ bool PngObject::readPngFile(FILE* file)
 		memcpy(&data_[width_*i*4], rowPointers[height_-i-1], width_ * 4);
 	}
 
-	png_destroy_read_struct(&pngPtr, &infoPtr, png_infopp_NULL);	// clean up after the read, and free any memory allocated
+	png_destroy_read_struct(&pngPtr, &infoPtr, NULL);	// clean up after the read, and free any memory allocated
 
 	return true;
 }

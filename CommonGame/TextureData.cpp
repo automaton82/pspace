@@ -1,10 +1,13 @@
 //David Millman
 
 #include "TextureData.h"
+#include <algorithm>
 
 #include "GLObject.h"
 
 #include "math.h"
+
+using std::min;
 
 Color TextureData::defaultColorKey_(0, 0, 0);
 bool TextureData::useDefaultColorKey_(false);

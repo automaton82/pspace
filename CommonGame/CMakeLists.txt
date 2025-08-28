@@ -15,6 +15,9 @@ file(GLOB_RECURSE COMMONGAME_HEADERS
 # Remove any platform-specific files we don't need for cross-platform
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
+# Remove .old files
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
+
 # Remove Subspace-specific files that shouldn't be in CommonGame
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*ChatBuffer\\.cpp$")
 
@@ -22,6 +25,12 @@ list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*ChatBuffer\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DInput.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DAudio.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*WinUtil.*\\.cpp$")
+
+# Remove Windows-specific threading and timing files (need porting)
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*Thread.*\\.cpp$")
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*Timer.*\\.cpp$")
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeProfiler.*\\.cpp$")
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeStream.*\\.cpp$")
 
 # Remove files with complex inheritance issues (temporary)
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*FileLog.*\\.cpp$")
@@ -42,6 +51,11 @@ list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*GameHud.*\\.cpp$")
 # Create the CommonGame library
 add_library(CommonGame STATIC ${COMMONGAME_SOURCES} ${COMMONGAME_HEADERS})
 
+# Explicitly add SDL2 port files that might have been filtered out
+target_sources(CommonGame PRIVATE 
+    ${CMAKE_CURRENT_SOURCE_DIR}/SDLGLObject.cpp
+)
+
 # Include directories for CommonGame
 target_include_directories(CommonGame PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
@@ -49,6 +63,7 @@ target_include_directories(CommonGame PUBLIC
     ${OpenGL_INCLUDE_DIRS}
     ${PNG_INCLUDE_DIRS}
     ${OPENAL_INCLUDE_DIR}
+    ${ALUT_INCLUDE_DIRS}
 )
 
 # Link libraries for CommonGame
@@ -59,6 +74,7 @@ target_link_libraries(CommonGame PUBLIC
     ${PNG_LIBRARIES}
     ${ZLIB_LIBRARIES}
     ${OPENAL_LIBRARY}
+    ${ALUT_LIBRARIES}
     ${PLATFORM_LIBS}
 )
 

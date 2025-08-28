@@ -1,9 +1,7 @@
 //David Millman
 
 #include "GameObject.h"
-
-#include <GL/glaux.h>
-#include <GL/glut.h>
+#include "Platform.h"
 
 GameObject::GameObject() :
 	garbage(false)

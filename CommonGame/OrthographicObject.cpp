@@ -1,7 +1,5 @@
 #include "OrthographicObject.h"
-
-#include <windows.h>
-#include <gl/gl.h>
+#include "Platform.h"
 
 OrthographicObject::OrthographicObject() :
 	orthoX_(0), orthoY_(0),

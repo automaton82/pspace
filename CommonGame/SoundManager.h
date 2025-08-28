@@ -10,7 +10,7 @@ using std::string;
 #include <list>
 using std::list;
 
-#include <al/alc.h>
+#include <AL/alc.h>
 
 #include "DataTypes.h"
 #include "Vector.h"

@@ -24,6 +24,8 @@ find_package(OpenGL REQUIRED)
 find_package(PNG REQUIRED)
 find_package(ZLIB REQUIRED)
 find_package(OpenAL REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(ALUT REQUIRED freealut)
 
 # Platform-specific settings
 if(WIN32)
@@ -38,7 +40,26 @@ include_directories(${OpenGL_INCLUDE_DIRS})
 
 # Add subdirectories
 add_subdirectory(CommonGame)
-add_subdirectory(Subspace/subspace)
+# Note: Subspace application excluded temporarily due to architectural issues
+# add_subdirectory(Subspace/subspace)
+
+# Add test program
+add_executable(test_sdl2 test_sdl2.cpp)
+
+target_include_directories(test_sdl2 PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${SDL2_INCLUDE_DIRS}
+    ${OpenGL_INCLUDE_DIRS}
+)
+
+target_link_libraries(test_sdl2 PRIVATE
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${CMAKE_DL_LIBS}
+)
+
+target_compile_options(test_sdl2 PRIVATE ${SDL2_CFLAGS_OTHER})
 
 # VS Code integration files
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.vscode")

@@ -1,9 +1,11 @@
 #include "MapCollisions.h"
 
 #include <float.h>
+#include <algorithm>
 
 #include "MathUtil.h"
 using namespace MathUtil;
+using std::min;
 
 void calcDistanceStep(const TileMap& map, double time, const Vector& vel, Vector& increments)
 {
