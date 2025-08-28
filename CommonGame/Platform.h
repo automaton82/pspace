@@ -36,6 +36,9 @@
     #define NULL 0
     #endif
     
+    // Threading constants
+    #define INFINITE 0xFFFFFFFF
+    
     // Message box types (we'll need to implement these with SDL)
     #define MB_OK 0
     #define MB_ICONEXCLAMATION 0

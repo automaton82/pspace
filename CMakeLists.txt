@@ -61,6 +61,31 @@ target_link_libraries(test_sdl2 PRIVATE
 
 target_compile_options(test_sdl2 PRIVATE ${SDL2_CFLAGS_OTHER})
 
+# Build new SDL2-based Subspace test application
+add_executable(subspace_test subspace_main.cpp SubspaceMock.cpp SDLInputBridge.cpp)
+
+target_include_directories(subspace_test PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
+    ${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace
+    ${SDL2_INCLUDE_DIRS}
+    ${OpenGL_INCLUDE_DIRS}
+    ${PNG_INCLUDE_DIRS}
+    ${OPENAL_INCLUDE_DIR}
+)
+
+target_link_libraries(subspace_test PRIVATE
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${SDL2_IMAGE_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${PNG_LIBRARIES}
+    ${ZLIB_LIBRARIES}
+    ${OPENAL_LIBRARY}
+    ${PLATFORM_LIBS}
+)
+
+target_compile_options(subspace_test PRIVATE ${SDL2_CFLAGS_OTHER})
+
 # VS Code integration files
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.vscode")
     message(STATUS "VS Code configuration found")
