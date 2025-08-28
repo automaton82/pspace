@@ -63,8 +63,72 @@
         unsigned char* data;
     } AUX_IMAGE;
     
+    // Windows bitmap structures (compatibility)
+    typedef struct {
+        WORD  bfType;
+        DWORD bfSize;
+        WORD  bfReserved1;
+        WORD  bfReserved2;
+        DWORD bfOffBits;
+    } BITMAPFILEHEADER;
+    
+    typedef struct {
+        DWORD biSize;
+        DWORD biWidth;
+        DWORD biHeight;
+        WORD  biPlanes;
+        WORD  biBitCount;
+        DWORD biCompression;
+        DWORD biSizeImage;
+        DWORD biXPelsPerMeter;
+        DWORD biYPelsPerMeter;
+        DWORD biClrUsed;
+        DWORD biClrImportant;
+    } BITMAPINFOHEADER;
+    
+    typedef struct {
+        BYTE rgbBlue;
+        BYTE rgbGreen;
+        BYTE rgbRed;
+        BYTE rgbReserved;
+    } RGBQUAD;
+    
+    // Windows file handling constants
+    #define GENERIC_READ 0
+    #define OPEN_EXISTING 0
+    #define INVALID_HANDLE_VALUE ((HANDLE)-1)
+    
+    // Bitmap compression constants
+    #define BI_RGB 0
+    #define BI_RLE8 1
+    #define BI_RLE4 2
+    #define BI_BITFIELDS 3
+    
+    // Stub Windows API functions
+    inline HANDLE CreateFile(const char* filename, DWORD access, DWORD shareMode, 
+                            void* security, DWORD creation, DWORD flags, HANDLE templateFile) {
+        return INVALID_HANDLE_VALUE; // Stub implementation
+    }
+    
+    inline BOOL CloseHandle(HANDLE handle) {
+        return TRUE; // Stub implementation
+    }
+    
+    inline BOOL ReadFile(HANDLE file, void* buffer, DWORD bytesToRead, 
+                        DWORD* bytesRead, void* overlapped) {
+        if (bytesRead) *bytesRead = 0;
+        return FALSE; // Stub implementation
+    }
+    
+    // GLaux structures
+    typedef struct {
+        unsigned char* data;
+        int sizeX, sizeY;
+        int components;
+    } AUX_RGBImageRec;
+    
     // Stub for auxDIBImageLoad - will be implemented later
-    AUX_IMAGE* auxDIBImageLoad(const char* filename);
+    AUX_RGBImageRec* auxDIBImageLoad(const char* filename);
     
 #endif
 

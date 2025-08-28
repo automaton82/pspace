@@ -1,6 +1,7 @@
 #include "ExtendedTextBuffer.h"
 
 #include <iostream>
+#include <algorithm> // for std::min
 
 #include "AsciiUtil.h"
 
@@ -25,12 +26,12 @@ ExtendedTextBuffer::~ExtendedTextBuffer()
 
 double ExtendedTextBuffer::getDisplayHeight() const
 {
-	return (font_.getFontHeight() * min(linesDisplayed_, size()) + padTop_+padBottom_+borderWidth_);
+	return (font_.getFontHeight() * std::min(linesDisplayed_, size()) + padTop_+padBottom_+borderWidth_);
 }
 
 double ExtendedTextBuffer::getDisplayWidth() const
 {
-	return (font_.getFontWidth() * min(lineWidth_, maxWidth_) + padLeft_+padRight_+borderWidth_);
+	return (font_.getFontWidth() * std::min(lineWidth_, maxWidth_) + padLeft_+padRight_+borderWidth_);
 }
 
 Uint ExtendedTextBuffer::getLineDisplayOffset() const
@@ -154,7 +155,7 @@ void ExtendedTextBuffer::drawText() const
 	const Chunk* line;
 	Uint nextLineOffset = 0;
 
-	Uint displayLines = min(linesDisplayed_, size());
+	Uint displayLines = std::min(linesDisplayed_, size());
 	Uint lineNum = 0;
 
 	glTranslated(0, font_.getFontHeight() * displayLines, 0);	//move to top of buffer
@@ -283,8 +284,8 @@ void ExtendedTextBuffer::buildIndexesFrom(Uint lineIndex, Uint off)
 
 void ExtendedTextBuffer::drawBackground() const
 {
-	double drawWidth = min(lineWidth_, maxWidth_) * font_.getFrameWidth();
-	double drawHeight =  min(linesDisplayed_, size()) * font_.getFrameHeight();
+	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
+	double drawHeight =  std::min(linesDisplayed_, size()) * font_.getFrameHeight();
 
 	glColor4d(backgroundColor_.r, backgroundColor_.g, backgroundColor_.b, backgroundColor_.a);
 	glBegin(GL_QUADS);			//background
@@ -298,8 +299,8 @@ void ExtendedTextBuffer::drawBackground() const
 
 void ExtendedTextBuffer::drawBorder() const
 {
-	double drawWidth = min(lineWidth_, maxWidth_) * font_.getFrameWidth();
-	double drawHeight = min(linesDisplayed_, size()) * font_.getFrameHeight();
+	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
+	double drawHeight = std::min(linesDisplayed_, size()) * font_.getFrameHeight();
 
 	glColor4d(borderColor_.r, borderColor_.g, borderColor_.b, borderColor_.a);
 	glLineWidth(borderWidth_);

@@ -1,6 +1,7 @@
 #include "BasicTextBuffer.h"
 
 #include "AsciiUtil.h"
+#include <algorithm> // for std::max
 
 BasicTextBuffer::BasicTextBuffer() : 
 	currentColor_(0),
@@ -46,7 +47,7 @@ void BasicTextBuffer::setFont(const TextureFont& font)
 
 void BasicTextBuffer::setTabWidth(Uint width)
 {
-	tabWidth_ = max(1, width);
+	tabWidth_ = std::max(1U, width);
 }
 
 Uint BasicTextBuffer::size() const

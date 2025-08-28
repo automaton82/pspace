@@ -274,30 +274,6 @@ Camera.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Camera.cpp.s
 .PHONY : Camera.cpp.s
 
-ChatBuffer.o: ChatBuffer.cpp.o
-.PHONY : ChatBuffer.o
-
-# target to build an object file
-ChatBuffer.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/ChatBuffer.cpp.o
-.PHONY : ChatBuffer.cpp.o
-
-ChatBuffer.i: ChatBuffer.cpp.i
-.PHONY : ChatBuffer.i
-
-# target to preprocess a source file
-ChatBuffer.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/ChatBuffer.cpp.i
-.PHONY : ChatBuffer.cpp.i
-
-ChatBuffer.s: ChatBuffer.cpp.s
-.PHONY : ChatBuffer.s
-
-# target to generate assembly for a file
-ChatBuffer.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/ChatBuffer.cpp.s
-.PHONY : ChatBuffer.cpp.s
-
 Color.o: Color.cpp.o
 .PHONY : Color.o
 
@@ -345,102 +321,6 @@ Console.s: Console.cpp.s
 Console.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Console.cpp.s
 .PHONY : Console.cpp.s
-
-DAudioInterface.o: DAudioInterface.cpp.o
-.PHONY : DAudioInterface.o
-
-# target to build an object file
-DAudioInterface.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DAudioInterface.cpp.o
-.PHONY : DAudioInterface.cpp.o
-
-DAudioInterface.i: DAudioInterface.cpp.i
-.PHONY : DAudioInterface.i
-
-# target to preprocess a source file
-DAudioInterface.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DAudioInterface.cpp.i
-.PHONY : DAudioInterface.cpp.i
-
-DAudioInterface.s: DAudioInterface.cpp.s
-.PHONY : DAudioInterface.s
-
-# target to generate assembly for a file
-DAudioInterface.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DAudioInterface.cpp.s
-.PHONY : DAudioInterface.cpp.s
-
-DInputInterface.o: DInputInterface.cpp.o
-.PHONY : DInputInterface.o
-
-# target to build an object file
-DInputInterface.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputInterface.cpp.o
-.PHONY : DInputInterface.cpp.o
-
-DInputInterface.i: DInputInterface.cpp.i
-.PHONY : DInputInterface.i
-
-# target to preprocess a source file
-DInputInterface.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputInterface.cpp.i
-.PHONY : DInputInterface.cpp.i
-
-DInputInterface.s: DInputInterface.cpp.s
-.PHONY : DInputInterface.s
-
-# target to generate assembly for a file
-DInputInterface.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputInterface.cpp.s
-.PHONY : DInputInterface.cpp.s
-
-DInputKeyboard.o: DInputKeyboard.cpp.o
-.PHONY : DInputKeyboard.o
-
-# target to build an object file
-DInputKeyboard.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputKeyboard.cpp.o
-.PHONY : DInputKeyboard.cpp.o
-
-DInputKeyboard.i: DInputKeyboard.cpp.i
-.PHONY : DInputKeyboard.i
-
-# target to preprocess a source file
-DInputKeyboard.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputKeyboard.cpp.i
-.PHONY : DInputKeyboard.cpp.i
-
-DInputKeyboard.s: DInputKeyboard.cpp.s
-.PHONY : DInputKeyboard.s
-
-# target to generate assembly for a file
-DInputKeyboard.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputKeyboard.cpp.s
-.PHONY : DInputKeyboard.cpp.s
-
-DInputMouse.o: DInputMouse.cpp.o
-.PHONY : DInputMouse.o
-
-# target to build an object file
-DInputMouse.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputMouse.cpp.o
-.PHONY : DInputMouse.cpp.o
-
-DInputMouse.i: DInputMouse.cpp.i
-.PHONY : DInputMouse.i
-
-# target to preprocess a source file
-DInputMouse.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputMouse.cpp.i
-.PHONY : DInputMouse.cpp.i
-
-DInputMouse.s: DInputMouse.cpp.s
-.PHONY : DInputMouse.s
-
-# target to generate assembly for a file
-DInputMouse.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/DInputMouse.cpp.s
-.PHONY : DInputMouse.cpp.s
 
 Displayable.o: Displayable.cpp.o
 .PHONY : Displayable.o
@@ -562,174 +442,6 @@ ExtendedWindowObject.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/ExtendedWindowObject.cpp.s
 .PHONY : ExtendedWindowObject.cpp.s
 
-FileLog.o: FileLog.cpp.o
-.PHONY : FileLog.o
-
-# target to build an object file
-FileLog.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLog.cpp.o
-.PHONY : FileLog.cpp.o
-
-FileLog.i: FileLog.cpp.i
-.PHONY : FileLog.i
-
-# target to preprocess a source file
-FileLog.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLog.cpp.i
-.PHONY : FileLog.cpp.i
-
-FileLog.s: FileLog.cpp.s
-.PHONY : FileLog.s
-
-# target to generate assembly for a file
-FileLog.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLog.cpp.s
-.PHONY : FileLog.cpp.s
-
-FileLogBase.o: FileLogBase.cpp.o
-.PHONY : FileLogBase.o
-
-# target to build an object file
-FileLogBase.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogBase.cpp.o
-.PHONY : FileLogBase.cpp.o
-
-FileLogBase.i: FileLogBase.cpp.i
-.PHONY : FileLogBase.i
-
-# target to preprocess a source file
-FileLogBase.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogBase.cpp.i
-.PHONY : FileLogBase.cpp.i
-
-FileLogBase.s: FileLogBase.cpp.s
-.PHONY : FileLogBase.s
-
-# target to generate assembly for a file
-FileLogBase.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogBase.cpp.s
-.PHONY : FileLogBase.cpp.s
-
-FileLogDecorator.o: FileLogDecorator.cpp.o
-.PHONY : FileLogDecorator.o
-
-# target to build an object file
-FileLogDecorator.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogDecorator.cpp.o
-.PHONY : FileLogDecorator.cpp.o
-
-FileLogDecorator.i: FileLogDecorator.cpp.i
-.PHONY : FileLogDecorator.i
-
-# target to preprocess a source file
-FileLogDecorator.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogDecorator.cpp.i
-.PHONY : FileLogDecorator.cpp.i
-
-FileLogDecorator.s: FileLogDecorator.cpp.s
-.PHONY : FileLogDecorator.s
-
-# target to generate assembly for a file
-FileLogDecorator.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogDecorator.cpp.s
-.PHONY : FileLogDecorator.cpp.s
-
-FileLogger.o: FileLogger.cpp.o
-.PHONY : FileLogger.o
-
-# target to build an object file
-FileLogger.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogger.cpp.o
-.PHONY : FileLogger.cpp.o
-
-FileLogger.i: FileLogger.cpp.i
-.PHONY : FileLogger.i
-
-# target to preprocess a source file
-FileLogger.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogger.cpp.i
-.PHONY : FileLogger.cpp.i
-
-FileLogger.s: FileLogger.cpp.s
-.PHONY : FileLogger.s
-
-# target to generate assembly for a file
-FileLogger.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/FileLogger.cpp.s
-.PHONY : FileLogger.cpp.s
-
-GLExtensions.o: GLExtensions.cpp.o
-.PHONY : GLExtensions.o
-
-# target to build an object file
-GLExtensions.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLExtensions.cpp.o
-.PHONY : GLExtensions.cpp.o
-
-GLExtensions.i: GLExtensions.cpp.i
-.PHONY : GLExtensions.i
-
-# target to preprocess a source file
-GLExtensions.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLExtensions.cpp.i
-.PHONY : GLExtensions.cpp.i
-
-GLExtensions.s: GLExtensions.cpp.s
-.PHONY : GLExtensions.s
-
-# target to generate assembly for a file
-GLExtensions.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLExtensions.cpp.s
-.PHONY : GLExtensions.cpp.s
-
-GLObject.o: GLObject.cpp.o
-.PHONY : GLObject.o
-
-# target to build an object file
-GLObject.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLObject.cpp.o
-.PHONY : GLObject.cpp.o
-
-GLObject.i: GLObject.cpp.i
-.PHONY : GLObject.i
-
-# target to preprocess a source file
-GLObject.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLObject.cpp.i
-.PHONY : GLObject.cpp.i
-
-GLObject.s: GLObject.cpp.s
-.PHONY : GLObject.s
-
-# target to generate assembly for a file
-GLObject.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLObject.cpp.s
-.PHONY : GLObject.cpp.s
-
-GLPBuffer.o: GLPBuffer.cpp.o
-.PHONY : GLPBuffer.o
-
-# target to build an object file
-GLPBuffer.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLPBuffer.cpp.o
-.PHONY : GLPBuffer.cpp.o
-
-GLPBuffer.i: GLPBuffer.cpp.i
-.PHONY : GLPBuffer.i
-
-# target to preprocess a source file
-GLPBuffer.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLPBuffer.cpp.i
-.PHONY : GLPBuffer.cpp.i
-
-GLPBuffer.s: GLPBuffer.cpp.s
-.PHONY : GLPBuffer.s
-
-# target to generate assembly for a file
-GLPBuffer.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLPBuffer.cpp.s
-.PHONY : GLPBuffer.cpp.s
-
 GLUtil.o: GLUtil.cpp.o
 .PHONY : GLUtil.o
 
@@ -754,30 +466,6 @@ GLUtil.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GLUtil.cpp.s
 .PHONY : GLUtil.cpp.s
 
-GameConnection.o: GameConnection.cpp.o
-.PHONY : GameConnection.o
-
-# target to build an object file
-GameConnection.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameConnection.cpp.o
-.PHONY : GameConnection.cpp.o
-
-GameConnection.i: GameConnection.cpp.i
-.PHONY : GameConnection.i
-
-# target to preprocess a source file
-GameConnection.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameConnection.cpp.i
-.PHONY : GameConnection.cpp.i
-
-GameConnection.s: GameConnection.cpp.s
-.PHONY : GameConnection.s
-
-# target to generate assembly for a file
-GameConnection.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameConnection.cpp.s
-.PHONY : GameConnection.cpp.s
-
 GameDisplayManager.o: GameDisplayManager.cpp.o
 .PHONY : GameDisplayManager.o
 
@@ -801,30 +489,6 @@ GameDisplayManager.s: GameDisplayManager.cpp.s
 GameDisplayManager.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameDisplayManager.cpp.s
 .PHONY : GameDisplayManager.cpp.s
-
-GameHud.o: GameHud.cpp.o
-.PHONY : GameHud.o
-
-# target to build an object file
-GameHud.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameHud.cpp.o
-.PHONY : GameHud.cpp.o
-
-GameHud.i: GameHud.cpp.i
-.PHONY : GameHud.i
-
-# target to preprocess a source file
-GameHud.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameHud.cpp.i
-.PHONY : GameHud.cpp.i
-
-GameHud.s: GameHud.cpp.s
-.PHONY : GameHud.s
-
-# target to generate assembly for a file
-GameHud.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/GameHud.cpp.s
-.PHONY : GameHud.cpp.s
 
 GameMap.o: GameMap.cpp.o
 .PHONY : GameMap.o
@@ -1234,6 +898,30 @@ Particle.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Particle.cpp.s
 .PHONY : Particle.cpp.s
 
+PlatformCompat.o: PlatformCompat.cpp.o
+.PHONY : PlatformCompat.o
+
+# target to build an object file
+PlatformCompat.cpp.o:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/PlatformCompat.cpp.o
+.PHONY : PlatformCompat.cpp.o
+
+PlatformCompat.i: PlatformCompat.cpp.i
+.PHONY : PlatformCompat.i
+
+# target to preprocess a source file
+PlatformCompat.cpp.i:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/PlatformCompat.cpp.i
+.PHONY : PlatformCompat.cpp.i
+
+PlatformCompat.s: PlatformCompat.cpp.s
+.PHONY : PlatformCompat.s
+
+# target to generate assembly for a file
+PlatformCompat.cpp.s:
+	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/PlatformCompat.cpp.s
+.PHONY : PlatformCompat.cpp.s
+
 PngObject.o: PngObject.cpp.o
 .PHONY : PngObject.o
 
@@ -1378,30 +1066,6 @@ Rotatable.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Rotatable.cpp.s
 .PHONY : Rotatable.cpp.s
 
-SDLGLObject.o: SDLGLObject.cpp.o
-.PHONY : SDLGLObject.o
-
-# target to build an object file
-SDLGLObject.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.o
-.PHONY : SDLGLObject.cpp.o
-
-SDLGLObject.i: SDLGLObject.cpp.i
-.PHONY : SDLGLObject.i
-
-# target to preprocess a source file
-SDLGLObject.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.i
-.PHONY : SDLGLObject.cpp.i
-
-SDLGLObject.s: SDLGLObject.cpp.s
-.PHONY : SDLGLObject.s
-
-# target to generate assembly for a file
-SDLGLObject.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SDLGLObject.cpp.s
-.PHONY : SDLGLObject.cpp.s
-
 Sizable.o: Sizable.cpp.o
 .PHONY : Sizable.o
 
@@ -1425,54 +1089,6 @@ Sizable.s: Sizable.cpp.s
 Sizable.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Sizable.cpp.s
 .PHONY : Sizable.cpp.s
-
-Socket.o: Socket.cpp.o
-.PHONY : Socket.o
-
-# target to build an object file
-Socket.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.o
-.PHONY : Socket.cpp.o
-
-Socket.i: Socket.cpp.i
-.PHONY : Socket.i
-
-# target to preprocess a source file
-Socket.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.i
-.PHONY : Socket.cpp.i
-
-Socket.s: Socket.cpp.s
-.PHONY : Socket.s
-
-# target to generate assembly for a file
-Socket.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Socket.cpp.s
-.PHONY : Socket.cpp.s
-
-SocketUDP.o: SocketUDP.cpp.o
-.PHONY : SocketUDP.o
-
-# target to build an object file
-SocketUDP.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.o
-.PHONY : SocketUDP.cpp.o
-
-SocketUDP.i: SocketUDP.cpp.i
-.PHONY : SocketUDP.i
-
-# target to preprocess a source file
-SocketUDP.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.i
-.PHONY : SocketUDP.cpp.i
-
-SocketUDP.s: SocketUDP.cpp.s
-.PHONY : SocketUDP.s
-
-# target to generate assembly for a file
-SocketUDP.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/SocketUDP.cpp.s
-.PHONY : SocketUDP.cpp.s
 
 SortedDisplayManager.o: SortedDisplayManager.cpp.o
 .PHONY : SortedDisplayManager.o
@@ -2122,30 +1738,6 @@ Vector.cpp.s:
 	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/Vector.cpp.s
 .PHONY : Vector.cpp.s
 
-WinUtil.o: WinUtil.cpp.o
-.PHONY : WinUtil.o
-
-# target to build an object file
-WinUtil.cpp.o:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.o
-.PHONY : WinUtil.cpp.o
-
-WinUtil.i: WinUtil.cpp.i
-.PHONY : WinUtil.i
-
-# target to preprocess a source file
-WinUtil.cpp.i:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.i
-.PHONY : WinUtil.cpp.i
-
-WinUtil.s: WinUtil.cpp.s
-.PHONY : WinUtil.s
-
-# target to generate assembly for a file
-WinUtil.cpp.s:
-	cd /home/runner/work/pspace/pspace/build && $(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/WinUtil.cpp.s
-.PHONY : WinUtil.cpp.s
-
 WindowManager.o: WindowManager.cpp.o
 .PHONY : WindowManager.o
 
@@ -2221,27 +1813,12 @@ help:
 	@echo "... Camera.o"
 	@echo "... Camera.i"
 	@echo "... Camera.s"
-	@echo "... ChatBuffer.o"
-	@echo "... ChatBuffer.i"
-	@echo "... ChatBuffer.s"
 	@echo "... Color.o"
 	@echo "... Color.i"
 	@echo "... Color.s"
 	@echo "... Console.o"
 	@echo "... Console.i"
 	@echo "... Console.s"
-	@echo "... DAudioInterface.o"
-	@echo "... DAudioInterface.i"
-	@echo "... DAudioInterface.s"
-	@echo "... DInputInterface.o"
-	@echo "... DInputInterface.i"
-	@echo "... DInputInterface.s"
-	@echo "... DInputKeyboard.o"
-	@echo "... DInputKeyboard.i"
-	@echo "... DInputKeyboard.s"
-	@echo "... DInputMouse.o"
-	@echo "... DInputMouse.i"
-	@echo "... DInputMouse.s"
 	@echo "... Displayable.o"
 	@echo "... Displayable.i"
 	@echo "... Displayable.s"
@@ -2257,39 +1834,12 @@ help:
 	@echo "... ExtendedWindowObject.o"
 	@echo "... ExtendedWindowObject.i"
 	@echo "... ExtendedWindowObject.s"
-	@echo "... FileLog.o"
-	@echo "... FileLog.i"
-	@echo "... FileLog.s"
-	@echo "... FileLogBase.o"
-	@echo "... FileLogBase.i"
-	@echo "... FileLogBase.s"
-	@echo "... FileLogDecorator.o"
-	@echo "... FileLogDecorator.i"
-	@echo "... FileLogDecorator.s"
-	@echo "... FileLogger.o"
-	@echo "... FileLogger.i"
-	@echo "... FileLogger.s"
-	@echo "... GLExtensions.o"
-	@echo "... GLExtensions.i"
-	@echo "... GLExtensions.s"
-	@echo "... GLObject.o"
-	@echo "... GLObject.i"
-	@echo "... GLObject.s"
-	@echo "... GLPBuffer.o"
-	@echo "... GLPBuffer.i"
-	@echo "... GLPBuffer.s"
 	@echo "... GLUtil.o"
 	@echo "... GLUtil.i"
 	@echo "... GLUtil.s"
-	@echo "... GameConnection.o"
-	@echo "... GameConnection.i"
-	@echo "... GameConnection.s"
 	@echo "... GameDisplayManager.o"
 	@echo "... GameDisplayManager.i"
 	@echo "... GameDisplayManager.s"
-	@echo "... GameHud.o"
-	@echo "... GameHud.i"
-	@echo "... GameHud.s"
 	@echo "... GameMap.o"
 	@echo "... GameMap.i"
 	@echo "... GameMap.s"
@@ -2341,6 +1891,9 @@ help:
 	@echo "... Particle.o"
 	@echo "... Particle.i"
 	@echo "... Particle.s"
+	@echo "... PlatformCompat.o"
+	@echo "... PlatformCompat.i"
+	@echo "... PlatformCompat.s"
 	@echo "... PngObject.o"
 	@echo "... PngObject.i"
 	@echo "... PngObject.s"
@@ -2359,18 +1912,9 @@ help:
 	@echo "... Rotatable.o"
 	@echo "... Rotatable.i"
 	@echo "... Rotatable.s"
-	@echo "... SDLGLObject.o"
-	@echo "... SDLGLObject.i"
-	@echo "... SDLGLObject.s"
 	@echo "... Sizable.o"
 	@echo "... Sizable.i"
 	@echo "... Sizable.s"
-	@echo "... Socket.o"
-	@echo "... Socket.i"
-	@echo "... Socket.s"
-	@echo "... SocketUDP.o"
-	@echo "... SocketUDP.i"
-	@echo "... SocketUDP.s"
 	@echo "... SortedDisplayManager.o"
 	@echo "... SortedDisplayManager.i"
 	@echo "... SortedDisplayManager.s"
@@ -2452,9 +1996,6 @@ help:
 	@echo "... Vector.o"
 	@echo "... Vector.i"
 	@echo "... Vector.s"
-	@echo "... WinUtil.o"
-	@echo "... WinUtil.i"
-	@echo "... WinUtil.s"
 	@echo "... WindowManager.o"
 	@echo "... WindowManager.i"
 	@echo "... WindowManager.s"

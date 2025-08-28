@@ -127,12 +127,12 @@ Subspace/subspace/clean: Subspace/subspace/CMakeFiles/subspace.dir/clean
 CommonGame/CMakeFiles/CommonGame.dir/all:
 	$(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/depend
 	$(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target CommonGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Built target CommonGame"
 .PHONY : CommonGame/CMakeFiles/CommonGame.dir/all
 
 # Build rule for subdir invocation for target.
 CommonGame/CMakeFiles/CommonGame.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/pspace/pspace/build/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/pspace/pspace/build/CMakeFiles 40
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CommonGame/CMakeFiles/CommonGame.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/pspace/pspace/build/CMakeFiles 0
 .PHONY : CommonGame/CMakeFiles/CommonGame.dir/rule
@@ -144,7 +144,7 @@ CommonGame: CommonGame/CMakeFiles/CommonGame.dir/rule
 # codegen rule for target.
 CommonGame/CMakeFiles/CommonGame.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CommonGame/CMakeFiles/CommonGame.dir/build.make CommonGame/CMakeFiles/CommonGame.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Finished codegen for target CommonGame"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40 "Finished codegen for target CommonGame"
 .PHONY : CommonGame/CMakeFiles/CommonGame.dir/codegen
 
 # clean rule for target.
@@ -159,7 +159,7 @@ CommonGame/CMakeFiles/CommonGame.dir/clean:
 Subspace/subspace/CMakeFiles/subspace.dir/all: CommonGame/CMakeFiles/CommonGame.dir/all
 	$(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/depend
 	$(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target subspace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target subspace"
 .PHONY : Subspace/subspace/CMakeFiles/subspace.dir/all
 
 # Build rule for subdir invocation for target.
@@ -176,7 +176,7 @@ subspace: Subspace/subspace/CMakeFiles/subspace.dir/rule
 # codegen rule for target.
 Subspace/subspace/CMakeFiles/subspace.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f Subspace/subspace/CMakeFiles/subspace.dir/build.make Subspace/subspace/CMakeFiles/subspace.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Finished codegen for target subspace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/runner/work/pspace/pspace/build/CMakeFiles --progress-num=41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Finished codegen for target subspace"
 .PHONY : Subspace/subspace/CMakeFiles/subspace.dir/codegen
 
 # clean rule for target.

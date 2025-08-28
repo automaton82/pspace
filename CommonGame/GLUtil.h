@@ -1,11 +1,7 @@
 #ifndef _GLUTIL_H_
 #define _GLUTIL_H_
 
-#include <windows.h>
-
-#include <gl/gl.h>
-#include <gl/glu.h>
-#include <gl/glaux.h>
+#include "Platform.h"
 
 #include "Vector.h"
 

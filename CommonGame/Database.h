@@ -4,6 +4,7 @@
 #include <vector>
 #include <list>
 #include <map>
+#include <cstddef> // for NULL
 
 using std::vector;
 using std::list;
@@ -74,7 +75,7 @@ int Database<T>::addItem(T* newItem)
 		return -1;
 
 	int id = static_cast<int>(data.size());
-	pair< ContainerType::iterator, bool> result = data.insert( ContainerType::value_type(id, newItem) );
+	std::pair< typename ContainerType::iterator, bool> result = data.insert( typename ContainerType::value_type(id, newItem) );
 
 	++numItems_;
 
@@ -108,7 +109,7 @@ const T* Database<T>::getItem(int itemID) const
 	if(itemID < 0 || itemID >= size())
 		return NULL;
 
-	ContainerType::const_iterator i = data.find(itemID);
+	typename ContainerType::const_iterator i = data.find(itemID);
 	if(i == data.end())
 		return NULL;
 	
@@ -119,7 +120,7 @@ template <class T>
 void Database<T>::clear()
 {
 	//vector<T*>::iterator i;
-	ContainerType::iterator i;
+	typename ContainerType::iterator i;
 	for(i = data.begin(); i != data.end(); ++i)
 	{
 		T* item = (*i).second;

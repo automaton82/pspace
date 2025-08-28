@@ -6,7 +6,7 @@
 #include <iostream>
 
 // Stub implementation of auxDIBImageLoad for compatibility
-AUX_IMAGE* auxDIBImageLoad(const char* filename)
+AUX_RGBImageRec* auxDIBImageLoad(const char* filename)
 {
     // For now, return null to avoid crashes
     // TODO: Implement proper SDL2_image loading
