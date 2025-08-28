@@ -1,14 +1,32 @@
 #ifndef _DINPUTINTERFACE_H_
 #define _DINPUTINTERFACE_H_
 
+#ifdef _WIN32
 #define DIRECTINPUT_VERSION 0x800
-
 #include <windows.h>
 #include <dinput.h>
 #include <stdio.h>
 
 #define KeyDown(data, n) ((data[n] & 0x80) ? true : false)
 #define KeyUp(data, n) ((data[n] & 0x80) ? false : true)
+#else
+// Linux/SDL2 compatibility - DirectInput not available
+// DInputInterface will be stubbed out
+#include <cstdio>
+typedef unsigned char BYTE;
+typedef int HRESULT;
+typedef void* LPDIRECTINPUT8;
+typedef void* LPDIRECTINPUTDEVICE8;
+typedef struct {
+    long lX;
+    long lY;
+    long lZ;
+    unsigned char rgbButtons[4];
+} DIMOUSESTATE;
+#define S_OK 0
+#define KeyDown(data, n) false
+#define KeyUp(data, n) true
+#endif
 
 class DInputInterface
 {

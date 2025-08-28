@@ -51,8 +51,8 @@ void GameLoop()
 	//Input Handling
 	DIMOUSESTATE* mouse = 0;
 	static const DIMOUSESTATE* prevMouse = 0;
-	static mouseX = 0;
-	static mouseY = 0;
+	static int mouseX = 0;
+	static int mouseY = 0;
 
 	//TODO: add input toggle buttons - cntrl, alt, shift
 

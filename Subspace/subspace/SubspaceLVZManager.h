@@ -1,12 +1,22 @@
 #ifndef _SUBSPACELVZMANAGER_H_
 #define _SUBSPACELVZMANAGER_H_
 
+#ifdef _WIN32
 #include <hash_map>
+using std::hash_map;
+using std::hash_multimap;
+#else
+// Modern C++ replacement for deprecated hash_map
+#include <unordered_map>
+#define hash_map unordered_map
+#define hash_multimap unordered_multimap
+using std::unordered_map;
+using std::unordered_multimap;
+#endif
+
 #include <map>
 #include <string>
 
-using std::hash_map;
-using std::hash_multimap;
 using std::map;
 using std::multimap;
 using std::string;

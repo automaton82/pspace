@@ -515,12 +515,12 @@ void SubspaceHud::draw() const
 
 		if(!myPlayer_->isSpectator())
 		{
-			glColor4d(color.r_, color.b_, color.g_, color.a_);
+			glColor4d(color.r, color.b, color.g, color.a);
 			glPushMatrix();
     			drawPlayerStatus();
 			glPopMatrix();
 		
-			glColor4d(color.r_, color.b_, color.g_, color.a_);
+			glColor4d(color.r, color.b, color.g, color.a);
 			glPushMatrix();
 				drawLifeBar();
 			glPopMatrix();
@@ -528,23 +528,23 @@ void SubspaceHud::draw() const
 
 		if(showRadar_)
 		{
-			glColor4d(color.r_, color.b_, color.g_, color.a_);
+			glColor4d(color.r, color.b, color.g, color.a);
 			glPushMatrix();
 				drawRadarInfo();
 			glPopMatrix();
 
-			glColor4d(color.r_, color.b_, color.g_, color.a_);
+			glColor4d(color.r, color.b, color.g, color.a);
 			glPushMatrix();
 				drawRadar();
 			glPopMatrix();
 		}
 
-		glColor4d(color.r_, color.b_, color.g_, color.a_);
+		glColor4d(color.r, color.b, color.g, color.a);
 		glPushMatrix();
 	    	drawMyPlayerIcons();
 		glPopMatrix();
 
-		glColor4d(color.r_, color.b_, color.g_, color.a_);
+		glColor4d(color.r, color.b, color.g, color.a);
 		glPushMatrix();
 			drawStatBox();	//player names, etc.
 		glPopMatrix();
@@ -628,7 +628,7 @@ void SubspaceHud::initRadar()
 {
 	printf("INIT RADAR\n");
 
-	static oldRadarWidthMax = 0, oldRadarHeightMax = 0;
+	static int oldRadarWidthMax = 0, oldRadarHeightMax = 0;
 
 	radarDisplayWidth_ = 208;	//tiles on radar display
 	radarDisplayHeight_ = 208;
@@ -655,7 +655,7 @@ void SubspaceHud::initBigRadar()
 	printf("INIT BIG RADAR\n");
 
 
-	static oldRadarWidthMax = 0, oldRadarHeightMax = 0;
+	static int oldRadarWidthMax = 0, oldRadarHeightMax = 0;
 
 	//bigRadarDisplayWidth_ = SubspaceMap::maxTileX;	//size on screen
 	//bigRadarDisplayHeight_ = SubspaceMap::maxTileY;
@@ -877,8 +877,8 @@ void SubspaceHud::drawRadarInfo() const
 			objectToTileCoords(myPlayer_->getSubspacePosition(), &xPos, &yPos);
 		}
 
-		xPos = min(1024, max(0, xPos));		// 1024 is the max tile
-		yPos = min(1024, max(0, yPos));
+		xPos = std::min(1024U, std::max(0U, xPos));		// 1024 is the max tile
+		yPos = std::min(1024U, std::max(0U, yPos));
 
 		//coordinates
 		string coordStr;

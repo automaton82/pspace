@@ -185,7 +185,7 @@ void SubspaceGlobal:: setMessageNameWidth(Uint width)
 		width += 2;
 		if(width >= maxMessageNameWidth)
 			width = maxMessageNameWidth;
-		chat_->setHeaderWidth(max(2, width));
+		chat_->setHeaderWidth(std::max(2U, width));
 		messageNameWidth_ = getMessageNameWidth();
 	}
 	else

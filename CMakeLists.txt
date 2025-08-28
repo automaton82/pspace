@@ -128,6 +128,8 @@ add_executable(subspace_full subspace_full.cpp SDLInputBridge.cpp ${SUBSPACE_GAM
 target_include_directories(subspace_full PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
     ${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace
+    "${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace network library"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace LVZ deconstructor"
     ${SDL2_INCLUDE_DIRS}
     ${OpenGL_INCLUDE_DIRS}
     ${PNG_INCLUDE_DIRS}

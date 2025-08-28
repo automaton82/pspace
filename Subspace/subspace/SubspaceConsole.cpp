@@ -32,7 +32,7 @@ double SubspaceConsole::getDisplayHeight() const
 	if(getBuffer().size() == 0)
 		return 0;
 
-	Uint lines = min(displayLines_, AsciiUtil::countWrapLines(getBuffer(), lineWidth_));
+	Uint lines = std::min(displayLines_, AsciiUtil::countWrapLines(getBuffer(), lineWidth_));
 	return (double)lines * font_->getFontHeight();
 }
 
@@ -291,22 +291,22 @@ bool SubspaceConsole::isKnownQuery(const string& name)
 
 void SubspaceConsole::initQueries()
 {
-	consoleCommands_["freq"] = queryTeam;
-	consoleCommands_["lines"] = queryMessageLines;
-	consoleCommands_["messagelines"] = queryMessageLines;
-	consoleCommands_["namelen"] = queryNameLength;
-	consoleCommands_["namelength"] = queryNameLength;
-	consoleCommands_["namewidth"] = queryNameLength;
-	consoleCommands_["ship"] = queryShip;
-	consoleCommands_["status"] = queryStatus;
-	consoleCommands_["status2"] = queryStatus2;
-	consoleCommands_["team"] = queryTeam;
-	consoleCommands_["target"] = queryTargetBounty;
-	consoleCommands_["targetbounty"] = queryTargetBounty;
-	consoleCommands_["tick"] = queryTicked;
-	consoleCommands_["ticked"] = queryTicked;
-	consoleCommands_["timeprofile"] = queryTimeProfiler;
-	consoleCommands_["timeprofiler"] = queryTimeProfiler;
+	consoleCommands_["freq"] = &SubspaceConsole::queryTeam;
+	consoleCommands_["lines"] = &SubspaceConsole::queryMessageLines;
+	consoleCommands_["messagelines"] = &SubspaceConsole::queryMessageLines;
+	consoleCommands_["namelen"] = &SubspaceConsole::queryNameLength;
+	consoleCommands_["namelength"] = &SubspaceConsole::queryNameLength;
+	consoleCommands_["namewidth"] = &SubspaceConsole::queryNameLength;
+	consoleCommands_["ship"] = &SubspaceConsole::queryShip;
+	consoleCommands_["status"] = &SubspaceConsole::queryStatus;
+	consoleCommands_["status2"] = &SubspaceConsole::queryStatus2;
+	consoleCommands_["team"] = &SubspaceConsole::queryTeam;
+	consoleCommands_["target"] = &SubspaceConsole::queryTargetBounty;
+	consoleCommands_["targetbounty"] = &SubspaceConsole::queryTargetBounty;
+	consoleCommands_["tick"] = &SubspaceConsole::queryTicked;
+	consoleCommands_["ticked"] = &SubspaceConsole::queryTicked;
+	consoleCommands_["timeprofile"] = &SubspaceConsole::queryTimeProfiler;
+	consoleCommands_["timeprofiler"] = &SubspaceConsole::queryTimeProfiler;
 
 }
 
@@ -573,7 +573,7 @@ void SubspaceConsole::parseChannelSpecific(const string& s, int* channel, string
 	size_t i = s.find_first_of(';');		// first ';'
 	size_t i2 = s.find_first_of(';', i+1);	// second ';'
 	
-	int c = max(1, atoi(s.substr(i+1, i2-i).c_str()));
+	int c = std::max(1, atoi(s.substr(i+1, i2-i).c_str()));
 	*channel = c;
 	*text = s.substr(i2+1);					// second ';' to end
 }

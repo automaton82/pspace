@@ -1,6 +1,7 @@
 #include "SubspaceChat.h"
 
 #include <iostream>
+#include <algorithm>  // For std::min, std::max
 
 #include "AsciiUtil.h"
 #include "SubspaceSettings.h"
@@ -39,7 +40,7 @@ Uint SubspaceChat::countLines() const
 
 double SubspaceChat::getDisplayHeight() const
 {
-	Uint lines = min(linesDisplayed_, countLines());
+	Uint lines = std::min(linesDisplayed_, countLines());
 
 	return (double)lines * font_.getFontHeight();
 }
@@ -77,7 +78,7 @@ void SubspaceChat::setFont(const TextureFont& font)
 
 void SubspaceChat::setHeaderWidth(Uint width)
 {
-	Uint w = min(width, lineWidth_ - headerSeparator_.size() - 1 - 1);	
+	Uint w = std::min(width, static_cast<Uint>(lineWidth_ - headerSeparator_.size() - 1 - 1));	
 	headerWidth_ = w;
 }
 

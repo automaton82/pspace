@@ -1,10 +1,18 @@
 #ifndef _SUBSPACELVZDATA_
 #define _SUBSPACELVZDATA_
 
+#ifdef _WIN32
 typedef unsigned __int32 Uint32;
 typedef unsigned __int16 Uint16;
 typedef signed __int32 Sint32;
 typedef signed __int16 Sint16;
+#else
+// Linux compatibility - use standard integer types
+typedef unsigned int Uint32;
+typedef unsigned short Uint16;
+typedef signed int Sint32;
+typedef signed short Sint16;
+#endif
 
 #pragma pack(push, 1)
 

@@ -2,6 +2,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <algorithm>  // For std::min, std::max
 #include "SubspaceSettings.h"
 
 SubspaceHelp::SubspaceHelp() : 
@@ -51,7 +52,7 @@ void SubspaceHelp::setPage(Uint page)
 {
 	assert(page < pages_.size());
 
-	currentPage_ = min(pages_.size()-1, max(0, page));	//make sure page is in range
+	currentPage_ = std::min((Uint)(pages_.size()-1), std::max(0U, page));	//make sure page is in range
 }
 
 bool SubspaceHelp::load(const string& filename)
@@ -215,7 +216,7 @@ void SubspaceHelp::parseLine(const string& l)
 		offset = line.find_first_of(newStateChar, offset);
 	}
 
-	offset = min(line.size(), offset);	//check for bad offsets
+	offset = std::min(line.size(), offset);	//check for bad offsets
 	if(offset-lastOffset > 0)	//leftover word
 	{
 		if(first)

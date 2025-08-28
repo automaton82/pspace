@@ -4,7 +4,18 @@
 #define _SUBSPACERELIABLEMANAGER_H_
 
 #include <map>
+
+#ifdef _WIN32
 #include <windows.h>
+#else
+// Linux compatibility
+typedef unsigned char BYTE;
+typedef unsigned short WORD;
+typedef unsigned int DWORD;
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+#endif
 
 #include "SubspacePacket.h"
 #include "SubspacePacketFactory.h"

@@ -34,7 +34,7 @@ public:
 
 protected:
 
-	static team_;
+	static int team_;
 
 	double timeToLive_;
 

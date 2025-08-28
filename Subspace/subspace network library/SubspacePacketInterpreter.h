@@ -3,7 +3,14 @@
 #ifndef _SUBSPACEPACKETINTERPRETER_H_
 #define _SUBSPACEPACKETINTERPRETER_H_
 
+#ifdef _WIN32
 #include "windows.h"
+#else
+// Linux compatibility
+typedef unsigned char BYTE;
+typedef unsigned short WORD;  
+typedef unsigned int DWORD;
+#endif
 
 #include <vector>
 using std::vector;

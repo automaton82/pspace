@@ -104,7 +104,7 @@ bool Bitmap::loadFromHandle(HANDLE h)
 {
 	BOOL readResult;
 	
-	unsigned long bytesRead = 0;
+	DWORD bytesRead = 0;
 	
 	int numBytes = 0;
 	int bytesPerRow = 0;

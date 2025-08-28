@@ -37,10 +37,16 @@ public:
 	double getElapsedTime() const;
 private:
 	
+#ifdef _WIN32
 	LARGE_INTEGER ticksPerSecond_;
-
 	LARGE_INTEGER startTick_;
 	LARGE_INTEGER stopTick_;
+#else
+	// Linux compatibility - use timespec or similar
+	long long ticksPerSecond_;
+	long long startTick_;
+	long long stopTick_;
+#endif
 
 	bool paused;
 };

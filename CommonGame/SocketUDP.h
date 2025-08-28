@@ -6,8 +6,23 @@
 #include <string>
 using std::string;
 
+#ifdef _WIN32
 #include <windows.h>
 #include <winsock.h>
+#else
+// Linux socket compatibility
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <netdb.h>
+typedef int SOCKET;
+typedef struct sockaddr_in SOCKADDR_IN;
+typedef struct sockaddr SOCKADDR;
+#define INVALID_SOCKET -1
+#define SOCKET_ERROR -1
+#define closesocket close
+#endif
 
 #include "DataTypes.h"
 

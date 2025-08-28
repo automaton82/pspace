@@ -1,6 +1,9 @@
 #include "SubspaceGameManager.h"
 
 #include <fstream>
+#ifndef _WIN32
+#include <sys/stat.h>
+#endif
 
 #include "DynamicData.h"
 #include "GLUtil.h"
@@ -440,7 +443,11 @@ void SubspaceGameManager::initZone()
 	const string zoneBaseDir = "zones/";
 	string zoneDir = configData_.getData("zonedir") + "/";
 
+#ifdef _WIN32
 	CreateDirectory((zoneBaseDir+zoneDir).c_str(), 0);		// TODO: check for existing directory?
+#else
+	mkdir((zoneBaseDir+zoneDir).c_str(), 0755);		// TODO: check for existing directory?
+#endif
 
 	zone_.setZonePath(zoneBaseDir + zoneDir);
 }
@@ -510,7 +517,7 @@ void SubspaceGameManager::updateConsole()
 
 void SubspaceGameManager::updateHud()
 {
-	static oldPlayerSize = 0;
+	static int oldPlayerSize = 0;
 
 	hud_.setMyPlayer(zone_.getMyPlayer());
 	hud_.setMap(zone_.getMap());

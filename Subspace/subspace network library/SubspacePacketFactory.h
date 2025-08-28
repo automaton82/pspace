@@ -2,7 +2,18 @@
 
 #include "DataTypes.h"
 #include "SubspacePacket.h"
+
+#ifdef _WIN32
 #include "windows.h"
+#else
+// Linux compatibility
+typedef unsigned char BYTE;
+typedef unsigned short WORD;
+typedef unsigned int DWORD;
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+#endif
 
 #ifndef _SUBSPACEPACKETFACTORY_H_
 #define _SUBSPACEPACKETFACTORY_H_

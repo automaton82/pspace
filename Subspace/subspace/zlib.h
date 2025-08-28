@@ -635,7 +635,7 @@ ZEXTERN int ZEXPORT compress2 OF((Bytef *dest,   uLongf *destLen,
    Z_STREAM_ERROR if the level parameter is invalid.
 */
 
-ZEXTERN int __cdecl ZEXPORT uncompress OF((Bytef *dest,   uLongf *destLen,
+ZEXTERN int ZEXPORT uncompress OF((Bytef *dest,   uLongf *destLen,
                                    const Bytef *source, uLong sourceLen));
 /*
      Decompresses the source buffer into the destination buffer.  sourceLen is

@@ -2,10 +2,16 @@
 
 #include <algorithm>
 #include <fstream>
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
 
 #include "GLUtil.h"
 #include "TimeProfiler.h"
 #include "zlib.h"
+
+// Forward declaration for thread routine
+void positionThreadRoutine(void* ssZone);
 
 static TimeProfiler& timeProfiler = *TimeProfiler::getInstance();
 
@@ -251,11 +257,11 @@ void SubspaceZone::initFlag(int flagID)
 {
 	if(flags_.find(flagID) != flags_.end())
 	{
-		debugout << "Flag " << flagID << " already exists." << endl;
+		debugout << "Flag " << flagID << " already exists." << "\n";
 	}
 	else
 	{
-		debugout << "Created flag " << flagID << endl;
+		debugout << "Created flag " << flagID << "\n";
 
 		flags_[flagID] = new SubspaceFlag();
 		flags_[flagID]->setFlagID(flagID);
@@ -273,7 +279,7 @@ void SubspaceZone::initFlags()
 		//debugout << (*i).first << " ";
 		//debugout.write(printfString("%d ", (*i).first));
 	}
-	debugout << "." << endl;
+	debugout << "." << "\n";
 }
 
 
@@ -951,7 +957,7 @@ void SubspaceZone::playerGotFlag(int playerID, int flagID)
 
 	if(flagID >= (int)flags_.size())
 	{
-		debugout << "Error: invalid flag id [" << flagID << "]" << endl;
+		debugout << "Error: invalid flag id [" << flagID << "]" << "\n";
 		return;
 	}
 	
@@ -982,7 +988,7 @@ void SubspaceZone::playerGotFlag(int playerID, int flagID)
 		flag->setIsMyTeamFlag(player->getTeam() == getMyPlayer()->getTeam());
 		player->giveFlag(flag);
 
-		debugout << "Player [" << playerID << "] received flag [" << flagID << "]" << endl;
+		debugout << "Player [" << playerID << "] received flag [" << flagID << "]" << "\n";
 	}
 }
 
@@ -1044,7 +1050,7 @@ void SubspaceZone::playerRequestFlag(int playerID, int flagID)
 	initFlag(flagID);	
 	SubspaceFlag* flag = flags_[flagID];
 
-	debugout << "Player [" << playerID << "] requested flag [" << flagID << "]" << endl;
+	debugout << "Player [" << playerID << "] requested flag [" << flagID << "]" << "\n";
 
 	if(!flag->isActive() || flag->isCarried())
 		return;
@@ -1087,12 +1093,12 @@ void SubspaceZone::initBall(int ballID)
 {
 	if(balls_[ballID])
 	{
-		debugout << "Ball " << ballID << " already exists." << endl;
+		debugout << "Ball " << ballID << " already exists." << "\n";
 		//printf("Ball %d already exists.", ballID);
 	}
 	else
 	{
-		debugout << "Created ball " << ballID << endl;
+		debugout << "Created ball " << ballID << "\n";
 		//printf("Created ball %d\n", ballID);
 		balls_[ballID] = new SubspaceBall();
 		balls_[ballID]->setBallID(ballID);
@@ -1124,7 +1130,7 @@ void SubspaceZone::setBall(int ballID, int ownerID, const Vector& position, cons
 
 	SubspacePlayer* player = getPlayer(ownerID);
 
-	//debugout << "Ball [" << ballID << "] carried by " << ownerID << ", at (" << position.x_ << "," << position.y_ << "):(" << velocity.x_ << "," << velocity.y_ << "); time: " << timestamp << endl;
+	//debugout << "Ball [" << ballID << "] carried by " << ownerID << ", at (" << position.x_ << "," << position.y_ << "):(" << velocity.x_ << "," << velocity.y_ << "); time: " << timestamp << "\n";
 	
 	//debugout.write(printfString("Ball [%d] carried by %d, at (%f,%f):(%f,%f); time: %d\n", ballID, ownerID, position.x_, position.y_, velocity.x_, velocity.y_, timestamp));
 	//printf("Ball [%d] carried by %d, at (%f,%f):(%f,%f); time: %d\n", ballID, ownerID, position.x_, position.y_, velocity.x_, velocity.y_, timestamp);
@@ -1180,8 +1186,13 @@ void SubspaceZone::updatePrizes(double time)
 	prizeGenerator_.setPopulation(getNumPlayers());
 
 	//TODO: make this use an actual timer
-	Uint16 delay = max(arenaSettings_.PrizeDelay, 1);
+	Uint16 delay = std::max(arenaSettings_.PrizeDelay, (Uint16)1);
+#ifdef _WIN32
 	int iterations = (GetTickCount() / 10 - lastPrizeUpdate_) / delay;
+#else
+	// Use SDL ticks on Linux
+	int iterations = (SDL_GetTicks() / 10 - lastPrizeUpdate_) / delay;
+#endif
 	for(int i=0; i < iterations; ++i)
 	{
 		for(int j=0; j < arenaSettings_.PrizeHideCount && getNumPrizes() < getNumPrizesMax(); ++j)
@@ -1192,7 +1203,11 @@ void SubspaceZone::updatePrizes(double time)
 	}
 
 	if(iterations > 0)
+#ifdef _WIN32
 		lastPrizeUpdate_ = GetTickCount() / 10;
+#else
+		lastPrizeUpdate_ = SDL_GetTicks() / 10;
+#endif
 
 	//update prize list
 	//updateList(prizes_, time);
@@ -1217,7 +1232,7 @@ void SubspaceZone::spawnPrize(Vector* pos)
 	{
 		//displayManager_[MapItemLayer].addObject(p);
 
-		//debugout << "Spawned prize [" << p->getPrizeType() << "] at (" << x << "," << y << ")" << endl;
+		//debugout << "Spawned prize [" << p->getPrizeType() << "] at (" << x << "," << y << ")" << "\n";
 		//printf("Spawned prize [%d] at (%d, %d)\n", p->getPrizeType(), x, y);
 		++numPrizes_;
 	}
@@ -1338,7 +1353,7 @@ void SubspaceZone::createTurret(int requesterID, int destinationID)
 
 	requester->setTurretParent(destination);
 	
-	debugout << "Turret link created: " << requesterID << " on " << destinationID << endl;
+	debugout << "Turret link created: " << requesterID << " on " << destinationID << "\n";
 }
 
 void SubspaceZone::destroyTurret(int playerID)
@@ -1346,10 +1361,10 @@ void SubspaceZone::destroyTurret(int playerID)
 	SubspacePlayer* player = getPlayer(playerID);
 	
 	if(!player)
-		debugout << "Invalid turret destruction: player [" << playerID << "]" << endl;
+		debugout << "Invalid turret destruction: player [" << playerID << "]" << "\n";
 	else
 	{
-		debugout << "Destroy turret link on player [" << playerID << "]" << endl;
+		debugout << "Destroy turret link on player [" << playerID << "]" << "\n";
 		//player->setTurretParent(0);	
 		if(getMyPlayer()->getTurretParent() == player)
 			requestTurret((Uint16)-1);
@@ -1360,7 +1375,7 @@ void SubspaceZone::destroyTurret(int playerID)
 
 void SubspaceZone::requestTurret(int playerID)
 {
-	debugout << "Requested attach to player [" << playerID << "]" << endl;
+	debugout << "Requested attach to player [" << playerID << "]" << "\n";
 
 	SubspacePlayer* p = getPlayer(playerID);
 	if(p && p->getTeam() != getMyPlayer()->getTeam())
@@ -1441,8 +1456,8 @@ void SubspaceZone::update(double timestep)
 template <class ListType>
 void SubspaceZone::updateList(ListType& list, double timeStep, ObjectLayerType layer)
 {
-	ListType::iterator i;
-	ListType::value_type item;
+	typename ListType::iterator i;
+	typename ListType::value_type item;
 	bool doDelete = false;
 
 	for(i = list.begin(); i != list.end(); ++i)
@@ -1472,8 +1487,8 @@ void SubspaceZone::updateList(ListType& list, double timeStep, ObjectLayerType l
 template <class MapType>
 void SubspaceZone::updateMap(MapType& map, double timeStep)
 {
-	MapType::iterator i;
-	MapType::mapped_type item;
+	typename MapType::iterator i;
+	typename MapType::mapped_type item;
 	bool doDelete = false;
 
 	for(i = map.begin(); i != map.end(); ++i)
@@ -1537,13 +1552,13 @@ GLUtil::enterOrthoMode();
 	int drawWidth = 70;
 	int drawHeight = drawWidth * 3 / 4;
 
-	double xtemp = max(-1, (int)playerCamera.getPosition().x_/SubspaceMap::tileWidth*SubspaceMap::tileWidth-(double)(drawWidth*SubspaceMap::tileWidth));	//weird, but only draw tiles every tileWidth/height
-	double ytemp = max(-1, (int)playerCamera.getPosition().y_/SubspaceMap::tileHeight*SubspaceMap::tileHeight-(double)(drawHeight*SubspaceMap::tileHeight));
+	double xtemp = std::max(-1.0, (int)playerCamera.getPosition().x_/SubspaceMap::tileWidth*SubspaceMap::tileWidth-(double)(drawWidth*SubspaceMap::tileWidth));	//weird, but only draw tiles every tileWidth/height
+	double ytemp = std::max(-1.0, (int)playerCamera.getPosition().y_/SubspaceMap::tileHeight*SubspaceMap::tileHeight-(double)(drawHeight*SubspaceMap::tileHeight));
 	
-	int xstart = max(-1, (int)playerCamera.getPosition().x_/16-drawWidth);
-	int xend = max(-1, (int)playerCamera.getPosition().x_/16+drawWidth);
-	int ystart = max(-1, (int)playerCamera.getPosition().y_/16-drawHeight);
-	int yend = max(-1, (int)playerCamera.getPosition().y_/16+drawHeight);
+	int xstart = std::max(-1, (int)playerCamera.getPosition().x_/16-drawWidth);
+	int xend = std::max(-1, (int)playerCamera.getPosition().x_/16+drawWidth);
+	int ystart = std::max(-1, (int)playerCamera.getPosition().y_/16-drawHeight);
+	int yend = std::max(-1, (int)playerCamera.getPosition().y_/16+drawHeight);
 	
 	map_.setDrawRange(xstart, ystart, xend, yend);
 	
@@ -1718,8 +1733,8 @@ void SubspaceZone::drawRadarItems(const SubspaceRadar& radar) const
 template <class ListType>
 void SubspaceZone::drawList(const ListType& list) const
 {
-	ListType::const_iterator i;
-	ListType::value_type item;
+	typename ListType::const_iterator i;
+	typename ListType::value_type item;
 
 	for(i = list.begin(); i != list.end(); ++i)
 	{
@@ -1734,8 +1749,8 @@ void SubspaceZone::drawList(const ListType& list) const
 template <class MapType>
 void SubspaceZone::drawMap(const MapType& map) const
 {
-	MapType::const_iterator i;
-	MapType::mapped_type item;
+	typename MapType::const_iterator i;
+	typename MapType::mapped_type item;
 
 	for(i = map.begin(); i != map.end(); ++i)
 	{
@@ -1764,9 +1779,17 @@ void positionThreadRoutine(void* ssZone)
 		else
 			sleepDelay = 100;
 
+#ifdef _WIN32
 		Sleep(sleepDelay);
+#else
+		SDL_Delay(sleepDelay);
+#endif
 	}
 	printf("Stopped position routine.");
 
-	ExitThread(0);	
+#ifdef _WIN32
+	ExitThread(0);
+#else
+	return;
+#endif	
 }

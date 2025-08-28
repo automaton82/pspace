@@ -19,7 +19,7 @@
     typedef unsigned int UINT;
     typedef unsigned char BYTE;
     typedef unsigned short WORD;
-    typedef unsigned long DWORD;
+    typedef unsigned int DWORD;  // Fixed: DWORD should be 32-bit, not long on 64-bit systems
     typedef int BOOL;
     typedef void* HANDLE;
     typedef void* HWND;
