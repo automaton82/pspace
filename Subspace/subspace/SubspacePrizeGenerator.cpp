@@ -36,7 +36,7 @@ void SubspacePrizeGenerator::setPrizeWeights(const PrizeSettings& settings, Uint
 	memcpy(&prizeWeights_, &settings, sizeof(PrizeSettings));
 
 	//calcPrizeWeightTotal();
-	prizeNegativeFactor_ = max(prizeNegativeFactor, 1);
+	prizeNegativeFactor_ = std::max(prizeNegativeFactor, (Uint16)1);
 	prizeWeightTotal_ = prizeWeights_.getTotalWeight();
 
 	memcpy(&multiPrizeWeights_, &settings, sizeof(PrizeSettings));
@@ -104,7 +104,7 @@ SubspacePrize* SubspacePrizeGenerator::createPrize()
 
 	// Find dimensions of the prize bounding rectangle
 	Uint16 distance = spawnRange_ + spawnRangeUpgrade_*population_;
-	distance = min(distance, 1024);
+	distance = std::min(distance, (Uint16)1024);
 
 	// Fill prize coordinates
 	Uint32 xRand, yRand;

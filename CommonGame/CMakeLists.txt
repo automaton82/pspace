@@ -18,6 +18,9 @@ list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 # Remove .old files
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
 
+# Remove SubspaceStubs.cpp since we're using real implementations
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*SubspaceStubs\\.cpp$")
+
 # Remove Subspace-specific files that shouldn't be in CommonGame
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*ChatBuffer\\.cpp$")
 
@@ -26,10 +29,25 @@ list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DInput.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DAudio.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*WinUtil.*\\.cpp$")
 
-# Remove Windows-specific threading and timing files (need porting)
+# Add Linux DirectInput stubs
+if(NOT WIN32)
+    list(APPEND COMMONGAME_SOURCES 
+        "${CMAKE_CURRENT_SOURCE_DIR}/DInputInterface_Linux.cpp"
+        "${CMAKE_CURRENT_SOURCE_DIR}/DInputKeyboard_Linux.cpp"
+    )
+endif()
+
+# Remove Windows-specific threading files (need porting)
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*Thread.*\\.cpp$")
-list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*Timer.*\\.cpp$")
-list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeProfiler.*\\.cpp$")
+# Add Linux Thread stub for interim functionality
+list(APPEND COMMONGAME_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Thread_Linux.cpp")
+# Add Linux Thread stub for interim functionality
+list(APPEND COMMONGAME_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Thread_Linux.cpp")
+# Add Subspace color and sound globals 
+list(APPEND COMMONGAME_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/SubspaceColors.cpp")
+list(APPEND COMMONGAME_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/SubspaceSounds.cpp")
+# TimeProfiler.cpp - include it for game linking
+# list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeProfiler.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeStream.*\\.cpp$")
 
 # Remove files with complex inheritance issues (temporary)

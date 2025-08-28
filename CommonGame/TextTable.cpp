@@ -197,34 +197,34 @@ void TextTable::addColumn(Uint columnWidth, const string& header, CenterType cen
 
 void TextTable::scrollDown(Uint n)		//TODO: some way to do scrolls without all the casting?
 {
-	int scrollHeight = max(0, (int)columnHeight_ - (int)displayHeight_);
-	int scrollAvailable = max(0, (int)columnHeight_ - (int)scrollHeight - (int)currentY_);	//need greater than 0
+	int scrollHeight = std::max(0, (int)columnHeight_ - (int)displayHeight_);
+	int scrollAvailable = std::max(0, (int)columnHeight_ - (int)scrollHeight - (int)currentY_);	//need greater than 0
 
-	currentY_ += min(scrollAvailable, (int)n);
+	currentY_ += std::min(scrollAvailable, (int)n);
 }
 
 void TextTable::scrollUp(Uint n)
 {
-	int scrollHeight = max(0, (int)columnHeight_ - (int)displayHeight_);
+	int scrollHeight = std::max(0, (int)columnHeight_ - (int)displayHeight_);
 	int scrollAvailable = (int)currentY_;
 
-	currentY_ -= min(scrollAvailable, (int)n);
+	currentY_ -= std::min(scrollAvailable, (int)n);
 }
 
 void TextTable::scrollRight(Uint n)
 {
-	int scrollWidth = max(0, (int)rowWidth_ - (int)displayWidth_);
+	int scrollWidth = std::max(0, (int)rowWidth_ - (int)displayWidth_);
 	int scrollAvailable = (int)rowWidth_ - (int)scrollWidth - (int)currentX_;
 	
-	currentY_ += min(scrollAvailable, (int)n);
+	currentY_ += std::min(scrollAvailable, (int)n);
 }
 
 void TextTable::scrollLeft(Uint n)
 {
-	int scrollWidth = max(0, (int)rowWidth_ - (int)displayWidth_);
+	int scrollWidth = std::max(0, (int)rowWidth_ - (int)displayWidth_);
 	int scrollAvailable = (int)currentX_;
 	
-	currentY_ -= min(scrollAvailable, (int)n);
+	currentY_ -= std::min(scrollAvailable, (int)n);
 }
 
 void TextTable::setBackgroundColor(const Color& c)

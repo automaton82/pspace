@@ -6,10 +6,10 @@ PlayerManager::PlayerManager()
 {
 }
 
-PlayerID PlayerManager::addPlayer(SSPlayer& p)
+PlayerID PlayerManager::addPlayer(SubspacePlayer& p)
 {
-	players_[p.data()->info_.playerID] = p;
-	return (PlayerID)p.data()->info_.playerID;
+	players_[p.getId()] = p;
+	return (PlayerID)p.getId();
 }
 
 void PlayerManager::removePlayer(PlayerID id)
@@ -17,7 +17,7 @@ void PlayerManager::removePlayer(PlayerID id)
 	players_.erase(id);
 }
 
-SSPlayer* PlayerManager::getPlayer(PlayerID id)
+SubspacePlayer* PlayerManager::getPlayer(PlayerID id)
 {
 	if(players_.find(id) != players_.end())
 		return &players_[id];
@@ -25,12 +25,12 @@ SSPlayer* PlayerManager::getPlayer(PlayerID id)
 		return 0;
 }
 
-SSPlayer* PlayerManager::getPlayer(string name)
+SubspacePlayer* PlayerManager::getPlayer(string name)
 {
 	PlayerMap::iterator i;
 	for(i = players_.begin(); i != players_.end(); i++)
 	{		
-		if(i->second.data()->info_.name == name)
+		if(i->second.getName() == name)
 			return &(i->second);
 	}
 	return 0;

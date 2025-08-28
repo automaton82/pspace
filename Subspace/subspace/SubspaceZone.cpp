@@ -1793,3 +1793,52 @@ void positionThreadRoutine(void* ssZone)
 	return;
 #endif	
 }
+
+// Stub implementations for missing network methods
+bool SubspaceZone::sendShipChange(ShipType ship)
+{
+	// TODO: Implement ship change network message
+	// For now, just return success (stub implementation)
+	return true;
+}
+
+bool SubspaceZone::sendTeamChange(Uint16 team)
+{
+	// TODO: Implement team change network message
+	// For now, just log the request
+	return true; // Return success for stub
+}
+
+bool SubspaceZone::sendAttachRequest(Uint16 targetPlayer)
+{
+	// TODO: Implement attach/turret request network message
+	// For now, just log the request
+	return true; // Return success for stub
+}
+
+bool SubspaceZone::sendBrickDrop(Uint16 xTile, Uint16 yTile)
+{
+	// TODO: Implement brick drop network message
+	// For now, just log the request
+	return true; // Return success for stub
+}
+
+bool SubspaceZone::sendKothTimerEnded()
+{
+	// TODO: Implement KOTH timer ended network message
+	// For now, just log the request
+	return true; // Return success for stub
+}
+
+bool SubspaceZone::sendFlagRequest(Uint16 flagId)
+{
+	// TODO: Implement flag request network message
+	// For now, just log the request
+	return true; // Return success for stub
+}
+
+void SubspaceZone::handlePlayerObjectCollisions()
+{
+	// TODO: Implement player-object collision detection
+	// For now, just return (stub implementation)
+}

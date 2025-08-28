@@ -10,6 +10,7 @@
 #include "InputEvent.h"
 
 #include <SDL2/SDL.h>
+#include <GL/gl.h>
 #include <iostream>
 
 // Mock Windows globals for compatibility
@@ -298,6 +299,18 @@ public:
         std::cout << "Subspace game shutting down..." << std::endl;
     }
 };
+
+// Global rendering function expected by main-game.cpp
+void DrawGLScene()
+{
+    // Basic OpenGL rendering - clear the screen
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    
+    // TODO: Add actual game rendering here
+    // For now, just a basic clear to prevent crashes
+    
+    // Swap buffers will be handled by the main loop
+}
 
 int main(int argc, char* argv[]) 
 {

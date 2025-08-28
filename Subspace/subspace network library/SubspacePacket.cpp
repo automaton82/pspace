@@ -1,7 +1,11 @@
 #include "SubspacePacket.h"
 
 #include <assert.h>
+#ifdef _WIN32
 #include <winsock2.h>
+#else
+#include <arpa/inet.h>  // For htons, ntohs etc.
+#endif
 
 SubspacePacket::SubspacePacket() :
 	data(0),

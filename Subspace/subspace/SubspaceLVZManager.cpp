@@ -23,7 +23,7 @@ bool SubspaceLVZManager::load(const string& path, const string& filename)
 
 	if(b1 == filename_.npos) b1 = filename_.length();
 	if(b2 == filename_.npos) b2 = filename_.length();
-	size_t nameStart = min(b1, b2);
+	size_t nameStart = std::min(b1, b2);
 
 	if(nameStart == filename_.npos)
 		nameStart = 0;
@@ -266,15 +266,16 @@ void SubspaceLVZManager::addMapObject(const LVZMapObject& o)
 	if(img.getNumFrames() == 0 || img.getNumFrames() == (Uint)-1)
 		return;
 
-	mapObjects_[obj->layer].insert(std::pair<int, LVZMapObject*>(obj->objectID, obj));
+	int objectID = obj->objectID; // Copy bit-field to temporary variable
+	mapObjects_[obj->layer].insert(std::pair<int, LVZMapObject*>(objectID, obj));
 
-	if(itemData_.find(obj->objectID) == itemData_.end())
+	if(itemData_.find(objectID) == itemData_.end())
 	{
 		LVZItemData item;
 		item.isEnabled = false;
 		item.displayTimeLeft = 0;//obj->displayTime*100.0;		// convert 1/10th s to ms
 
-		itemData_.insert(std::pair<int, LVZItemData>(obj->objectID, item));	
+		itemData_.insert(std::pair<int, LVZItemData>(objectID, item));	
 	}
 }
 
@@ -285,15 +286,16 @@ void SubspaceLVZManager::addScreenObject(const LVZScreenObject& o)
 
 	LVZScreenObject* obj = new LVZScreenObject(o);
 
-	screenObjects_[obj->layer].insert(std::pair<int, LVZScreenObject*>(obj->objectID, obj));
+	int objectID = obj->objectID; // Copy bit-field to temporary variable
+	screenObjects_[obj->layer].insert(std::pair<int, LVZScreenObject*>(objectID, obj));
 	
-	if(itemData_.find(obj->objectID) == itemData_.end())
+	if(itemData_.find(objectID) == itemData_.end())
 	{
 		LVZItemData item;
 		item.isEnabled = false;
 		item.displayTimeLeft = 0;//obj->displayTime*100.0;		// convert 1/10th s to ms
 
-		itemData_.insert(std::pair<int, LVZItemData>(obj->objectID, item));
+		itemData_.insert(std::pair<int, LVZItemData>(objectID, item));
 	}
 }
 

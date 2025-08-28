@@ -95,6 +95,10 @@ private:
 	double flashTime_;
 	double bombFlashTime_;
 	double timer_;
+	
+	// Temporary coordinates for radar calculations
+	mutable Uint tempTX_, tempTY_;  // Temporary tile coordinates
+	mutable Uint tempRX_, tempRY_;  // Temporary radar coordinates
 
 	int targetBounty_;
 };

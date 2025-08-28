@@ -2,6 +2,10 @@
 
 #include "SubspaceReliableManager.h"
 
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+
 SubspaceReliableManager::SubspaceReliableManager() :
 	clientPacketID_(0),
 	serverPacketID_(0),
@@ -68,7 +72,11 @@ int SubspaceReliableManager::addFromClient(SubspacePacket& p)
 		p.prepend(relHeader);
 	}
 	
+#ifdef _WIN32
 	clientPackets_[GetTickCount() / 10] = p;
+#else
+	clientPackets_[SDL_GetTicks() / 10] = p;
+#endif
 	SubspacePacketInterpreter::reliablePacket(p, &id, NULL);
 	return id;
 }

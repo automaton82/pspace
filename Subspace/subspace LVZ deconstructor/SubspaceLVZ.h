@@ -41,7 +41,11 @@ private:
 	union TypeName
 	{
 		char bytes[4];
+#ifdef _WIN32
 		unsigned __int32 u;
+#else
+		unsigned int u;
+#endif
 	};
 	
     static const TypeName contTypeName;

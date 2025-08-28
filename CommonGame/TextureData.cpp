@@ -190,8 +190,8 @@ char* TextureData::expandData(char* data, Uint width, Uint height, Uint* newWidt
 			}
 			else
 			{
-				Uint lastWidth = min(x, width-1);		//copy end colors
-				Uint lastHeight = min(y, height-1);	
+				Uint lastWidth = std::min(x, width-1);		//copy end colors
+				Uint lastHeight = std::min(y, height-1);	
 				Uint lastPixel = (lastHeight*width + lastWidth) * 4;
 
 				expandedData[currPixelNew] = data[lastPixel];
@@ -228,7 +228,7 @@ char* TextureData::filterColor(char* data, Uint width, Uint height, const Color&
 				//data[index + 3] = (char)255;
 
 				//scale alpha based on color
-				//newData[newIndex + 3] = max(max(newData[newIndex+0], newData[newIndex+1]), newData[newIndex+2]);
+				//newData[newIndex + 3] = std::max(std::max(newData[newIndex+0], newData[newIndex+1]), newData[newIndex+2]);
 			}
 		}
 	}

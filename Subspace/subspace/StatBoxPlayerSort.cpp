@@ -38,7 +38,7 @@ void StatBoxPlayerSort::init(const SubspacePlayerMap& playerMap, const SubspaceP
 	playerSort(textBox_, players_, playerMap, myPlayer, false);
 
 	topDisplayIndex_ = 0;
-	bottomDisplayIndex_ = min(statBoxSize_-1, textBox_.size()-1);
+	bottomDisplayIndex_ = std::min(statBoxSize_-1, textBox_.size()-1);
 	textBox_.setLinesDisplayed(statBoxSize_);
 	//textBox_.etHeader(itoa(players_.size()), COLOR_Green);
 }
@@ -118,7 +118,7 @@ void StatBoxPlayerSort::increaseSize()
 
 void StatBoxPlayerSort::pageDown()
 {
-	/*selectedPlayerIndex_ = max(selectedPlayerIndex_+textBox_.getLinesDisplayed(), textBox_.getLinesDisplayed());		// correction for integer wrapping around
+	/*selectedPlayerIndex_ = std::max(selectedPlayerIndex_+textBox_.getLinesDisplayed(), textBox_.getLinesDisplayed());		// correction for integer wrapping around
 	if(selectedPlayerIndex_ >= textBox_.size())
 		selectedPlayerIndex_ = textBox_.size() - 1;
 
@@ -143,7 +143,7 @@ void StatBoxPlayerSort::pageUp()
 
 	topDisplayIndex_ = selectedPlayerIndex_;
 
-	bottomDisplayIndex_ = min(topDisplayIndex_ + textBox_.getLinesDisplayed(), textBox_.size()-1);
+	bottomDisplayIndex_ = std::min(topDisplayIndex_ + textBox_.getLinesDisplayed(), textBox_.size()-1);
 
 	textBox_.setLineDisplayOffset(topDisplayIndex_);*/
 

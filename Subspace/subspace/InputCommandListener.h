@@ -3,11 +3,12 @@
 
 #include "../../CommonGame/CommandListenerBase.h"
 #include "InputEvent.h"
-
+#include "InputCommandReceiver.h"
 #include "InputCommands.h"
 
 class InputCommandListener : 
-	public CommandListenerBase<InputCommandListener, InputCommand>
+	public CommandListenerBase<InputCommandListener, InputCommand>,
+	public InputCommandReceiver
 {
 public:
 

@@ -1,10 +1,17 @@
 #include "SubspaceCoreProtocol.h"
 
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+
 #include "SubspacePacketFactory.h"
 using namespace SubspacePacketFactory;
 
 #include "SubspacePacketInterpreter.h"
 using namespace SubspacePacketInterpreter;
+
+// Forward declaration for thread routine
+void reliablePacketHandlerRoutine(void* coreProtocol);
 
 SubspaceCoreProtocol::SubspaceCoreProtocol() :
 	reliablePacketThread_(static_cast<Thread::startRoutine>(reliablePacketHandlerRoutine)),
@@ -136,7 +143,11 @@ Uint SubspaceCoreProtocol::getReliableReceivedPackets() const
 
 Uint32 SubspaceCoreProtocol::getServerTimeStamp()
 {
+#ifdef _WIN32
     return serverTimeStamp_ + GetTickCount() - clientTimeStamp_; //timestamp difference
+#else
+    return serverTimeStamp_ + SDL_GetTicks() - clientTimeStamp_; //timestamp difference
+#endif
 	//return serverTimeStamp_;
 }
 
@@ -145,7 +156,11 @@ void SubspaceCoreProtocol::setServerTimeStamp(Uint32 timestamp)
 	//this->log("Timestamp old,new: %d, %d", serverTimeStamp_, timestamp);
 	
 	serverTimeStamp_ = timestamp;
+#ifdef _WIN32
 	clientTimeStamp_ = GetTickCount();
+#else
+	clientTimeStamp_ = SDL_GetTicks();
+#endif
 }
 
 
@@ -162,17 +177,33 @@ void reliablePacketHandlerRoutine(void* arg)
 		if(!coreProtocol->resendDelay_)
 			coreProtocol->resendDelay_ = defaultResendDelay;
 
+#ifdef _WIN32
 		while(coreProtocol->reliablePackets_.availableFromClient(GetTickCount()/10, coreProtocol->resendDelay_))
+#else
+		while(coreProtocol->reliablePackets_.availableFromClient(SDL_GetTicks()/10, coreProtocol->resendDelay_))
+#endif
 		{
+#ifdef _WIN32
 			SubspacePacket resendPacket = coreProtocol->reliablePackets_.getNextFromClient(GetTickCount() / 10, coreProtocol->resendDelay_);
+#else
+			SubspacePacket resendPacket = coreProtocol->reliablePackets_.getNextFromClient(SDL_GetTicks() / 10, coreProtocol->resendDelay_);
+#endif
 			coreProtocol->reliablePackets_.addFromClient(resendPacket);
 
 			printf("Reliable packet resent: Client[%d]  Server[%d]\n", coreProtocol->reliablePackets_.getLastClientID(), coreProtocol->reliablePackets_.getLastServerID());
 			coreProtocol->sendPacket(resendPacket);
 		}
+#ifdef _WIN32
 		Sleep(coreProtocol->resendDelay_);
+#else
+		SDL_Delay(coreProtocol->resendDelay_);
+#endif
 	}
 	//coreProtocol->log("Reliable handler stopped.");
 
+#ifdef _WIN32
 	ExitThread(0);
+#else
+	return;
+#endif
 }

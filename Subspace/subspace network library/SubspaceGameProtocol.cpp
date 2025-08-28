@@ -1,5 +1,9 @@
 #include "SubspaceGameProtocol.h"
 
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+
 #include "Timer.h"
 
 #include "SubspaceChatCommandReceiver.h"
@@ -10,6 +14,9 @@ using namespace SubspacePacketFactory;
 
 #include "SubspacePacketInterpreter.h"
 using namespace SubspacePacketInterpreter;
+
+// Forward declaration for thread routine
+void packetHandlerRoutine(void* gameProtocol);
 
 SubspaceGameProtocol::SubspaceGameProtocol() : 
 	packetHandlerThread_(static_cast<Thread::startRoutine>(packetHandlerRoutine)),
@@ -36,7 +43,11 @@ bool SubspaceGameProtocol::connect(const string& user, const string& password, c
 
 	while(!coreProtocol_.isConnected() && timer.getElapsedTime() < timeout)
 	{
+#ifdef _WIN32
 		Sleep(1);
+#else
+		SDL_Delay(1);
+#endif
 	}
 
 	if(coreProtocol_.isConnected())
@@ -71,7 +82,13 @@ bool SubspaceGameProtocol::connect2(const string& host, Uint16 port, Uint timeou
 	coreProtocol_.sendSyncRequest();
 	
 	while(!this->isConnected() && timer.getElapsedTime() < timeout)
+	{
+#ifdef _WIN32
 		Sleep(1);
+#else
+		SDL_Delay(1);
+#endif
+	}
 	
 	if(this->isConnected())
 	{
@@ -210,7 +227,11 @@ void packetHandlerRoutine(void* arg)
 		if(!mainProtocol->coreProtocol_.receivePacket(p))
 		{
 			//mainProtocol->debugLog("PACKET: Packet receive failed (SubspaceProtocol - packetHandlerRoutine)!");
+#ifdef _WIN32
 			Sleep(1);
+#else
+			SDL_Delay(1);
+#endif
 		}
 		else
 		{
@@ -219,6 +240,10 @@ void packetHandlerRoutine(void* arg)
 	}
 	//mainProtocol->log("Packet handler stopped.");
 
+#ifdef _WIN32
 	ExitThread(0);
+#else
+	return;
+#endif
 	//return;
 }

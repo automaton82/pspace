@@ -9,6 +9,9 @@
 #include "MathUtil.h"
 #include "SubspaceGlobal.h"
 
+using std::min;
+using std::max;
+
 SubspaceMap::SubspaceMap() : 
 	borderType_(20),
 	isLoaded_(false),
@@ -33,25 +36,25 @@ bool SubspaceMap::load(const string& filename)
 	if(!file.is_open())
 	{
 		//this->log("File not found: %s", filename.c_str());
-		debugout << "File not found: " << filename << endl;
+		debugout << "File not found: " << filename << "\n";
 		return false;
 	}
 	file.close();
 
 	//this->log("Reading file \"%s\"...", filename.c_str());
-	debugout << "Loading mapfile \"" << AsciiUtil::trim(filename) << "\"..." << endl;
+	debugout << "Loading mapfile \"" << AsciiUtil::trim(filename) << "\"...\n";
 
 	
 	if(!bitmap.loadFromFile(filename))	//uses bitmap just to check
 	//!bmpObj.load(filename))	//if no bitmap data
 	{
 		//this->log("No tile bitmap found.");
-		debugout << "No tile bitmap found, loading default..." << ends;
+		debugout << "No tile bitmap found, loading default...\n";
 		useDefaultTile = true;
 
 		if(!bmpObj.load("graphics/tiles.bm2"))	//load default data
 		{
-			debugout << "Error loading default bitmap data." << endl;
+			debugout << "Error loading default bitmap data.\n";
 			//this->log("Error Loading default bitmap data.");
 			return false;
 		}
@@ -97,22 +100,22 @@ bool SubspaceMap::load(const string& filename)
 	int validTiles, invalidTiles;
 
 	//this->log("Reading tile data...");
-	debugout << "Reading tile data..." << ends;
+	debugout << "Reading tile data...\n";
 	if(!readTileInfo(fileHandle, validTiles, invalidTiles))
 	{
-		debugout << "Error reading tile data." << endl;
+		debugout << "Error reading tile data.\n";
 		//this->log("Error reading tile data.");
 		isLoaded_ = false;
 	}
 	else
 	{
-		debugout << "done." << endl;
+		debugout << "done.\n";
 		isLoaded_ = true;
 	}
 
 	if(invalidTiles != 0)
 	{
-		debugout << "Found " << validTiles << " valid tiles, " << invalidTiles << " invalid tiles." << endl;
+		debugout << "Found " << validTiles << " valid tiles, " << invalidTiles << " invalid tiles.\n";
 		//this->log("Found %d valid tiles, %d invalid tiles.", validTiles, invalidTiles);
 	}
 
@@ -125,7 +128,7 @@ bool SubspaceMap::load(const string& filename)
 
 	if(isLoaded_)
 	{
-		debugout << "Map loaded successfully." << endl;
+		debugout << "Map loaded successfully.\n";
 		//this->log("Map loaded successfully.");
 
 		mapFilename_ = filename;
@@ -140,7 +143,7 @@ bool SubspaceMap::load(const string& filename)
 
 		for(s = t; (*s).first < toLinear(500 + 400, (*t).second.y_); ++s)	
 		{
-			test << "(" << (*s).second.x_ << ", " << (*s).second.y_ << ")" << std::endl;
+			test << "(" << (*s).second.x_ << ", " << (*s).second.y_ << ")" << "\n";
 		}
 		t = drawTiles_.lower_bound(toLinear(500, (*t).second.y_+1));				
 	}
@@ -276,8 +279,8 @@ bool SubspaceMap::addObject(int tileX, int tileY, SubspaceGameObject* object, bo
 			nextTileX = tileX + radius*cos(angle);
 			nextTileY = tileY + radius*sin(angle);
 			
-			nextTileX = min(maxTileX, nextTileX);
-			nextTileY = min(maxTileY, nextTileY);
+			nextTileX = std::min((int)maxTileX, (int)nextTileX);
+			nextTileY = std::min((int)maxTileY, (int)nextTileY);
 
 			index = nextTileY*maxTileX + nextTileX;
 			i = objects_.find(index);
@@ -333,11 +336,11 @@ void SubspaceMap::setDrawRange(int x, int y, int xEnd, int yEnd)
 {
 	assert(x >= -1 && x <= xEnd && y >= -1 && y <= yEnd);
 
-	drawX_ = min( max(-1, x), (int)width_+1);	//clamp at -1 and width+1
-	drawY_ = min( max(-1, y), (int)height_+1);
+	drawX_ = std::min( std::max(-1, x), (int)width_+1);	//clamp at -1 and width+1
+	drawY_ = std::min( std::max(-1, y), (int)height_+1);
 
-	drawXEnd_ = min( max(-1, xEnd), (int)width_+1);	//clamp at -1 and width+1
-	drawYEnd_ = min( max(-1, yEnd), (int)height_+1);
+	drawXEnd_ = std::min( std::max(-1, xEnd), (int)width_+1);	//clamp at -1 and width+1
+	drawYEnd_ = std::min( std::max(-1, yEnd), (int)height_+1);
 }
 
 void SubspaceMap::draw() const
@@ -427,10 +430,10 @@ void SubspaceMap::drawObjectMap(const ObjectMap& objectMap) const
 
 void SubspaceMap::drawTile(const SubspaceTile& t) const
 {
-	//int dx = (int)t.x_ - max(0, drawX_);
-	//int dy = (int)t.y_ - max(0, drawY_);
-	int dx = t.x_ - max(0, drawX_);
-	int dy = t.y_ - max(0, drawY_);
+	//int dx = (int)t.x_ - std::max(0, drawX_);
+	//int dy = (int)t.y_ - std::max(0, drawY_);
+	int dx = t.x_ - std::max(0, drawX_);
+	int dy = t.y_ - std::max(0, drawY_);
 
 	glPushMatrix();
 		glTranslated(dx*(double)tileWidth, dy*(double)tileHeight, 0);
@@ -586,7 +589,7 @@ struct TileData
 bool SubspaceMap::readTileInfo(HANDLE fileHandle, int& validTiles, int& invalidTiles)
 {
 	BOOL readResult;
-	unsigned long bytesRead = 0;
+	DWORD bytesRead = 0;
 	unsigned long currentByte = 0;
 		
 	invalidTiles = 0;
@@ -629,8 +632,8 @@ bool SubspaceMap::readTileInfo(HANDLE fileHandle, int& validTiles, int& invalidT
 
 int SubspaceMap::toLinear(int x, int  y)
 {
-	x = max(0, min(maxTileX, x));
-	y = max(0, min(maxTileY, y));
+	x = std::max(0, std::min(maxTileX, x));
+	y = std::max(0, std::min(maxTileY, y));
 
 	return (y * maxTileX + x);	
 }
@@ -646,7 +649,7 @@ int SubspaceMap::toLinearBorder(int x, int  y)
 template <class T>
 void SubspaceMap::updateList(T& list, double time)
 {
-	T::iterator i;
+	typename T::iterator i;
 	for(i = list.begin(); i != list.end(); ++i)
 		(*i).update(time);
 }

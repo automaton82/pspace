@@ -3,25 +3,25 @@
 #include <map>
 
 #include "DataTypes.h"
-#include "SSPlayer.h"
+#include "SubspacePlayer.h"
 
 #ifndef _PlayerManager_
 #define _PlayerManager_
 
 typedef Uint PlayerID;
 
-typedef std::map<Uint, SSPlayer> PlayerMap;
+typedef std::map<Uint, SubspacePlayer> PlayerMap;
 
 class PlayerManager
 {
 public:
 	PlayerManager();
 	
-	PlayerID addPlayer(SSPlayer& p);
+	PlayerID addPlayer(SubspacePlayer& p);
 	void removePlayer(PlayerID id);
 
-	SSPlayer* getPlayer(PlayerID id);
-	SSPlayer* getPlayer(string name);
+	SubspacePlayer* getPlayer(PlayerID id);
+	SubspacePlayer* getPlayer(string name);
 
 private:
 

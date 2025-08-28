@@ -1,5 +1,9 @@
 #include "SubspaceCoreProtocol.h"
 
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+
 #include "SubspacePacketFactory.h"
 using namespace SubspacePacketFactory;
 
@@ -181,7 +185,11 @@ bool SubspaceCoreProtocol::onSyncResponse(SubspacePacket& p)
 
 	setServerTimeStamp(pongTime);
 
+#ifdef _WIN32
 	pingCurrent_ = GetTickCount()/10 - (int)pingTime;		//TODO: factor this out
+#else
+	pingCurrent_ = SDL_GetTicks()/10 - (int)pingTime;		//TODO: factor this out
+#endif
 
 	if(pingCurrent_ > pingHigh_) 
 		pingHigh_ = pingCurrent_;

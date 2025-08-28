@@ -17,6 +17,8 @@ typedef unsigned char BYTE;
 typedef int HRESULT;
 typedef void* LPDIRECTINPUT8;
 typedef void* LPDIRECTINPUTDEVICE8;
+typedef void* HWND;
+typedef void* HINSTANCE;
 typedef struct {
     long lX;
     long lY;

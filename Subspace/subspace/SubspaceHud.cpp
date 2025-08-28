@@ -303,13 +303,13 @@ double SubspaceHud::getLVZScreenCoordY(LVZScreenType type) const
 
 void SubspaceHud::setNameWidth(int width)
 {
-	width = max(1, min(maxNameLength_, width));
+	width = std::max(1, std::min(maxNameLength_, width));
 	chat_->setHeaderWidth(width);
 }
 
 void SubspaceHud::setChatLines(int lines)
 {
-	lines = max(0, min(maxChatLines_, lines));
+	lines = std::max(0, std::min(maxChatLines_, lines));
 	chat_->setLinesDisplayed(lines);
 }
 

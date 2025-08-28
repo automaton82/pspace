@@ -4,7 +4,7 @@
 using namespace std;
 
 #include "Checksum.h"
-#include "MathUtil.H"
+#include "MathUtil.h"
 #include "WinUtil.h"
 
 const double SubspaceNetworkHandler::defaultFailRate = 20.0;
@@ -80,11 +80,11 @@ bool SubspaceNetworkHandler::connect(const string& host, Uint16 port)
 {
 	if(!socket_.open(host, port))
 	{
-		cerr << "UDP startup failed." << endl;
+		cerr << "UDP startup failed." << "\n";
 		return false;
 	}
 
-	cout << "Connecting to " << socket_.getHost() << " (" << socket_.getIPAddress() << ":" << socket_.getPort() << ")" << endl;
+	cout << "Connecting to " << socket_.getHost() << " (" << socket_.getIPAddress() << ":" << socket_.getPort() << ")" << "\n";
 
 	return true;
 }
@@ -105,8 +105,8 @@ bool SubspaceNetworkHandler::receivePacket(SubspacePacket& p)
 	//wait for a new packet - blocking operation
 	if(!socket_.waitForData(timeout_))
 	{
-		cout << "No data coming from server... (" << timeout_ << " ms since last packet)" << endl;
-		cout << "RECEIVEPACKET: " << getLastWindowsError() << endl;
+		cout << "No data coming from server... (" << timeout_ << " ms since last packet)" << "\n";
+		cout << "RECEIVEPACKET: " << getLastWindowsError() << "\n";
 		return false;
 	}
 	//if(!socket_.receiveData(reinterpret_cast<char*>(p.data), MAX_PACKET_SIZE, &p.dataSize))
@@ -164,9 +164,7 @@ bool SubspaceNetworkHandler::sendPacketHelper(SubspacePacket& p)
 	Uint offset = 0;
 	while(offset < p.size())
 	{
-		int size = min(chunkDataSize, p.size() - offset);	//remaining part of the packet or a maxsize packet
-
-		//if(p.size() - offset < MAX_PACKET_SIZE)
+			int size = std::min((Uint)chunkDataSize, p.size() - offset);	//remaining part of the packet or a maxsize packet		//if(p.size() - offset < MAX_PACKET_SIZE)
 		if(p.size() < MAX_PACKET_SIZE + offset)				//check if this is the last piece of the packet
 		{
 			chunk.data = &p.data[offset];

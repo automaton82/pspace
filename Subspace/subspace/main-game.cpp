@@ -17,15 +17,21 @@ static SubspaceGameManager gameManager;
 static DInputInterface directInput;
 static DInputKeyboard keyboard(&directInput);
 
+#ifdef _WIN32
 extern HWND g_hWnd;		// Holds Our Window Handle
 extern HINSTANCE g_hInstance;		// Holds The Instance Of The Application
+#endif
 
 Timer displayTimer;
 Timer gameTimer;
 
 void GameInit()
 {
+#ifdef _WIN32
 	directInput.Initialize(g_hWnd, g_hInstance);
+#else
+	directInput.Initialize(nullptr, nullptr);
+#endif
 	keyboard.setCallback(GameInput);
 
 	gameManager.init();

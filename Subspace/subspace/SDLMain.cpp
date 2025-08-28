@@ -151,7 +151,7 @@ bool HandleSDLEvents()
 		case SDL_KEYUP:
 		{
 			InputEvent input;
-			input.type_ = (e.type == SDL_KEYDOWN) ? InputEvent::KEY_DOWN : InputEvent::KEY_UP;
+			input.type_ = (e.type == SDL_KEYDOWN) ? KEY_PRESSED : KEY_RELEASED;
 			input.key_ = e.key.keysym.sym;
 			input.x_ = 0;
 			input.y_ = 0;
@@ -163,7 +163,7 @@ bool HandleSDLEvents()
 		case SDL_MOUSEBUTTONUP:
 		{
 			InputEvent input;
-			input.type_ = (e.type == SDL_MOUSEBUTTONDOWN) ? InputEvent::MOUSE_DOWN : InputEvent::MOUSE_UP;
+			input.type_ = (e.type == SDL_MOUSEBUTTONDOWN) ? MOUSE_DOWN : MOUSE_UP;
 			input.key_ = e.button.button;
 			input.x_ = e.button.x;
 			input.y_ = e.button.y;
@@ -174,7 +174,7 @@ bool HandleSDLEvents()
 		case SDL_MOUSEMOTION:
 		{
 			InputEvent input;
-			input.type_ = InputEvent::MOUSE_MOVE;
+			input.type_ = MOUSE_MOVE;
 			input.key_ = 0;
 			input.x_ = e.motion.x;
 			input.y_ = e.motion.y;

@@ -1,8 +1,9 @@
 //This file was Kindly provided by Snrrrub to handle all the Checksums
 
-// <-<-<- Writen By: Snrrrub ->->->
+// <-<-<- Written By: Snrrrub ->->->
 
 #include "Checksum.h"
+#include <stdint.h>  // For uintptr_t
 
 bool Checksum::LoadMap(const char *filename, void *dest)
 {
@@ -37,7 +38,7 @@ bool Checksum::LoadMap(const char *filename, void *dest)
 
 Uint32 Checksum::mapChecksum(Uint32 key, void *data)
 {
-	Uint32 EAX, ECX, ESI, EDX;
+	uintptr_t EAX, ECX, ESI, EDX;
 	Uint32 HighBit = 0;
 	Uint32 cnt;
 	Uint32 original_key = key;
@@ -62,10 +63,10 @@ Uint32 Checksum::mapChecksum(Uint32 key, void *data)
 
 	EDX = key % 0x1F;
 
-	ESI = (ECX << 0x0A) + (Uint32)mapdata + EDX;
+	ESI = (ECX << 0x0A) + (uintptr_t)mapdata + EDX;
 	EAX = 0x400 - EDX;
 	cnt = (0x41F - ECX) >> 5;
-	mapdata  = (char *)EAX;
+	mapdata  = (char *)(uintptr_t)EAX;
 
 	for(; cnt > 0; cnt--, ESI += 0x8000)
 	{
@@ -75,14 +76,14 @@ Uint32 Checksum::mapChecksum(Uint32 key, void *data)
 			continue;
 		while(ECX < EDX)
 		{
-			unsigned char byte = (*((char *)ECX));
+			unsigned char byte = (*((char *)(uintptr_t)ECX));
 			if((byte < 0xA1 || byte == 0xAB) && byte != 0)
 				key += original_key ^ byte;
 			ECX += 0x1F;
 		}
-		EAX = (Uint32)mapdata;
+		EAX = (uintptr_t)mapdata;
 	}
-	return key;
+	return (Uint32)key;
 }
 
 Uint32 Checksum::settingsChecksum(Uint32 key, void *settings)

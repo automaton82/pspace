@@ -85,11 +85,11 @@ void SubspaceBackground::resize()
 void SubspaceBackground::drawPointStar(const Color& color) const
 {
 	Material m;
-	m.setColor(Color(color.r_, color.g_, color.b_));
-	m.setAlpha(color.a_);
+	m.setColor(Color(color.r, color.g, color.b));
+	m.setAlpha(color.a);
 	m.enable();
 
-	glColor4d(color.r_, color.g_, color.b_, color.a_);
+	glColor4d(color.r, color.g, color.b, color.a);
 
 	/*glBegin(GL_POINTS);
 		glVertex3f(0, 0, 0);

@@ -127,8 +127,8 @@ char* SubspaceRadar::createRadarTexture(const SubspaceMap* map, Uint width, Uint
 	assert(map);
 	assert(width > 0 && height > 0);		
 
-	width = min(SubspaceMap::maxTileX, width);
-	height = min(SubspaceMap::maxTileY, height);
+	width = std::min((Uint)SubspaceMap::maxTileX, width);
+	height = std::min((Uint)SubspaceMap::maxTileY, height);
 
 	radarWidth_ = width;
 	radarHeight_ = height;
@@ -136,7 +136,7 @@ char* SubspaceRadar::createRadarTexture(const SubspaceMap* map, Uint width, Uint
 	char* pixels = new char[width * height * 4];
 	memset(pixels, 0, width*height*4);
 
-	debugout << "Creating radar..." << ends;
+	debugout << "Creating radar..." << "\n";
 	//printf("Creating radar...");
 
 	Uint w, h;
@@ -200,7 +200,7 @@ char* SubspaceRadar::createRadarTexture(const SubspaceMap* map, Uint width, Uint
 		}
 	}
 
-	debugout << "done." << endl;
+	debugout << "done." << "\n";
 	//printf("done.\n");
 
 	return pixels;
@@ -290,7 +290,7 @@ void SubspaceRadar::drawBorder() const
 	glEnd();
 }
 
-static tempTX_, tempTY_, tempRX_, tempRY_;
+// Temporary variables moved to class members
 
 void SubspaceRadar::drawRadarStatic() const
 {
@@ -306,8 +306,8 @@ void SubspaceRadar::drawRadarStatic() const
 			//TODO: all these calculations would be done much easier with ints
 		double xPos = radarTileX_, yPos = radarTileY_;	//middle position
 
-		xPos = min(SubspaceMap::maxTileX-radarTileDisplayWidth_/2, xPos);	//max of half radar screen less than top tile
-		yPos = min(SubspaceMap::maxTileY-radarTileDisplayWidth_/2, yPos);
+		xPos = std::min((double)SubspaceMap::maxTileX-radarTileDisplayWidth_/2, xPos);	//max of half radar screen less than top tile
+		yPos = std::min((double)SubspaceMap::maxTileY-radarTileDisplayWidth_/2, yPos);
 		
 		if(radarTileDisplayWidth_/2 > xPos)				//adjust from center
 			xPos = 0;

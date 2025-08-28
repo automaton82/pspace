@@ -92,11 +92,11 @@ void TileMap::setDrawRange(Uint x, Uint y, Uint xEnd, Uint yEnd)
 {
 	assert(x <= xEnd && y <= yEnd);
 
-	x = min(x, width_);
-	y = min(y, height_);
+	x = std::min(x, width_);
+	y = std::min(y, height_);
 
-	xEnd = min(xEnd, width_);
-	yEnd = min(yEnd, height_);
+	xEnd = std::min(xEnd, width_);
+	yEnd = std::min(yEnd, height_);
 
 	drawX_ = x;
 	drawY_ = y;

@@ -111,16 +111,8 @@ target_compile_options(subspace_test PRIVATE ${SDL2_CFLAGS_OTHER})
 # Build full Subspace game application with real game manager
 # We need to include specific Subspace sources for the game manager
 file(GLOB SUBSPACE_GAME_SOURCES
-    "Subspace/subspace/SubspaceGameManager.cpp"
-    "Subspace/subspace/SubspaceGlobal.cpp"
-    "Subspace/subspace/SubspaceZone.cpp"
-    "Subspace/subspace/SubspaceHud.cpp"
-    "Subspace/subspace/SubspaceChat.cpp"
-    "Subspace/subspace/SubspaceStatBox.cpp"
-    "Subspace/subspace/SubspaceMenu.cpp"
-    "Subspace/subspace/SubspaceConsole.cpp"
-    "Subspace/subspace/SubspaceHelp.cpp"
-    "Subspace/subspace/main-game.cpp"
+    "Subspace/subspace/*.cpp"
+    "Subspace/subspace network library/*.cpp"
 )
 
 add_executable(subspace_full subspace_full.cpp SDLInputBridge.cpp ${SUBSPACE_GAME_SOURCES})

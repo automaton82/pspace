@@ -1,5 +1,9 @@
 #include "SubspaceCoreProtocol.h"
 
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+
 #include "SubspacePacketFactory.h"
 using namespace SubspacePacketFactory;
 
@@ -57,7 +61,11 @@ bool SubspaceCoreProtocol::sendReliableAck(Uint32 ackID)
 //0x0005
 bool SubspaceCoreProtocol::sendSyncRequest()
 {
+#ifdef _WIN32
 	SubspacePacket p = syncRequest(netHandler_.getPacketsSent(), netHandler_.getPacketsReceived(), GetTickCount()/10);
+#else
+	SubspacePacket p = syncRequest(netHandler_.getPacketsSent(), netHandler_.getPacketsReceived(), SDL_GetTicks()/10);
+#endif
 
 	printf("Sending synchronization request...\n");
 
@@ -67,7 +75,11 @@ bool SubspaceCoreProtocol::sendSyncRequest()
 //0x0006
 bool SubspaceCoreProtocol::sendSyncResponse()
 {
+#ifdef _WIN32
 	SubspacePacket p = syncResponse(serverTimeStamp_, GetTickCount() / 10);
+#else
+	SubspacePacket p = syncResponse(serverTimeStamp_, SDL_GetTicks() / 10);
+#endif
 
 	//this->log("Sent synchronization response...");
 	PacketLog::log("Core->: Sync Response\n");

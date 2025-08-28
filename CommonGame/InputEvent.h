@@ -62,6 +62,13 @@ enum InputEventType
 	//MOUSE_NO_BUTTON
 	MOUSE_PASSIVE,
 
+	// Additional event types for SDL integration  
+	KEY_PRESSED,	// Key press event (different from directional KEY_DOWN)
+	KEY_RELEASED,	// Key release event (different from directional KEY_UP)
+	MOUSE_DOWN,
+	MOUSE_UP,
+	MOUSE_MOVE,
+
 	INPUT_NumInputs
 };
 
@@ -83,6 +90,12 @@ public:
 	InputEventType type;		//should be set through constructor, to update inputStates
 	InputEventState state;
 	InputEventState previousState;
+
+	// Additional fields for mouse/extended input support
+	int key_;		// For mouse button or key code
+	int x_;			// Mouse x coordinate  
+	int y_;			// Mouse y coordinate
+	InputEventType type_;	// Alternative type field
 
 	//static bool isAscii(InputEventType event) const;
 	//static char getAscii(InputEventType event) const;

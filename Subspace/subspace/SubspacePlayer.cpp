@@ -6,6 +6,7 @@
 #include "Rect.h"
 #include "MathUtil.h"
 using namespace MathUtil;
+using std::max;
 
 #include "SubspaceSound.h"
 #include "SubspaceGlobal.h"
@@ -579,7 +580,7 @@ void SubspacePlayer::giveFlag(SubspaceFlag* flag)
 
 	if(i != flags_.end())	//already has flag
 	{
-		debugout << "Warning: " << getName() << " already carrying flag [" << (*i)->getFlagID() << "]" << endl;
+		debugout << "Warning: " << getName() << " already carrying flag [" << (*i)->getFlagID() << "]\n";
 		return;
 	}
 
@@ -678,7 +679,7 @@ void SubspacePlayer::changeShip(ShipType ship)
 	//data_.info.shipType = ship;
 	status_.ship = ship;
 
-	debugout << "Ship change: " << ship << endl;
+	debugout << "Ship change: " << ship << "\n";
 	//debugout.setBaseStream(&std::cout);
 	//printf("Ship Change: %d\n", ship);
 	//debugout.write(printfString("Ship change: %d", ship));
@@ -801,7 +802,7 @@ void SubspacePlayer::fireWeapon(const WeaponData& weapon)
 			if(weapon.bouncing)
 				weapons_.bombs.bounces = shipSettings_->BombBounceCount;
 			weapons_.bombs.emp = shipSettings_->EmpBomb != 0;//weapon.emp;
-			weapons_.bombs.level = max(weapon.level+1, 3);
+			weapons_.bombs.level = std::max(weapon.level+1, 3);
 			weapons_.bombs.shrapnel = weapon.shrapCount;
 			
 			if(weapon.bouncing)
@@ -831,7 +832,7 @@ void SubspacePlayer::fireWeapon(const WeaponData& weapon)
 			break;
 		default:
 
-			debugout << "Unknown weapon fired: " << weapon.type << endl;
+			debugout << "Unknown weapon fired: " << weapon.type << "\n";
 			//printf("Unknown weapon fired: %d\n", weapon.type);
 	}
 	/*WEP_None,
@@ -1289,7 +1290,7 @@ void SubspacePlayer::mineDestroyed()
 
 void SubspacePlayer::mineFired()
 {
-	debugout << "Mine fired: " << mines_ << endl;
+	debugout << "Mine fired: " << mines_ << "\n";
 	//printf("Mine fired: %d\n", mines_);
 
 	//no check - possible for a bunch of bombs to be converted to mines
