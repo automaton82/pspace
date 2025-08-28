@@ -2,6 +2,7 @@
 #include "SoundManager.h"
 #include "SubspaceMock.h"  // Use mock instead of full SubspaceGlobal
 #include "SDLInputBridge.h"
+#include "InputCommandGenerator.h"
 #include "Platform.h"
 
 #include <SDL2/SDL.h>
@@ -17,6 +18,7 @@ private:
     SDLGLObject* window_;
     SoundManager* soundManager_;
     SDLInputBridge* inputBridge_;
+    InputCommandGenerator* commandGenerator_;
     bool running_;
     int windowWidth_;
     int windowHeight_;
@@ -31,6 +33,7 @@ public:
         window_(nullptr), 
         soundManager_(nullptr),
         inputBridge_(nullptr),
+        commandGenerator_(nullptr),
         running_(false),
         windowWidth_(800),
         windowHeight_(600),
@@ -72,6 +75,10 @@ public:
         
         // Initialize input bridge
         inputBridge_ = new SDLInputBridge();
+        
+        // Initialize input command generator
+        commandGenerator_ = new InputCommandGenerator();
+        commandGenerator_->setInputBridge(inputBridge_);
 
         std::cout << "Subspace Application initialized successfully!" << std::endl;
         return true;
@@ -79,6 +86,11 @@ public:
 
     void cleanup() 
     {
+        if (commandGenerator_) {
+            delete commandGenerator_;
+            commandGenerator_ = nullptr;
+        }
+        
         if (inputBridge_) {
             delete inputBridge_;
             inputBridge_ = nullptr;
@@ -129,108 +141,85 @@ public:
 
     void handleKeyDown(const SDL_KeyboardEvent& key) 
     {
-        // Map SDL2 key to our input system
+        // Generate input commands using the command generator
+        auto commands = commandGenerator_->processKeyboardEvent(key, true);
+        
+        // Execute the commands (for now, they just print debug info)
+        commandGenerator_->executeCommands(commands, nullptr);
+        
+        // Also handle some direct game logic for visual feedback
         InputEventType inputType = inputBridge_->mapKey(key.keysym.sym);
-        
-        bool shift, ctrl, alt;
-        inputBridge_->getModifiers(key.keysym.mod, shift, ctrl, alt);
-        
-        std::cout << "Key pressed: " << SDL_GetKeyName(key.keysym.sym) 
-                  << " (InputType: " << inputType << ")";
-        if (shift) std::cout << " +SHIFT";
-        if (ctrl) std::cout << " +CTRL";
-        if (alt) std::cout << " +ALT";
-        std::cout << std::endl;
-        
-        // Handle movement and actions
         switch (inputType) {
             case KEY_ESCAPE:
                 running_ = false;
                 break;
                 
             case KEY_F1:
-                std::cout << "F1 - Help: WASD/Arrows=move, Space=thrust, Mouse=fire, ESC=quit" << std::endl;
+                std::cout << "=== INPUT COMMAND SYSTEM DEMO ===" << std::endl;
+                std::cout << "This demonstrates SDL2 → InputCommand integration" << std::endl;
+                std::cout << "Watch the console for InputActivated/InputActive/InputUnactivated events" << std::endl;
                 break;
                 
             case KEY_UP:
                 thrustActive_ = true;
-                std::cout << "THRUST ON" << std::endl;
                 break;
                 
             case KEY_LEFT:
                 leftTurn_ = true;
-                std::cout << "TURN LEFT" << std::endl;
                 break;
                 
             case KEY_RIGHT:
                 rightTurn_ = true;
-                std::cout << "TURN RIGHT" << std::endl;
-                break;
-                
-            case ' ':  // Space bar
-                std::cout << "SPECIAL ACTION (shields/bomb/etc.)" << std::endl;
-                break;
-                
-            default:
-                // Handle other keys
-                if (inputType >= 32 && inputType < 127) {
-                    std::cout << "ASCII key: '" << (char)inputType << "'" << std::endl;
-                }
                 break;
         }
     }
 
     void handleKeyUp(const SDL_KeyboardEvent& key) 
     {
-        InputEventType inputType = inputBridge_->mapKey(key.keysym.sym);
+        // Generate input commands for key release
+        auto commands = commandGenerator_->processKeyboardEvent(key, false);
+        commandGenerator_->executeCommands(commands, nullptr);
         
-        // Handle key releases for movement
+        // Handle direct game logic
+        InputEventType inputType = inputBridge_->mapKey(key.keysym.sym);
         switch (inputType) {
             case KEY_UP:
                 thrustActive_ = false;
-                std::cout << "THRUST OFF" << std::endl;
                 break;
                 
             case KEY_LEFT:
                 leftTurn_ = false;
-                std::cout << "STOP TURN LEFT" << std::endl;
                 break;
                 
             case KEY_RIGHT:
                 rightTurn_ = false;
-                std::cout << "STOP TURN RIGHT" << std::endl;
                 break;
         }
     }
 
     void handleMouseDown(const SDL_MouseButtonEvent& button) 
     {
-        InputEventType inputType = inputBridge_->mapMouseButton(button.button);
+        // Generate mouse input commands
+        auto commands = commandGenerator_->processMouseButtonEvent(button, true);
+        commandGenerator_->executeCommands(commands, nullptr);
         
-        std::cout << "Mouse button " << (int)button.button << " pressed at (" 
-                  << button.x << ", " << button.y << ") - InputType: " << inputType << std::endl;
-                  
-        switch (inputType) {
-            case MOUSE_BUTTON_LEFT:
-                std::cout << "FIRE PRIMARY WEAPON!" << std::endl;
-                break;
-            case MOUSE_BUTTON_RIGHT:
-                std::cout << "FIRE SECONDARY WEAPON!" << std::endl;
-                break;
-            case MOUSE_BUTTON_MIDDLE:
-                std::cout << "MIDDLE MOUSE ACTION" << std::endl;
-                break;
-        }
+        // Also show mouse position info
+        std::cout << "Mouse click at (" << button.x << ", " << button.y << ")" << std::endl;
     }
 
     void handleMouseUp(const SDL_MouseButtonEvent& button) 
     {
-        std::cout << "Mouse button " << (int)button.button << " released at (" 
-                  << button.x << ", " << button.y << ")" << std::endl;
+        // Generate mouse release commands
+        auto commands = commandGenerator_->processMouseButtonEvent(button, false);
+        commandGenerator_->executeCommands(commands, nullptr);
     }
 
     void handleMouseMove(const SDL_MouseMotionEvent& motion) 
     {
+        // Generate mouse motion commands if needed
+        auto commands = commandGenerator_->processMouseMotionEvent(motion);
+        commandGenerator_->executeCommands(commands, nullptr);
+        
         // Only log if a button is pressed to avoid spam
         if (motion.state != 0) {
             std::cout << "Mouse moved to (" << motion.x << ", " << motion.y << ")" << std::endl;
@@ -336,13 +325,18 @@ public:
         Uint32 lastTime = SDL_GetTicks();
         
         std::cout << "Starting main loop..." << std::endl;
+        std::cout << "=== INPUT COMMAND SYSTEM INTEGRATION TEST ===" << std::endl;
+        std::cout << "This demonstrates the complete input pipeline:" << std::endl;
+        std::cout << "SDL2 Events → SDLInputBridge → InputCommands → Game Actions" << std::endl;
+        std::cout << "" << std::endl;
         std::cout << "Controls:" << std::endl;
         std::cout << "  WASD or Arrow Keys - Move ship" << std::endl;
-        std::cout << "  Left Mouse - Fire primary weapon" << std::endl;
-        std::cout << "  Right Mouse - Fire secondary weapon" << std::endl;
+        std::cout << "  Left/Right Mouse - Fire weapons" << std::endl;
         std::cout << "  Space - Special action" << std::endl;
-        std::cout << "  F1 - Help" << std::endl;
+        std::cout << "  F1 - Show system info" << std::endl;
         std::cout << "  ESC - Quit" << std::endl;
+        std::cout << "" << std::endl;
+        std::cout << "Watch console output for InputCommand events!" << std::endl;
 
         while (running_) {
             // Calculate delta time

@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16)
 project(pspace VERSION 0.190 LANGUAGES CXX C)
 
 # Set C++ standard
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Set build type if not specified
@@ -61,8 +61,30 @@ target_link_libraries(test_sdl2 PRIVATE
 
 target_compile_options(test_sdl2 PRIVATE ${SDL2_CFLAGS_OTHER})
 
+# Add executable for input command system demo (working version)
+add_executable(input_demo
+    input_demo_main.cpp
+    SDLInputBridge.cpp
+    InputCommandGenerator.cpp
+)
+
+target_include_directories(input_demo PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
+    ${SDL2_INCLUDE_DIRS}
+    ${OpenGL_INCLUDE_DIRS}
+)
+
+target_link_libraries(input_demo PRIVATE
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${CMAKE_DL_LIBS}
+)
+
+target_compile_options(input_demo PRIVATE ${SDL2_CFLAGS_OTHER})
+
 # Build new SDL2-based Subspace test application
-add_executable(subspace_test subspace_main.cpp SubspaceMock.cpp SDLInputBridge.cpp)
+add_executable(subspace_test subspace_main.cpp SubspaceMock.cpp SDLInputBridge.cpp InputCommandGenerator.cpp)
 
 target_include_directories(subspace_test PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
@@ -85,6 +107,46 @@ target_link_libraries(subspace_test PRIVATE
 )
 
 target_compile_options(subspace_test PRIVATE ${SDL2_CFLAGS_OTHER})
+
+# Build full Subspace game application with real game manager
+# We need to include specific Subspace sources for the game manager
+file(GLOB SUBSPACE_GAME_SOURCES
+    "Subspace/subspace/SubspaceGameManager.cpp"
+    "Subspace/subspace/SubspaceGlobal.cpp"
+    "Subspace/subspace/SubspaceZone.cpp"
+    "Subspace/subspace/SubspaceHud.cpp"
+    "Subspace/subspace/SubspaceChat.cpp"
+    "Subspace/subspace/SubspaceStatBox.cpp"
+    "Subspace/subspace/SubspaceMenu.cpp"
+    "Subspace/subspace/SubspaceConsole.cpp"
+    "Subspace/subspace/SubspaceHelp.cpp"
+    "Subspace/subspace/main-game.cpp"
+)
+
+add_executable(subspace_full subspace_full.cpp SDLInputBridge.cpp ${SUBSPACE_GAME_SOURCES})
+
+target_include_directories(subspace_full PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
+    ${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace
+    ${SDL2_INCLUDE_DIRS}
+    ${OpenGL_INCLUDE_DIRS}
+    ${PNG_INCLUDE_DIRS}
+    ${OPENAL_INCLUDE_DIR}
+)
+
+# Link against both CommonGame and the actual Subspace game code
+target_link_libraries(subspace_full PRIVATE
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${SDL2_IMAGE_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${PNG_LIBRARIES}
+    ${ZLIB_LIBRARIES}
+    ${OPENAL_LIBRARY}
+    ${PLATFORM_LIBS}
+)
+
+target_compile_options(subspace_full PRIVATE ${SDL2_CFLAGS_OTHER})
 
 # VS Code integration files
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/.vscode")
