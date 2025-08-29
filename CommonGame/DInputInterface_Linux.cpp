@@ -37,8 +37,9 @@ void DInputInterface::GetKeyStates(char* keyState)
 
 DIMOUSESTATE* DInputInterface::GetMouseState()
 {
-    // Stub - return nullptr on Linux
-    return nullptr;
+    // Return a static zero-initialized mouse state for Linux
+    static DIMOUSESTATE mouseState = {0};
+    return &mouseState;
 }
 
 char DInputInterface::GetAsciiFromScanCode(int n)

@@ -156,7 +156,7 @@ file(GLOB SUBSPACE_GAME_SOURCES
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*SDLMain\\.cpp$")
-list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main-game\\.cpp$")  # Has duplicate globals
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main-game\\.cpp$")  # We'll handle this separately
 
 add_executable(subspace_full 
     subspace_full.cpp 
@@ -165,6 +165,7 @@ add_executable(subspace_full
     CommonGame/FileLogger_Linux_Stub.cpp
     CommonGame/GameHud_Linux_Stub.cpp
     CommonGame/TimeStream_Linux_Stub.cpp
+    Subspace/subspace/main-game.cpp
     ${SUBSPACE_GAME_SOURCES}
 )
 

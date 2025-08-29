@@ -16,6 +16,12 @@
 #include <unistd.h>  // for chdir
 #include <cmath>     // for atan
 
+// Game function declarations
+extern void GameDisplay();
+extern void GameLoop();
+extern void GameInit();
+extern void GameDestroy();
+
 // Mock Windows globals for compatibility
 HWND g_hWnd = nullptr;
 HINSTANCE g_hInstance = nullptr;
@@ -26,8 +32,9 @@ SubspaceGameManager& getGameManager() {
     return gameManager;
 }
 
-Timer displayTimer;
-Timer gameTimer;
+// Timers are defined in main-game.cpp
+extern Timer displayTimer;
+extern Timer gameTimer;
 
 class SubspaceGameApplication 
 {
@@ -123,12 +130,10 @@ public:
         inputBridge_ = new SDLInputBridge();
         std::cout << "Input bridge created" << std::endl;
 
-        // Initialize the real game manager
+        // Initialize the real game manager using the proper game initialization
         try {
             std::cout << "Initializing game manager..." << std::endl;
-            getGameManager().init();
-            gameTimer.start();
-            displayTimer.start();
+            GameInit();
             gameInitialized_ = true;
             std::cout << "Game manager initialized successfully!" << std::endl;
         } catch (const std::exception& e) {
@@ -144,7 +149,7 @@ public:
     void cleanup() 
     {
         if (gameInitialized_) {
-            getGameManager().destroy();
+            GameDestroy();
         }
         
         if (inputBridge_) {
@@ -314,8 +319,6 @@ public:
         running_ = true;
         SDL_Event event;
         
-        Uint32 lastTime = SDL_GetTicks();
-        
         std::cout << "Starting full Subspace game loop..." << std::endl;
         if (gameInitialized_) {
             std::cout << "Real Subspace game is running!" << std::endl;
@@ -325,23 +328,20 @@ public:
         std::cout << "Press ESC to quit" << std::endl;
 
         while (running_) {
-            Uint32 currentTime = SDL_GetTicks();
-            float deltaTime = (currentTime - lastTime) / 1000.0f;
-            lastTime = currentTime;
-
-            // Handle events
+            // Handle SDL events first
             while (SDL_PollEvent(&event)) {
                 handleEvent(event);
             }
 
-            // Update game logic
-            update(deltaTime);
-
-            // Render
-            render();
-
-            // Cap frame rate
-            SDL_Delay(16);
+            if (gameInitialized_) {
+                // Call the real Subspace game loop which handles timing and rendering
+                GameLoop();
+            } else {
+                // Fallback for demo mode
+                update(0.016f);  // 60 FPS
+                render();
+                SDL_Delay(16);
+            }
         }
 
         std::cout << "Subspace game shutting down..." << std::endl;
@@ -351,13 +351,21 @@ public:
 // Global rendering function expected by main-game.cpp
 void DrawGLScene()
 {
-    // Basic OpenGL rendering - clear the screen
+    // Clear the screen
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    // TODO: Add actual game rendering here
-    // For now, just a basic clear to prevent crashes
+    // Push matrix for game rendering
+    glPushMatrix();
     
-    // Swap buffers will be handled by the main loop
+    // Call the actual game display function
+    extern void GameDisplay();
+    GameDisplay();
+    
+    glPopMatrix();
+    
+    // Swap buffers to display the frame
+    extern SDLGLObject& sdlGLObject;
+    sdlGLObject.swapBuffers();
 }
 
 int main(int argc, char* argv[]) 

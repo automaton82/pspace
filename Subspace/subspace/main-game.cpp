@@ -13,7 +13,12 @@
 
 static TimeProfiler& timeProfiler = *TimeProfiler::getInstance();
 
-static SubspaceGameManager gameManager;
+// Use Meyer's singleton pattern to avoid static initialization order fiasco
+static SubspaceGameManager& getGameManager() {
+    static SubspaceGameManager gameManager;
+    return gameManager;
+}
+
 static DInputInterface directInput;
 static DInputKeyboard keyboard(&directInput);
 
@@ -34,7 +39,7 @@ void GameInit()
 #endif
 	keyboard.setCallback(GameInput);
 
-	gameManager.init();
+	getGameManager().init();
 
 	gameTimer.start();
 	displayTimer.start();
@@ -44,12 +49,12 @@ void GameInit()
 
 void GameDestroy()
 {
-	gameManager.destroy();
+	getGameManager().destroy();
 }
 
 void GameInput(InputEvent input)
 {
-	gameManager.handleInput(input, -1, -1);
+	getGameManager().handleInput(input, -1, -1);
 }
 
 void GameLoop()
@@ -80,7 +85,7 @@ void GameLoop()
 		{
 			if(mouse->rgbButtons[i] && !prevMouse->rgbButtons[i])
 			{
-				gameManager.handleInput(InputEvent((InputEventType)(i+MouseBegin), INPUT_STATE_DOWN, INPUT_STATE_UP), mouse->lX, mouse->lY);
+				getGameManager().handleInput(InputEvent((InputEventType)(i+MouseBegin), INPUT_STATE_DOWN, INPUT_STATE_UP), mouse->lX, mouse->lY);
 			}
 		}
 	}
@@ -99,10 +104,10 @@ void GameLoop()
 	/*double updateRate = 10.0;
 	while(updateAccum > updateRate)
 	{
-		gameManager.update(updateRate);		// TODO: turn trigger gets reset every update, need a persistent trigger
+		getGameManager().update(updateRate);		// TODO: turn trigger gets reset every update, need a persistent trigger
 		updateAccum -= updateRate;				
 	}*/
-    gameManager.update(timestep);
+    getGameManager().update(timestep);
 	gameTimer.start();
 
 	timeProfiler.exit("game update");
@@ -134,15 +139,15 @@ void GameResize(int width, int height)
 	subspaceGlobal.setWindowWidth(width);
 	subspaceGlobal.setWindowHeight(height);
 
-	gameManager.resize();
+	getGameManager().resize();
 }
 
 /*void GameTick(double value)
 {	
-	gameManager.update(value);
+	getGameManager().update(value);
 }*/
 
 void GameDisplay()
 {
-	gameManager.display();
+	getGameManager().display();
 }
