@@ -144,17 +144,17 @@ bool SubspaceNetworkHandler::sendPacketHelper(SubspacePacket& p)
 	while(offset < p.size())
 	{
 		//if(p.size() - offset < MAX_PACKET_SIZE)
-		if(p.size() < MAX_PACKET_SIZE + offset)
+		if(offset + 518 >= p.size())
 		{
 			int size = p.size() - offset;
 			if(size > 518) size = 518;
-			chunk = /*SubspacePacketFactory::*/packetFactory.smallChunkTail(p.getString(offset, size));
+			chunk = SubspacePacketFactory::smallChunkTail(p.getString(offset, size));
 		}
 		else
 		{
 			int size = p.size() - offset;
 			if(size > 518) size = 518;
-			chunk = /*SubspacePacketFactory::*/packetFactory.smallChunk(p.getString(offset, size));
+			chunk = SubspacePacketFactory::smallChunk(p.getString(offset, size));
 		}
 
 		if(!sendPacket(chunk))

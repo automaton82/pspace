@@ -1,35 +1,8 @@
 #include "InputCommandGenerator.h"
-#include "InputCommandsMock.h"
-#include <iostream>
-#include <SDL2/SDL.h>
 
-// Implementation of mock InputCommands classes
-namespace InputCommands {
-    
-    void InputActive::execute() {
-        std::cout << "InputActive: " << input.type;
-        if (input.shift) std::cout << " +SHIFT";
-        if (input.ctrl) std::cout << " +CTRL"; 
-        if (input.alt) std::cout << " +ALT";
-        std::cout << std::endl;
-    }
-    
-    void InputActivated::execute() {
-        std::cout << "InputActivated: " << input.type;
-        if (input.shift) std::cout << " +SHIFT";
-        if (input.ctrl) std::cout << " +CTRL";
-        if (input.alt) std::cout << " +ALT";
-        std::cout << " (Key/Button PRESSED)" << std::endl;
-    }
-    
-    void InputUnactivated::execute() {
-        std::cout << "InputUnactivated: " << input.type;
-        if (input.shift) std::cout << " +SHIFT";
-        if (input.ctrl) std::cout << " +CTRL";
-        if (input.alt) std::cout << " +ALT"; 
-        std::cout << " (Key/Button RELEASED)" << std::endl;
-    }
-}
+#include <iostream>
+#include <memory>
+#include <SDL2/SDL.h>
 
 InputCommandGenerator::InputCommandGenerator() : inputBridge_(nullptr) 
 {
@@ -58,10 +31,10 @@ InputCommands::InputData InputCommandGenerator::createInputData(InputEventType t
     return InputCommands::InputData(type, shift, ctrl, alt);
 }
 
-std::vector<std::unique_ptr<InputCommands::InputCommand>> 
+std::vector<std::unique_ptr<InputCommand>> 
 InputCommandGenerator::processKeyboardEvent(const SDL_KeyboardEvent& key, bool isPressed) 
 {
-    std::vector<std::unique_ptr<InputCommands::InputCommand>> commands;
+    std::vector<std::unique_ptr<InputCommand>> commands;
     
     if (!inputBridge_) {
         return commands;
@@ -88,25 +61,31 @@ InputCommandGenerator::processKeyboardEvent(const SDL_KeyboardEvent& key, bool i
         
         if (isPressed && !wasPressed) {
             // Key just pressed - send InputActivated
-            commands.push_back(std::unique_ptr<InputCommands::InputActivated>(new InputCommands::InputActivated(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputActivated>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         } else if (!isPressed && wasPressed) {
             // Key just released - send InputUnactivated  
-            commands.push_back(std::unique_ptr<InputCommands::InputUnactivated>(new InputCommands::InputUnactivated(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputUnactivated>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         }
         
         if (isPressed) {
             // Key is currently held - send InputActive
-            commands.push_back(std::unique_ptr<InputCommands::InputActive>(new InputCommands::InputActive(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputActive>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         }
     }
     
     return commands;
 }
 
-std::vector<std::unique_ptr<InputCommands::InputCommand>>
+std::vector<std::unique_ptr<InputCommand>>
 InputCommandGenerator::processMouseButtonEvent(const SDL_MouseButtonEvent& button, bool isPressed) 
 {
-    std::vector<std::unique_ptr<InputCommands::InputCommand>> commands;
+    std::vector<std::unique_ptr<InputCommand>> commands;
     
     if (!inputBridge_) {
         return commands;
@@ -133,23 +112,29 @@ InputCommandGenerator::processMouseButtonEvent(const SDL_MouseButtonEvent& butto
         mouseStates_[buttonIndex] = isPressed;
         
         if (isPressed && !wasPressed) {
-            commands.push_back(std::unique_ptr<InputCommands::InputActivated>(new InputCommands::InputActivated(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputActivated>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         } else if (!isPressed && wasPressed) {
-            commands.push_back(std::unique_ptr<InputCommands::InputUnactivated>(new InputCommands::InputUnactivated(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputUnactivated>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         }
         
         if (isPressed) {
-            commands.push_back(std::unique_ptr<InputCommands::InputActive>(new InputCommands::InputActive(inputData)));
+            auto cmd = std::make_unique<InputCommands::InputActive>();
+            cmd->input = inputData;
+            commands.push_back(std::move(cmd));
         }
     }
     
     return commands;
 }
 
-std::vector<std::unique_ptr<InputCommands::InputCommand>>
+std::vector<std::unique_ptr<InputCommand>>
 InputCommandGenerator::processMouseMotionEvent(const SDL_MouseMotionEvent& motion) 
 {
-    std::vector<std::unique_ptr<InputCommands::InputCommand>> commands;
+    std::vector<std::unique_ptr<InputCommand>> commands;
     
     // For now, we don't generate commands for passive mouse movement
     // This can be added later if needed for mouse look, etc.
@@ -157,24 +142,24 @@ InputCommandGenerator::processMouseMotionEvent(const SDL_MouseMotionEvent& motio
     return commands;
 }
 
-void InputCommandGenerator::executeCommands(const std::vector<std::unique_ptr<InputCommands::InputCommand>>& commands,
+void InputCommandGenerator::executeCommands(const std::vector<std::unique_ptr<InputCommand>>& commands,
                                            InputCommandReceiver* receiver) 
 {
     for (const auto& command : commands) {
         if (command) {
-            // For now, execute with null receiver since we're using mock commands
-            command->execute();
+            // Execute with the provided receiver
+            command->execute(receiver);
         }
     }
 }
 
-void InputCommandGenerator::debugPrintCommand(const InputCommands::InputCommand* command) const 
+void InputCommandGenerator::debugPrintCommand(const InputCommand* command) const 
 {
     if (!command) {
         std::cout << "NULL command" << std::endl;
         return;
     }
     
-    std::cout << "Command: " << command->getTypeName() 
-              << " Input: " << command->input.type << std::endl;
+    // Since we don't have getTypeName in the real implementation, we'll print the address
+    std::cout << "Command at: " << command << std::endl;
 }

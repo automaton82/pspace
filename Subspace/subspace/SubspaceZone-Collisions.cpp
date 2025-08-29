@@ -440,7 +440,7 @@ void SubspaceZone::handleMapObjectCollisions()
 				}
 				else
 				{
-					debugout << "Unknown object type" << std::endl;
+					debugout << "Unknown object type\n";
 				}
 			}
 		}

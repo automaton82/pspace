@@ -1,4 +1,5 @@
 #include "SubspacePRNG.h"
+#include <cstdint>
 
 
 //////// Linear Congruential Generator ////////
@@ -147,7 +148,7 @@ Uint16 SS_HEAVY_PRNG::getNextE()
 {	// Original C++ implementation contributed by UDP
 	Uint32 old_seed = s;
 
-	s = (long)(((__int64)old_seed * KSGSCM) >> 48);
+	s = (long)(((int64_t)old_seed * KSGSCM) >> 48);
 	s = s + (s >> 31);
 	s = ((old_seed % KSGSCD) * 16807) - (s * 2836) + 123;
 	if (s > 0x7fffffff) s += 0x7fffffff;
@@ -160,16 +161,10 @@ Uint16 SS_HEAVY_PRNG::getNextE()
 
 Uint32 IMULHIDWORD(Uint32 A, Uint32 B)
 {
-	Uint32 HDW;
-
-	__asm
-	{
-		mov		eax, A
-		imul	B
-		mov		HDW, edx
-	}
-
-	return HDW;
+	// Cross-platform implementation using 64-bit arithmetic
+	// This multiplies A * B and returns the high 32 bits
+	uint64_t result = (uint64_t)A * (uint64_t)B;
+	return (Uint32)(result >> 32);
 }
 
 Uint16 SS_HEAVY_PRNG::getNextG()

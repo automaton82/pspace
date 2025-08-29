@@ -231,7 +231,7 @@ void DrawGLScene()
 	
 	glPopMatrix();
 		
-	SwapBuffers(glObject.getDeviceContext());
+	glObject.swapBuffers();
 }
 
 bool CreateGLWindow(char* title, int width, int height, int bits)
@@ -289,7 +289,7 @@ bool CreateGLWindow(char* title, int width, int height, int bits)
 		return false;								// Return FALSE
 	}
 
-	if(!glObject.init(32, g_hWnd))
+	if(!glObject.init(32, width, height))
 	{
 		KillGLWindow();								// Reset The Display
 		MessageBox(NULL,"Can't Initialize OpenGL.","ERROR",MB_OK|MB_ICONEXCLAMATION);

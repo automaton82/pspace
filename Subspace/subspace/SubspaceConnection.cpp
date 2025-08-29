@@ -3,6 +3,11 @@
 #include "SubspaceConnection.h"
 
 #include "Timer.h"
+#ifdef _WIN32
+#include <windows.h>
+#else
+#include <unistd.h>
+#endif
 
 SubspaceConnection::SubspaceConnection()
 {
@@ -23,7 +28,11 @@ bool SubspaceConnection::connect(const string& host, Uint16 port, Uint timeout)
 
 	while(!mainProtocol_.isConnected() && timer.getElapsedTime() < timeout)
 	{
+#ifdef _WIN32
 		Sleep(50);
+#else
+		usleep(50000);  // 50ms in microseconds
+#endif
 	}
 
 	if(mainProtocol_.isConnected())
@@ -39,10 +48,12 @@ bool SubspaceConnection::disconnect()
 
 void SubspaceConnection::setLog(FILE* file)
 {
-	this->mainProtocol_.setLog(file);
+	// TODO: SubspaceCoreProtocol doesn't have setLog method
+	// this->mainProtocol_.setLog(file);
 }
 
 void SubspaceConnection::setHeader(const string& header)
 {
-	this->mainProtocol_.setHeader(header + " [Main]");
+	// TODO: SubspaceCoreProtocol doesn't have setHeader method  
+	// this->mainProtocol_.setHeader(header + " [Main]");
 }

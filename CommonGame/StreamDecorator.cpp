@@ -278,7 +278,7 @@ OutputStreamDecorator& operator<< (OutputStreamDecorator& s, const string& val)
 	return s;
 }
 
-OutputStreamDecorator& std::endl(OutputStreamDecorator& s)	
+OutputStreamDecorator& endl(OutputStreamDecorator& s)	
 { 
 	s.put('\n'); 
 	s.flush(); 

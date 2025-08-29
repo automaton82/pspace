@@ -1188,7 +1188,7 @@ void SubspaceZone::updatePrizes(double time)
 	//TODO: make this use an actual timer
 	Uint16 delay = std::max(arenaSettings_.PrizeDelay, (Uint16)1);
 #ifdef _WIN32
-	int iterations = (GetTickCount() / 10 - lastPrizeUpdate_) / delay;
+	int iterations = (SDL_GetTicks() / 10 - lastPrizeUpdate_) / delay;
 #else
 	// Use SDL ticks on Linux
 	int iterations = (SDL_GetTicks() / 10 - lastPrizeUpdate_) / delay;
@@ -1204,7 +1204,7 @@ void SubspaceZone::updatePrizes(double time)
 
 	if(iterations > 0)
 #ifdef _WIN32
-		lastPrizeUpdate_ = GetTickCount() / 10;
+		lastPrizeUpdate_ = SDL_GetTicks() / 10;
 #else
 		lastPrizeUpdate_ = SDL_GetTicks() / 10;
 #endif

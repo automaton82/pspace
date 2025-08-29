@@ -36,7 +36,7 @@ const InputData SubspaceMenuInput::MENU_Spectator = InputData((InputEventType)'s
 
 SubspaceMenuInput::SubspaceMenuInput() :
 	//isInputOn_(false),
-	menu_(false)
+	menu_(nullptr)
 {
 	loadConfigDefault();
 }

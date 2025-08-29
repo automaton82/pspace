@@ -1,7 +1,11 @@
 #include "algorithms.h"
 
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
+#include <SDL2/SDL.h>
+#include <cstring>
+#include <string>
+using std::string;
+
+#define STRLEN strlen
 
 
 //////// Integer square root ////////
@@ -41,7 +45,7 @@ Sint32 pos_quadratic(Sint32 a, Sint32 b, Sint32 c)
 
 Uint32 getTime()
 {
-	return GetTickCount() / 10;
+	return SDL_GetTicks() / 10;
 }
 
 
@@ -119,22 +123,11 @@ void toupper(char *buffer)
 	}
 }
 
-void trimString(char d, String &s)
+void trimString(char d, string &s)
 {
-	Uint32 slen = s.len;
-
-	for (Uint32 i = 0; i < slen; ++i)
-	{
-		if (s.msg[i] == d)
-		{
-			String tstr;
-			tstr.append(s.msg, i);
-			if ((i + 1) != slen)
-			{
-				tstr.append(s.msg, slen - i);
-			}
-			--slen;
-		}
+	size_t pos = 0;
+	while ((pos = s.find(d, pos)) != string::npos) {
+		s.erase(pos, 1);
 	}
 }
 
@@ -188,45 +181,41 @@ bool split(char d, char *in, char *out, Uint32 lx, Uint32 ly)
 	return (x == lx);
 }
 
-char *basetable	= "0123456789abcdefghijklmnopqrstuv",
-	 *zeroes	= "00000000000000000000000000000000",
-	 *negsign	= "-";
+// Convert binary numbers to ASCIIZ number representations
 
-String getString(Uint32 number, Uint32 base, Uint16 leading, bool sign)
+string getString(Uint32 number, Uint32 base, Uint16 leading, bool sign)
 {
-	String ret;
-
-	if (number == 0)
-	{
+	if (number == 0) {
 		if (leading < 1) leading = 1;
-
-		ret.set(zeroes, leading);
-
-		return ret;
+		return string(leading, '0');
 	}
 
-	if (sign)
-		if (number & 0x80000000)
-			number = ~number + 1;
-		else
-			sign = false;
+	bool negative = false;
+	if (sign && (number & 0x80000000)) {
+		number = ~number + 1;
+		negative = true;
+	}
 
-	do
-	{
+	string result;
+	const char* digits = "0123456789abcdefghijklmnopqrstuv";
+	
+	do {
 		Uint32 digit = number % base;
 		number /= base;
-		ret.prepend(basetable + digit, 1);
+		result = digits[digit] + result;
 	} while (number);
 
-	Sint32 diff = leading - ret.len;
+	// Add leading zeros if needed
+	if (result.length() < leading) {
+		result = string(leading - result.length(), '0') + result;
+	}
 
-	if (diff > 0)
-		ret.prepend(zeroes, (Uint32)diff);
+	// Add negative sign if needed
+	if (negative) {
+		result = "-" + result;
+	}
 
-	if (sign)
-		ret.prepend(negsign, 1);
-
-	return ret;
+	return result;
 }
 
 int getInteger(char *number, int base)
@@ -326,16 +315,9 @@ void swap(Uint16 &a, Uint16 &b)
 
 Uint32 IMULHIDWORD(Uint32 A, Uint32 B)
 {
-	Uint32 HDW;
-
-	__asm
-	{
-		mov		eax, A
-		imul	B
-		mov		HDW, edx
-	}
-
-	return HDW;
+	// Cross-platform replacement for Windows assembly
+	Uint64 result = (Uint64)A * (Uint64)B;
+	return (Uint32)(result >> 32);
 }
 
 
@@ -343,19 +325,9 @@ Uint32 IMULHIDWORD(Uint32 A, Uint32 B)
 
 void IDIVCOMP(Uint32 value, Uint32 width, Uint32 &x, Uint32 &y)
 {
-	Uint32 a, b;
-
-	__asm
-	{
-		mov		eax, value
-		cdq
-		idiv	width
-		mov		a, edx
-		mov		b, eax
-	}
-
-	x = a;
-	y = b;
+	// Cross-platform replacement for Windows assembly
+	x = value % width;  // remainder
+	y = value / width;  // quotient
 }
 
 

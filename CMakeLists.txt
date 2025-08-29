@@ -66,6 +66,7 @@ add_executable(input_demo
     input_demo_main.cpp
     SDLInputBridge.cpp
     InputCommandGenerator.cpp
+    Subspace/subspace/InputCommands.cpp
 )
 
 target_include_directories(input_demo PRIVATE
@@ -84,7 +85,7 @@ target_link_libraries(input_demo PRIVATE
 target_compile_options(input_demo PRIVATE ${SDL2_CFLAGS_OTHER})
 
 # Build new SDL2-based Subspace test application
-add_executable(subspace_test subspace_main.cpp SubspaceMock.cpp SDLInputBridge.cpp InputCommandGenerator.cpp)
+add_executable(subspace_test subspace_main.cpp SubspaceMock.cpp SDLInputBridge.cpp InputCommandGenerator.cpp Subspace/subspace/InputCommands.cpp)
 
 target_include_directories(subspace_test PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
@@ -114,6 +115,15 @@ file(GLOB SUBSPACE_GAME_SOURCES
     "Subspace/subspace/*.cpp"
     "Subspace/subspace network library/*.cpp"
 )
+
+# Filter out .old files and duplicates
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
+# Exclude network library main.cpp and duplicate files (prefer subspace/ versions)
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/main\\.cpp$")
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/SubspaceNetworkHandler\\.cpp$")
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/SubspaceReliableManager\\.cpp$")
+# Also exclude the other main.cpp files, we'll use our own
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace/main\\.cpp$")
 
 add_executable(subspace_full subspace_full.cpp SDLInputBridge.cpp ${SUBSPACE_GAME_SOURCES})
 

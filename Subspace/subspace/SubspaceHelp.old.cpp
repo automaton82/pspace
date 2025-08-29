@@ -51,7 +51,7 @@ void SubspaceHelp::setPage(Uint page)
 {
 	assert(page < pages_.size());
 
-	currentPage_ = std::min(pages_.size()-1, std::max(0, page));	//make sure page is in range
+	currentPage_ = std::min(pages_.size()-1, std::max(0U, page));	//make sure page is in range
 }
 
 Uint SubspaceHelp::size() const

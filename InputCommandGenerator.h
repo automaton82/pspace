@@ -3,19 +3,13 @@
 
 #include "InputEvent.h"
 #include "SDLInputBridge.h"
+#include "Subspace/subspace/InputCommands.h"
+#include "Subspace/subspace/InputCommandReceiver.h"
 #include <vector>
 #include <memory>
 
-// Forward declarations to avoid including the problematic files for now
-namespace InputCommands {
-    struct InputData;
-    class InputCommand;
-    class InputActive;
-    class InputActivated;
-    class InputUnactivated;
-}
-
-class InputCommandReceiver;
+/**
+#include <memory>
 
 /**
  * Generates InputCommand objects from SDL2 input events
@@ -42,13 +36,13 @@ public:
      */
     void setInputBridge(SDLInputBridge* bridge);
     
-    /**
-     * Process SDL2 keyboard event and generate appropriate InputCommands
-     * @param key SDL2 keyboard event
-     * @param isPressed true for key down, false for key up
+        /**
+     * Process keyboard events and generate input commands
+     * @param key SDL keyboard event
+     * @param isPressed true if key was pressed, false if released  
      * @return vector of InputCommand objects to execute
      */
-    std::vector<std::unique_ptr<InputCommands::InputCommand>> 
+    std::vector<std::unique_ptr<InputCommand>> 
         processKeyboardEvent(const SDL_KeyboardEvent& key, bool isPressed);
     
     /**
@@ -57,7 +51,7 @@ public:
      * @param isPressed true for button down, false for button up
      * @return vector of InputCommand objects to execute
      */
-    std::vector<std::unique_ptr<InputCommands::InputCommand>>
+    std::vector<std::unique_ptr<InputCommand>>
         processMouseButtonEvent(const SDL_MouseButtonEvent& button, bool isPressed);
     
     /**
@@ -65,7 +59,7 @@ public:
      * @param motion SDL2 mouse motion event
      * @return vector of InputCommand objects to execute (usually empty or passive movement)
      */
-    std::vector<std::unique_ptr<InputCommands::InputCommand>>
+    std::vector<std::unique_ptr<InputCommand>>
         processMouseMotionEvent(const SDL_MouseMotionEvent& motion);
     
     /**
@@ -73,13 +67,13 @@ public:
      * @param commands List of commands to execute
      * @param receiver Target receiver for the commands
      */
-    void executeCommands(const std::vector<std::unique_ptr<InputCommands::InputCommand>>& commands,
+    void executeCommands(const std::vector<std::unique_ptr<InputCommand>>& commands,
                         InputCommandReceiver* receiver);
     
     /**
      * Debug: Print information about an input command
      */
-    void debugPrintCommand(const InputCommands::InputCommand* command) const;
+    void debugPrintCommand(const InputCommand* command) const;
 };
 
 #endif

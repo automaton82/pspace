@@ -5,7 +5,7 @@
 #include <memory>
 #include "SDLInputBridge.h"
 #include "InputCommandGenerator.h"
-#include "InputCommandsMock.h"  // Include the mock commands interface
+
 #include "CommonGame/SDLGLObject.h"
 
 class InputCommandDemo {
@@ -31,7 +31,7 @@ public:
         }
         
         // Process events through the InputCommandGenerator directly using SDL event structures
-        std::vector<std::unique_ptr<InputCommands::InputCommand>> commands;
+        std::vector<std::unique_ptr<InputCommand>> commands;
         
         if (event.type == SDL_KEYDOWN || event.type == SDL_KEYUP) {
             bool isPressed = (event.type == SDL_KEYDOWN);
@@ -46,7 +46,7 @@ public:
             for (auto& command : commands) {
                 if (command) {
                     std::cout << "InputCommandDemo: Executing command..." << std::endl;
-                    command->execute();
+                    command->execute(nullptr);
                 }
             }
             
@@ -80,7 +80,7 @@ public:
             for (auto& command : commands) {
                 if (command) {
                     std::cout << "InputCommandDemo: Executing mouse command..." << std::endl;
-                    command->execute();
+                    command->execute(nullptr);
                 }
             }
         } else if (event.type == SDL_MOUSEMOTION) {
@@ -89,7 +89,7 @@ public:
             // Execute any passive commands (usually none for motion)
             for (auto& command : commands) {
                 if (command) {
-                    command->execute();
+                    command->execute(nullptr);
                 }
             }
         }

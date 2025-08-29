@@ -1,5 +1,8 @@
 //David Millman
 
+#ifndef _SUBSPACEPACKETFACTORY_H_
+#define _SUBSPACEPACKETFACTORY_H_
+
 #include "DataTypes.h"
 #include "SubspacePacket.h"
 
@@ -14,9 +17,6 @@ typedef int BOOL;
 #define TRUE 1
 #define FALSE 0
 #endif
-
-#ifndef _SUBSPACEPACKETFACTORY_H_
-#define _SUBSPACEPACKETFACTORY_H_
 
 using std::string;
 

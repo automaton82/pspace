@@ -2,6 +2,7 @@
 
 #include "Checksum.h"
 #include "SubspacePlayer.h"
+#include <SDL2/SDL.h>
 
 //0x01
 bool SubspaceZone::sendArenaLogin(const string& arenaName)
@@ -45,7 +46,7 @@ bool SubspaceZone::sendWeapon(const WeaponData& wep)
 	cmd.items = p->getItemSettings().u;
 	cmd.latency = 0;
 	cmd.timer = p->getSuperTime();
-	cmd.timestamp = GetTickCount();
+	cmd.timestamp = SDL_GetTicks();
 	cmd.togglables = p->getStateSettings().u;
 	cmd.weaponData = wep.u;
 	cmd.xPosition = p->getSubspacePosition().x_;

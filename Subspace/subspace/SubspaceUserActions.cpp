@@ -1,4 +1,5 @@
 #include "SubspaceUserActions.h"
+#include "SubspaceUserActionReceiver.h"
 
 SubspaceUserAction::~SubspaceUserAction()
 {

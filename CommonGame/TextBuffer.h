@@ -14,17 +14,17 @@ public:
 
 	struct Chunk
 	{
-		Chunk() : font(0), std::endline(false)
+		Chunk() : font(0), endline(false)
 		{}
 
 		Chunk(const string& t, const Color& c, const TextureFont* tf, bool el) :
-			text(t), color(c), font(tf), std::endline(el)
+			text(t), color(c), font(tf), endline(el)
 		{}
 
 		string text;
 		Color color;
 		const TextureFont* font;
-		bool std::endline;
+		bool endline;
 	};
 
 	typedef list<Chunk> ChunkList;
@@ -40,7 +40,7 @@ public:
 	void setDefaultFont(const TextureFont& font);
 	void write(const string& text, const Color& tint = Color(1.0, 1.0, 1.0), const TextureFont* font = 0);	//assumes font is valid during the life of the buffer
 	void writeln(const string& text, const Color& tint = Color(1.0, 1.0, 1.0), const TextureFont* font = 0);	//assumes font is valid during the life of the buffer
-	void std::endline();		//carriage return
+	void endline();		//carriage return
 
 	void initRead() const;	//sets cursor position
 	bool readChunk(Chunk* chunk) const;

@@ -2,8 +2,9 @@
 #define _SUBSPACEUSERACTIONRECEIVER_H_
 
 #include "InputEvent.h"
-
+#include "CommandListenerBase.h"
 #include "InputCommands.h"
+#include "SubspaceUserActions.h"
 
 class SubspaceUserActionReceiver : 
 	public CommandListenerBase<SubspaceUserActionReceiver, SubspaceUserAction>
@@ -15,6 +16,7 @@ public:
 	virtual void doScrollDown();
 	virtual void doPageUp();
 	virtual void doPageDown();
+	virtual void doSendChat();
 
 	// player weapon commands
 	virtual void doFireBrick();

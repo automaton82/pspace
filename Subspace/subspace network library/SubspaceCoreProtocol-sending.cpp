@@ -62,7 +62,7 @@ bool SubspaceCoreProtocol::sendReliableAck(Uint32 ackID)
 bool SubspaceCoreProtocol::sendSyncRequest()
 {
 #ifdef _WIN32
-	SubspacePacket p = syncRequest(netHandler_.getPacketsSent(), netHandler_.getPacketsReceived(), GetTickCount()/10);
+	SubspacePacket p = syncRequest(netHandler_.getPacketsSent(), netHandler_.getPacketsReceived(), SDL_GetTicks()/10);
 #else
 	SubspacePacket p = syncRequest(netHandler_.getPacketsSent(), netHandler_.getPacketsReceived(), SDL_GetTicks()/10);
 #endif
@@ -76,7 +76,7 @@ bool SubspaceCoreProtocol::sendSyncRequest()
 bool SubspaceCoreProtocol::sendSyncResponse()
 {
 #ifdef _WIN32
-	SubspacePacket p = syncResponse(serverTimeStamp_, GetTickCount() / 10);
+	SubspacePacket p = syncResponse(serverTimeStamp_, SDL_GetTicks() / 10);
 #else
 	SubspacePacket p = syncResponse(serverTimeStamp_, SDL_GetTicks() / 10);
 #endif

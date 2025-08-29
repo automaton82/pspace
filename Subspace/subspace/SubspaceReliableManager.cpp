@@ -1,6 +1,7 @@
 //David Millman
 
 #include "SubspaceReliableManager.h"
+#include <SDL2/SDL.h>  // For SDL_GetTicks()
 
 SubspaceReliableManager::SubspaceReliableManager() :
 	clientPacketID_(0),
@@ -64,12 +65,13 @@ int SubspaceReliableManager::addFromClient(SubspacePacket& p)
 
 	if(p.getSize() <= 6 || p[0] != 0x00 || p[1] != 0x03)
 	{
-		SubspacePacket relHeader = /*SubspacePacketFactory::*/packetFactory.reliableHeader(clientPacketID_++);
+		SubspacePacket relHeader = SubspacePacketFactory::reliableHeader(clientPacketID_++);
 		p.prepend(relHeader);
 	}
 	
-	clientPackets_[GetTickCount() / 10] = p;
-	/*SubspacePacketInterpreter::*/packetInterpreter.reliablePacket(p, &id, NULL);
+	// Use SDL_GetTicks() as cross-platform replacement for GetTickCount()
+	clientPackets_[SDL_GetTicks() / 10] = p;
+	SubspacePacketInterpreter::reliablePacket(p, &id, NULL);
 	return id;
 }
 

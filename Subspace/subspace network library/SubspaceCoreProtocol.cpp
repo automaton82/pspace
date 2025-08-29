@@ -144,7 +144,7 @@ Uint SubspaceCoreProtocol::getReliableReceivedPackets() const
 Uint32 SubspaceCoreProtocol::getServerTimeStamp()
 {
 #ifdef _WIN32
-    return serverTimeStamp_ + GetTickCount() - clientTimeStamp_; //timestamp difference
+    return serverTimeStamp_ + SDL_GetTicks() - clientTimeStamp_; //timestamp difference
 #else
     return serverTimeStamp_ + SDL_GetTicks() - clientTimeStamp_; //timestamp difference
 #endif
@@ -157,7 +157,7 @@ void SubspaceCoreProtocol::setServerTimeStamp(Uint32 timestamp)
 	
 	serverTimeStamp_ = timestamp;
 #ifdef _WIN32
-	clientTimeStamp_ = GetTickCount();
+	clientTimeStamp_ = SDL_GetTicks();
 #else
 	clientTimeStamp_ = SDL_GetTicks();
 #endif
@@ -178,13 +178,13 @@ void reliablePacketHandlerRoutine(void* arg)
 			coreProtocol->resendDelay_ = defaultResendDelay;
 
 #ifdef _WIN32
-		while(coreProtocol->reliablePackets_.availableFromClient(GetTickCount()/10, coreProtocol->resendDelay_))
+		while(coreProtocol->reliablePackets_.availableFromClient(SDL_GetTicks()/10, coreProtocol->resendDelay_))
 #else
 		while(coreProtocol->reliablePackets_.availableFromClient(SDL_GetTicks()/10, coreProtocol->resendDelay_))
 #endif
 		{
 #ifdef _WIN32
-			SubspacePacket resendPacket = coreProtocol->reliablePackets_.getNextFromClient(GetTickCount() / 10, coreProtocol->resendDelay_);
+			SubspacePacket resendPacket = coreProtocol->reliablePackets_.getNextFromClient(SDL_GetTicks() / 10, coreProtocol->resendDelay_);
 #else
 			SubspacePacket resendPacket = coreProtocol->reliablePackets_.getNextFromClient(SDL_GetTicks() / 10, coreProtocol->resendDelay_);
 #endif

@@ -4,10 +4,10 @@
 #define _SUBSPACECHATDATABASE_H_
 
 #include "Database.h"
-#include "ChatData.h"
+#include "ChatMessage.h"
 
 class SubspaceChatDatabase :
-	public Database<ChatData>
+	public Database<ChatMessage>
 {
 public:
 

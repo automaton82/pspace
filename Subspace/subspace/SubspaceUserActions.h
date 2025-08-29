@@ -21,8 +21,8 @@ namespace SubspaceUserActions
 		class name															\
 			: public SubspaceUserAction										\
 		{																	\
-			public: void execute(SubspaceUserActionReceiver* receiver)		\
-		}				
+			public: void execute(SubspaceUserActionReceiver* receiver);	\
+		};				
 	///////////////////////////////////////
 
 	// chat/info box commands
@@ -66,7 +66,7 @@ namespace SubspaceUserActions
     basicAction(Warp);   		
 
 	// menu commands
-	//basicAction(Quit);   
+	basicAction(Quit);   
 	//basicAction(ShipChange);   
 	//basicAction(ToggleHelp);   
 	//basicAction(ToggleInfoBox);   

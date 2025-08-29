@@ -73,7 +73,7 @@ int SubspaceReliableManager::addFromClient(SubspacePacket& p)
 	}
 	
 #ifdef _WIN32
-	clientPackets_[GetTickCount() / 10] = p;
+	clientPackets_[SDL_GetTicks() / 10] = p;
 #else
 	clientPackets_[SDL_GetTicks() / 10] = p;
 #endif

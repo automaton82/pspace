@@ -369,9 +369,9 @@ void SubspaceGameInput::initStringInputs()
 	stringInputs_["F11"] = KEY_F11;
 	stringInputs_["F12"] = KEY_F12;
 
-	stringInputs_["MOUSE_LEFT"] = MOUSE_LEFT;
-	stringInputs_["MOUSE_RIGHT"] = MOUSE_RIGHT;
-	stringInputs_["MOUSE_MIDDLE"] = MOUSE_MIDDLE;
+	stringInputs_["MOUSE_LEFT"] = MOUSE_BUTTON_LEFT;
+	stringInputs_["MOUSE_RIGHT"] = MOUSE_BUTTON_RIGHT;
+	stringInputs_["MOUSE_MIDDLE"] = MOUSE_BUTTON_MIDDLE;
 
 	hasStringInputs_ = true;
 }

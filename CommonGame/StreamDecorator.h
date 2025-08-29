@@ -58,7 +58,7 @@ public:
 	friend OutputStreamDecorator& operator<< (OutputStreamDecorator& s, const string& val);
 
 	//Manipulators
-	friend OutputStreamDecorator& std::endl(OutputStreamDecorator& s);
+	friend OutputStreamDecorator& endl(OutputStreamDecorator& s);
 	friend OutputStreamDecorator& ends(OutputStreamDecorator& s);
 
 protected:

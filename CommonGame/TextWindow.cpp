@@ -149,7 +149,7 @@ void TextWindow::cacheBuffer()
 					if(currHeight >= windowHeight)
 						break;
 					
-					line.std::endline();
+					line.endline();
 					bufferCache_.push_back(line);
 					line.clear();
 					
@@ -159,7 +159,7 @@ void TextWindow::cacheBuffer()
 				{
 					chars = (Uint)(windowWidth - currWidth)/chunk.font->getFontWidth();	//characters that can fit in window
 					line.write( (*w).substr(0, chars), chunk.color, chunk.font);
-					line.std::endline();
+					line.endline();
 					break;
 				}
 			}
@@ -170,12 +170,12 @@ void TextWindow::cacheBuffer()
 			}
 		}		
 
-		if(chunk.std::endline)
+		if(chunk.endline)
 		{
 			currHeight += textHeight;
 			currWidth = 0;
 
-			line.std::endline();
+			line.endline();
 			bufferCache_.push_back(line);
 			line.clear();
 		}

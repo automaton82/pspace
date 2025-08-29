@@ -186,7 +186,7 @@ bool SubspaceCoreProtocol::onSyncResponse(SubspacePacket& p)
 	setServerTimeStamp(pongTime);
 
 #ifdef _WIN32
-	pingCurrent_ = GetTickCount()/10 - (int)pingTime;		//TODO: factor this out
+	pingCurrent_ = SDL_GetTicks()/10 - (int)pingTime;		//TODO: factor this out
 #else
 	pingCurrent_ = SDL_GetTicks()/10 - (int)pingTime;		//TODO: factor this out
 #endif
@@ -267,7 +267,8 @@ bool SubspaceCoreProtocol::onFileTransfer(SubspacePacket& p)
 	}
 	fileBuffer_.append(buffer);
 
-	printf("Total file size: %d, file buffer size: %d, buffer size: %d\n", fileSize, fileBuffer_.size(), buffer.size());
+	printf("Total file size: %lu, file buffer size: %zu, buffer size: %zu\n", 
+	       (unsigned long)fileSize, fileBuffer_.size(), buffer.size());
 	//this->log("File download [%d]: %.2f%% complete", fileSize, (double)fileBuffer.size()/(double)fileSize * 100);
 
 	if(fileBuffer_.size() >= fileSize)

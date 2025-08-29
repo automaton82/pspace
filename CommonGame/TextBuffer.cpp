@@ -52,7 +52,7 @@ void TextBuffer::write(const string& text, const Color& tint, const TextureFont*
 		if(offset < text.length())	//if not at the end, a '\n' is in between
 		{
 			offset += 1;
-			std::endline();
+			endline();
 		}
 	}
 }
@@ -62,7 +62,7 @@ void TextBuffer::writeln(const string& text, const Color& tint, const TextureFon
 	write(text + "\n", tint, font);
 }
 
-void TextBuffer::std::endline()
+void TextBuffer::endline()
 {
 	Chunk c("", Color(1.0, 1.0, 1.0), &defaultFont_, true);
 

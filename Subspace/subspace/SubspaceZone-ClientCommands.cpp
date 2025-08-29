@@ -297,7 +297,7 @@ void SubspaceZone::doPosition(
 {
 	if(states.flash)
 	{
-		debugout << "FLASHING" << std::endl;
+		debugout << "FLASHING\n";
 		//printf("FLASHING\n");
 	}
 

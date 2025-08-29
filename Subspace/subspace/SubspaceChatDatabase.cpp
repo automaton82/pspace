@@ -2,7 +2,7 @@
 
 string SubspaceChatDatabase::getSender(int id)
 {
-	const ChatData* c = getItem(id);
+	const ChatMessage* c = getItem(id);
 
 	if(c)
 		return c->sender;
@@ -12,7 +12,7 @@ string SubspaceChatDatabase::getSender(int id)
 
 string SubspaceChatDatabase::getText(int id)
 {
-	const ChatData* c = getItem(id);
+	const ChatMessage* c = getItem(id);
 
 	if(c)
 		return c->text;
@@ -22,7 +22,7 @@ string SubspaceChatDatabase::getText(int id)
 
 ChatType SubspaceChatDatabase::getMessageType(int id)
 {
-	const ChatData* c = getItem(id);
+	const ChatMessage* c = getItem(id);
 
 	if(c)
 		return c->type;

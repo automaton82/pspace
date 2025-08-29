@@ -6,7 +6,7 @@
 #ifndef _SUBSPACEPRNG_H_
 #define _SUBSPACEPRNG_H_
 
-#include "datatypes.h"
+#include "DataTypes.h"
 
 class LCG_PRNG
 {	// Internal bot generator

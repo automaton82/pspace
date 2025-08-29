@@ -7,6 +7,12 @@
 #define ALGORITHMS_H
 
 #include "datatypes.h"
+// Ensure SDL types are available
+#ifndef _WIN32
+#include <SDL2/SDL.h>
+#endif
+#include <string>
+using std::string;
 
 
 Uint32 SQRT(Uint32 factor);	// Fast integer square root
@@ -42,10 +48,10 @@ bool isNumeric(char *buffer);	// Determine if this string is entirely numerical
 bool split(char d, char *in, char *out, Uint32 lx, Uint32 ly);	// Parse string with delimiter (inline: read notes in math.h)
 
 
-void trimString(char d, String &s);	// Remove all instances of (char) d
+void trimString(char d, string &s);	// Remove all instances of (char) d
 
 
-String getString(Uint32 number, Uint32 base, Uint16 leading, bool sign);	// Convert binary numbers to ASCIIZ number representations
+string getString(Uint32 number, Uint32 base, Uint16 leading, bool sign);	// Convert binary numbers to ASCIIZ number representations
 
 int getInteger(char *number, int base);										// Convert ASCIIZ numbers to binary number representations
 

@@ -103,7 +103,7 @@ void SubspaceTextBox::drawBackground() const
 	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight =  getDisplayHeight();
 
-	glColor4d(backgroundColor_.r_, backgroundColor_.g_, backgroundColor_.b_, backgroundColor_.a_);
+	glColor4d(backgroundColor_.r, backgroundColor_.g, backgroundColor_.b, backgroundColor_.a);
 	glBegin(GL_QUADS);			//background
 		glVertex3d(drawWidth + padLeft_+padRight_ + borderWidth_/2.0, 0, 0);
 		glVertex3d(0, 0, 0);
@@ -121,7 +121,7 @@ void SubspaceTextBox::drawBorder() const
 	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight = getDisplayHeight();
 
-	glColor4d(borderColor_.r_, borderColor_.g_, borderColor_.b_, borderColor_.a_);
+	glColor4d(borderColor_.r, borderColor_.g, borderColor_.b, borderColor_.a);
 	glLineWidth((float)borderWidth_);
 	glBegin(GL_LINE_LOOP);			//main border
 		glVertex3d(0, 0, 0);
@@ -157,7 +157,7 @@ void SubspaceTextBox::drawSeparator() const
 	double drawWidth = std::min(lineWidth_, maxWidth_) * font_.getFrameWidth();
 	double drawHeight = getDisplayHeight() - font_.getFontHeight() - headerPadTop_-headerPadBottom_ - separatorWidth_/2.0;
 
-	glColor4d(borderColor_.r_, borderColor_.g_, borderColor_.b_, borderColor_.a_);
+	glColor4d(borderColor_.r, borderColor_.g, borderColor_.b, borderColor_.a);
 	glLineWidth((float)separatorWidth_);
 	glBegin(GL_LINE_LOOP);			//main border
 		glVertex3d(0, 

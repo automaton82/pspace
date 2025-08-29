@@ -3,7 +3,17 @@
 #ifndef _SUBSPACENETWORKHANDLER_H_
 #define _SUBSPACENETWORKHANDLER_H_
 
+#ifdef _WIN32
 #include <windows.h>
+#else
+// Linux compatibility
+typedef unsigned char BYTE;
+typedef unsigned short WORD;  
+typedef unsigned int DWORD;
+typedef int BOOL;
+#define TRUE 1
+#define FALSE 0
+#endif
 
 #include <vector>
 #include <map>
@@ -16,9 +26,10 @@
 #include "Functor.h"
 
 #include "Checksum.h"
-#include "SubspacePacket.h"
+#include "../subspace network library/SubspacePacket.h"
 #include "SubspaceReliableManager.h"
 #include "SubspacePacketFactory.h"
+#include "SubspacePacketInterpreter.h"
 
 /**********************************
 * This will need to be threadsafe *
@@ -84,9 +95,6 @@ private:
 	bool encrypt;
 	Uint32 key;
 	Uint8 keyStream[520];
-
-	SubspacePacketFactory packetFactory;
-	SubspacePacketInterpreter packetInterpreter;
 
 	Uint timeout_;
 };

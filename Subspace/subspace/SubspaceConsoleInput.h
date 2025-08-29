@@ -23,6 +23,9 @@ private:
 
 public:
 	
+	SubspaceConsoleInput();
+	~SubspaceConsoleInput();
+	
 	bool doRequest(InputCommand* input);
 
 	void doInputActive(const InputData& input);

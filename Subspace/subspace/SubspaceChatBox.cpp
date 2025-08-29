@@ -12,7 +12,7 @@ SubspaceChatBox::SubspaceChatBox(const SubspaceChatDatabase* db) :
 	
 	TextureFont tex;
 	tex.load("graphics/tallfont.bm2");
-	tex.setTextureInfo(fontWidth, fontHeight);
+	tex.setFrameSize(fontWidth, fontHeight);
 	tex.setFrameRange(0, 96);
 
     this->setTexture(tex);
@@ -31,7 +31,7 @@ void SubspaceChatBox::draw() const
 	int rowNum = 0;
 	for(int i=chatDatabase->size()-1; i >= 0 && rowNum < numRows; --i)
 	{				//start at the last chat message
-		const ChatData* data = chatDatabase->getItem(i);
+		const ChatMessage* data = chatDatabase->getItem(i);
 		if(data)
 		{
 			int offset = 0;

@@ -7,7 +7,7 @@ class SubspaceZone;
 #include "SubspaceZone.h"
 
 class SubspaceProtocol;
-#include "SubspaceProtocol.h"
+#include "../subspace network library/SubspaceCoreProtocol.h"
 
 class SubspaceConnection
 {
@@ -30,7 +30,7 @@ public:
 
 private:
 
-	SubspaceProtocol mainProtocol_;
+	SubspaceCoreProtocol mainProtocol_;
 };
 
 #endif
