@@ -155,8 +155,18 @@ file(GLOB SUBSPACE_GAME_SOURCES
 # Filter out .old files and main.cpp (we'll use our own)
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*SDLMain\\.cpp$")
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main-game\\.cpp$")  # Has duplicate globals
 
-add_executable(subspace_full subspace_full.cpp ${SUBSPACE_GAME_SOURCES})
+add_executable(subspace_full 
+    subspace_full.cpp 
+    SDLInputBridge.cpp 
+    CommonGame/Socket_Linux_Stub.cpp
+    CommonGame/FileLogger_Linux_Stub.cpp
+    CommonGame/GameHud_Linux_Stub.cpp
+    CommonGame/TimeStream_Linux_Stub.cpp
+    ${SUBSPACE_GAME_SOURCES}
+)
 
 target_include_directories(subspace_full PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame

@@ -29,6 +29,20 @@ list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DInput.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*DAudio.*\\.cpp$")
 list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*WinUtil.*\\.cpp$")
 
+# Remove Windows-specific implementations and add Linux stubs
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*Socket\\.cpp$")
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*FileLogger\\.cpp$") 
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*GameHud\\.cpp$")
+list(FILTER COMMONGAME_SOURCES EXCLUDE REGEX ".*TimeStream\\.cpp$")
+
+# Add Linux stub implementations for now
+list(APPEND COMMONGAME_SOURCES 
+    "${CMAKE_CURRENT_SOURCE_DIR}/Socket_Linux_Stub.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/FileLogger_Linux_Stub.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/GameHud_Linux_Stub.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/TimeStream_Linux_Stub.cpp"
+)
+
 # Add Linux DirectInput stubs
 if(NOT WIN32)
     list(APPEND COMMONGAME_SOURCES 

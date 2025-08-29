@@ -55,25 +55,33 @@ public:
         std::cout << "Initializing Full Subspace Game..." << std::endl;
 
         // Initialize SDL2 and create window
+        std::cout << "Creating SDL window..." << std::endl;
         window_ = new SDLGLObject();
         if (!window_->init(32, windowWidth_, windowHeight_)) {
             std::cerr << "Failed to initialize SDL2 window!" << std::endl;
             return false;
         }
+        std::cout << "SDL window created successfully" << std::endl;
 
         // Initialize global settings
+        std::cout << "Setting global window dimensions..." << std::endl;
         subspaceGlobal.setWindowWidth(windowWidth_);
         subspaceGlobal.setWindowHeight(windowHeight_);
+        std::cout << "Global settings initialized" << std::endl;
 
         // Initialize sound system
+        std::cout << "Initializing sound system..." << std::endl;
         if (!SoundManager::init()) {
             std::cerr << "Warning: Failed to initialize sound system" << std::endl;
         } else {
             soundManager_ = new SoundManager();
+            std::cout << "Sound system initialized" << std::endl;
         }
         
         // Initialize input bridge
+        std::cout << "Creating input bridge..." << std::endl;
         inputBridge_ = new SDLInputBridge();
+        std::cout << "Input bridge created" << std::endl;
 
         // Initialize the real game manager
         try {

@@ -1,6 +1,9 @@
 #include "SubspacePRNG.h"
 #include <cstdint>
 
+// Forward declaration for function defined in algorithms.cpp
+extern Uint32 IMULHIDWORD(Uint32 A, Uint32 B);
+
 
 //////// Linear Congruential Generator ////////
 
@@ -159,13 +162,8 @@ Uint16 SS_HEAVY_PRNG::getNextE()
 
 //////// Multiplication overflow ////////
 
-Uint32 IMULHIDWORD(Uint32 A, Uint32 B)
-{
-	// Cross-platform implementation using 64-bit arithmetic
-	// This multiplies A * B and returns the high 32 bits
-	uint64_t result = (uint64_t)A * (uint64_t)B;
-	return (Uint32)(result >> 32);
-}
+// IMULHIDWORD function is defined in algorithms.cpp
+// Declaration only here to avoid multiple definitions
 
 Uint16 SS_HEAVY_PRNG::getNextG()
 {

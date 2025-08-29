@@ -1,5 +1,10 @@
 #include "main.h"
 
+#ifndef _WIN32
+#include <cstdio>
+#include <SDL2/SDL.h>
+#endif
+
 #include <math.h>
 #include <time.h>
 
@@ -358,3 +363,27 @@ void ReSizeGLScene(GLsizei width, GLsizei height)		// Resize And Initialize The 
 
 	GameResize(width, height);
 }
+
+#ifndef _WIN32
+// Linux main function - calls the Windows WinMain equivalent
+int main(int argc, char* argv[])
+{
+	printf("Starting Subspace...\n");
+	fflush(stdout);
+	
+	// Initialize SDL first for Linux
+	if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
+		printf("SDL_Init failed: %s\n", SDL_GetError());
+		return -1;
+	}
+	
+	printf("SDL initialized successfully\n");
+	fflush(stdout);
+	
+	// Convert argc/argv to Windows-style parameters
+	int result = WinMain(NULL, NULL, NULL, 0);
+	
+	SDL_Quit();
+	return result;
+}
+#endif
