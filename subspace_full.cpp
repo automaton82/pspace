@@ -11,8 +11,10 @@
 
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
+#include <GL/glu.h>  // For gluPerspective
 #include <iostream>
 #include <unistd.h>  // for chdir
+#include <cmath>     // for atan
 
 // Mock Windows globals for compatibility
 HWND g_hWnd = nullptr;
@@ -67,6 +69,39 @@ public:
             return false;
         }
         std::cout << "SDL window created successfully" << std::endl;
+
+        // Setup OpenGL viewport and perspective (essential for rendering)
+        std::cout << "Setting up OpenGL viewport..." << std::endl;
+        glViewport(0, 0, windowWidth_, windowHeight_);
+        
+        glMatrixMode(GL_PROJECTION);
+        glLoadIdentity();
+        
+        double ratio = (double)windowWidth_ / (double)windowHeight_;
+        double fov = atan(windowHeight_ / 600.0) * 180.0 / 3.14159; // ~MathUtil::PI
+        gluPerspective(fov, ratio, 10.0, 20000.0);
+        
+        glDepthRange(10, 20000);
+        
+        glMatrixMode(GL_MODELVIEW);
+        glLoadIdentity();
+        
+        // Initialize OpenGL state (like the original InitGL function)
+        glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+        glClearColor(0.0, 0.0, 0.0, 0.0);
+        glShadeModel(GL_SMOOTH);
+        
+        glEnable(GL_DEPTH_TEST);
+        glDepthFunc(GL_LEQUAL);
+        
+        glDisable(GL_LIGHTING);
+        
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glEnable(GL_BLEND);
+        
+        glEnable(GL_TEXTURE_2D);
+        
+        std::cout << "OpenGL setup complete" << std::endl;
 
         // Initialize global settings
         std::cout << "Setting global window dimensions..." << std::endl;
