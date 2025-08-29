@@ -22,7 +22,7 @@ ship = 0;
 
 ; Offline stuff
 defaultMap = zones/alpha2.lvl
-noconnect = 0;
+noconnect = 1;
 
 ; Configurable options
 lines = 10;

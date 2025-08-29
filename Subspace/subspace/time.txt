@@ -1,27 +1,27 @@
 total: 0
-	input: 0.004
-	game update: 0.224
-		chat: 0.013
-		console: 0.007
-		hud: 0.024
-		lvz: 0.02
-		network: 0.015
-		statBox: 0.01
-		zone: 0.081
-			players: 0.001
+	input: 0.003
+	game update: 0.21
+		chat: 0.008
+		console: 0.008
+		hud: 0.031
+		lvz: 0.011
+		network: 0.007
+		statBox: 0.004
+		zone: 0.1
+			players: 0.004
 			objects: 0.016
-			map: 0.008
-			background: 0.005
-			collisions: 0.005
-	display: 8.827
-		zone: 8.741
-			background: 8.547
-			map: 0.094
-				setup: 0.042
-				over tiles: 0.017
-				basic tiles: 0.013
-				under tiles: 0.008
-			objects: 0.04
-				effects: 0.007
-			lvz: 0.02
-		hud: 0.029
+			map: 0.022
+			background: 0.003
+			collisions: 0.008
+	display: 8.789
+		zone: 8.526
+			background: 8.277
+			map: 0.13
+				setup: 0.066
+				over tiles: 0.019
+				basic tiles: 0.019
+				under tiles: 0.002
+			objects: 0.05
+				effects: 0.014
+			lvz: 0.027
+		hud: 0.037

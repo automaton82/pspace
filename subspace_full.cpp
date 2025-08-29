@@ -214,6 +214,7 @@ public:
             InputEvent inputEvent;
             inputEvent.type = inputType;
             inputEvent.state = INPUT_STATE_DOWN;
+            inputEvent.previousState = INPUT_STATE_UP; // Required for isActivated() to work
             
             // Get mouse position for the input event
             int mouseX, mouseY;
@@ -232,6 +233,7 @@ public:
             InputEvent inputEvent;
             inputEvent.type = inputType;
             inputEvent.state = INPUT_STATE_UP;
+            inputEvent.previousState = INPUT_STATE_DOWN; // Required for isUnactivated() to work
             
             int mouseX, mouseY;
             SDL_GetMouseState(&mouseX, &mouseY);
@@ -354,13 +356,35 @@ void DrawGLScene()
     // Clear the screen
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    // Push matrix for game rendering
+    // Test rendering - draw a simple colored rectangle to verify OpenGL works
+    glMatrixMode(GL_PROJECTION);
     glPushMatrix();
+    glLoadIdentity();
+    glOrtho(0, 800, 0, 600, -1, 1);
     
-    // Call the actual game display function
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
+    
+    // Draw a bright green test rectangle
+    glDisable(GL_TEXTURE_2D);
+    glColor3f(0.0f, 1.0f, 0.0f);  // Bright green
+    glBegin(GL_QUADS);
+        glVertex2f(100, 100);
+        glVertex2f(200, 100);
+        glVertex2f(200, 200);
+        glVertex2f(100, 200);
+    glEnd();
+    
+    glPopMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
+    glMatrixMode(GL_MODELVIEW);
+    
+    // Now call the actual game display function
+    glPushMatrix();
     extern void GameDisplay();
     GameDisplay();
-    
     glPopMatrix();
     
     // Swap buffers to display the frame
