@@ -2,7 +2,7 @@
 
 #include <map>
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "SubspacePlayer.h"
 
 #ifndef _PlayerManager_

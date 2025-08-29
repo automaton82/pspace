@@ -9,7 +9,7 @@ using std::list;
 using std::map;
 using std::vector;
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "GameDisplayManager.h"
 #include "Rect.h"
 #include "Thread.h"

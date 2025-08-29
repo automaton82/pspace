@@ -2,6 +2,7 @@
 #include <cstdint>
 
 // Forward declaration for function defined in algorithms.cpp
+#include "DataTypes.h"
 extern Uint32 IMULHIDWORD(Uint32 A, Uint32 B);
 
 

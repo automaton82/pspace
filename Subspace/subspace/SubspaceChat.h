@@ -9,7 +9,7 @@ using std::list;
 using std::map;
 using std::string;
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "TextureFont.h"
 
 //#include "CommandGenerator.h"

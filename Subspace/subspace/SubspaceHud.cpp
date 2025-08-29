@@ -18,6 +18,10 @@ using std::vector;
 #include "SubspaceChat.h"
 #include "SubspaceConsole.h"
 #include "SubspaceHelp.h"
+
+// Static member definitions
+const int SubspaceHud::maxNameLength_;
+const int SubspaceHud::maxChatLines_;
 #include "SubspaceLifeBar.h"
 #include "SubspaceMenu.h"
 #include "SubspaceMap.h"

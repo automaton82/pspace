@@ -12,13 +12,18 @@
 #include <SDL2/SDL.h>
 #include <GL/gl.h>
 #include <iostream>
+#include <unistd.h>  // for chdir
 
 // Mock Windows globals for compatibility
 HWND g_hWnd = nullptr;
 HINSTANCE g_hInstance = nullptr;
 
-// Game components
-static SubspaceGameManager gameManager;
+// Game components - use function to avoid static initialization order issues
+SubspaceGameManager& getGameManager() {
+    static SubspaceGameManager gameManager;
+    return gameManager;
+}
+
 Timer displayTimer;
 Timer gameTimer;
 
@@ -86,7 +91,7 @@ public:
         // Initialize the real game manager
         try {
             std::cout << "Initializing game manager..." << std::endl;
-            gameManager.init();
+            getGameManager().init();
             gameTimer.start();
             displayTimer.start();
             gameInitialized_ = true;
@@ -104,7 +109,7 @@ public:
     void cleanup() 
     {
         if (gameInitialized_) {
-            gameManager.destroy();
+            getGameManager().destroy();
         }
         
         if (inputBridge_) {
@@ -175,7 +180,7 @@ public:
             SDL_GetMouseState(&mouseX, &mouseY);
             
             std::cout << "Game Input: " << inputType << " (Key: " << SDL_GetKeyName(key.keysym.sym) << ")" << std::endl;
-            gameManager.handleInput(inputEvent, mouseX, mouseY);
+            getGameManager().handleInput(inputEvent, mouseX, mouseY);
         }
     }
 
@@ -191,7 +196,7 @@ public:
             int mouseX, mouseY;
             SDL_GetMouseState(&mouseX, &mouseY);
             
-            gameManager.handleInput(inputEvent, mouseX, mouseY);
+            getGameManager().handleInput(inputEvent, mouseX, mouseY);
         }
     }
 
@@ -205,7 +210,7 @@ public:
             inputEvent.state = INPUT_STATE_DOWN;
             
             std::cout << "Game Mouse Input: " << inputType << " at (" << button.x << ", " << button.y << ")" << std::endl;
-            gameManager.handleInput(inputEvent, button.x, button.y);
+            getGameManager().handleInput(inputEvent, button.x, button.y);
         }
     }
 
@@ -218,7 +223,7 @@ public:
             inputEvent.type = inputType;
             inputEvent.state = INPUT_STATE_UP;
             
-            gameManager.handleInput(inputEvent, button.x, button.y);
+            getGameManager().handleInput(inputEvent, button.x, button.y);
         }
     }
 
@@ -230,7 +235,7 @@ public:
             inputEvent.type = MOUSE_PASSIVE;
             inputEvent.state = INPUT_STATE_DOWN; // For movement events
             
-            gameManager.handleInput(inputEvent, motion.x, motion.y);
+            getGameManager().handleInput(inputEvent, motion.x, motion.y);
         }
     }
 
@@ -238,7 +243,7 @@ public:
     {
         if (gameInitialized_) {
             // Let the game manager handle updates
-            gameManager.update(deltaTime);
+            getGameManager().update(deltaTime);
         }
     }
 
@@ -246,7 +251,7 @@ public:
     {
         if (gameInitialized_) {
             // Let the game manager handle rendering
-            gameManager.display();
+            getGameManager().display();
         } else {
             // Fallback rendering if game manager failed to initialize
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -324,6 +329,15 @@ int main(int argc, char* argv[])
 {
     std::cout << "=== PSpace - Full Subspace Game ===" << std::endl;
     std::cout << "SDL2-based cross-platform version" << std::endl;
+    
+    // Change to the correct directory where assets are located
+    const char* assetDir = "../Subspace/subspace";
+    if (chdir(assetDir) != 0) {
+        std::cerr << "Warning: Could not change to asset directory: " << assetDir << std::endl;
+        std::cerr << "Continuing with current directory..." << std::endl;
+    } else {
+        std::cout << "Changed to asset directory: " << assetDir << std::endl;
+    }
 
     SubspaceGameApplication app;
     app.run();

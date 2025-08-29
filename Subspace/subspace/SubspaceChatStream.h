@@ -5,7 +5,7 @@
 using std::string;
 
 #include "AsciiUtil.h"
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "StreamDecorator.h"
 class SubspaceChat;
 

@@ -1,7 +1,7 @@
 #ifndef _SUBSPACEUSERACTIONS_H_
 #define _SUBSPACEUSERACTIONS_H_
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 
 class SubspaceUserActionReceiver;
 

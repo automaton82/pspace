@@ -12,6 +12,10 @@
 using std::min;
 using std::max;
 
+// Static member definitions
+const int SubspaceMap::maxTileX;
+const int SubspaceMap::maxTileY;
+
 SubspaceMap::SubspaceMap() : 
 	borderType_(20),
 	isLoaded_(false),

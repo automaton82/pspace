@@ -1,7 +1,7 @@
 #ifndef _PRIZE_H_
 #define _PRIZE_H_
 
-#include "datatypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "prng.h"
 #include "settings.h"
 

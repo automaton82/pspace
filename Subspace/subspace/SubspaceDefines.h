@@ -4,7 +4,7 @@
 #include <map>
 #include <vector>
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 
 //////////////////////////
 

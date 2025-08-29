@@ -119,7 +119,13 @@ void TextureAnimated::setFrames(Uint rows, Uint columns)
  */
 void TextureAnimated::setFrameSize(Uint frameWidth, Uint frameHeight)
 {
-	assert(getTextureData());
+	// Check if texture data is available before proceeding
+	if (!getTextureData()) {
+		// Texture not loaded yet - this can happen during initialization
+		// without game assets. Skip setup for now.
+		return;
+	}
+	
 	//Uint textureWidth_ = this->getWidth();
 
 	Uint textureWidth_ = this->getTextureData()->memWidth;

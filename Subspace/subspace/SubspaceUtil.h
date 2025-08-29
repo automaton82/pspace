@@ -4,7 +4,7 @@
 #include <string>
 using std::string;
 
-#include "DataTypes.h"
+#include "../../CommonGame/DataTypes.h"
 #include "Vector.h"
 
 #include "SubspaceDefines.h"

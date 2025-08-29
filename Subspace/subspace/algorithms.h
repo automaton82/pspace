@@ -6,7 +6,7 @@
 #ifndef ALGORITHMS_H
 #define ALGORITHMS_H
 
-#include "datatypes.h"
+#include "../../CommonGame/DataTypes.h"
 // Ensure SDL types are available
 #ifndef _WIN32
 #include <SDL2/SDL.h>
