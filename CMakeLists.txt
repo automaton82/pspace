@@ -38,10 +38,47 @@ endif()
 include_directories(${SDL2_INCLUDE_DIRS})
 include_directories(${OpenGL_INCLUDE_DIRS})
 
-# Add subdirectories
+# Add subdirectories for the original 4-project structure
 add_subdirectory(CommonGame)
-# Note: Subspace application excluded temporarily due to architectural issues
-# add_subdirectory(Subspace/subspace)
+
+# Add Subspace Network Library as a static library
+file(GLOB NETWORK_LIB_SOURCES
+    "Subspace/subspace network library/*.cpp"
+)
+# Exclude main.cpp from network library
+list(FILTER NETWORK_LIB_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
+
+add_library(SubspaceNetworkLibrary STATIC ${NETWORK_LIB_SOURCES})
+
+target_include_directories(SubspaceNetworkLibrary PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
+    "${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace network library"
+    ${SDL2_INCLUDE_DIRS}
+)
+
+target_link_libraries(SubspaceNetworkLibrary PUBLIC
+    CommonGame
+    ${SDL2_LIBRARIES}
+    ${PLATFORM_LIBS}
+)
+
+# Add Subspace LVZ Deconstructor as a static library
+file(GLOB LVZ_SOURCES
+    "Subspace/subspace LVZ deconstructor/*.cpp"
+)
+# Exclude main.cpp from LVZ library
+list(FILTER LVZ_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
+
+add_library(SubspaceLVZ STATIC ${LVZ_SOURCES})
+
+target_include_directories(SubspaceLVZ PUBLIC
+    ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
+    "${CMAKE_CURRENT_SOURCE_DIR}/Subspace/subspace LVZ deconstructor"
+)
+
+target_link_libraries(SubspaceLVZ PUBLIC
+    CommonGame
+)
 
 # Add test program
 add_executable(test_sdl2 test_sdl2.cpp)
@@ -109,23 +146,17 @@ target_link_libraries(subspace_test PRIVATE
 
 target_compile_options(subspace_test PRIVATE ${SDL2_CFLAGS_OTHER})
 
-# Build full Subspace game application with real game manager
-# We need to include specific Subspace sources for the game manager
+# Build full Subspace game application (main executable)
+# Get only the main Subspace game sources (not network library or LVZ)
 file(GLOB SUBSPACE_GAME_SOURCES
     "Subspace/subspace/*.cpp"
-    "Subspace/subspace network library/*.cpp"
 )
 
-# Filter out .old files and duplicates
+# Filter out .old files and main.cpp (we'll use our own)
 list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*\\.old\\.cpp$")
-# Exclude network library main.cpp and duplicate files (prefer subspace/ versions)
-list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/main\\.cpp$")
-list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/SubspaceNetworkHandler\\.cpp$")
-list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace network library/SubspaceReliableManager\\.cpp$")
-# Also exclude the other main.cpp files, we'll use our own
-list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX "Subspace/subspace/main\\.cpp$")
+list(FILTER SUBSPACE_GAME_SOURCES EXCLUDE REGEX ".*main\\.cpp$")
 
-add_executable(subspace_full subspace_full.cpp SDLInputBridge.cpp ${SUBSPACE_GAME_SOURCES})
+add_executable(subspace_full subspace_full.cpp ${SUBSPACE_GAME_SOURCES})
 
 target_include_directories(subspace_full PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/CommonGame
@@ -138,9 +169,11 @@ target_include_directories(subspace_full PRIVATE
     ${OPENAL_INCLUDE_DIR}
 )
 
-# Link against both CommonGame and the actual Subspace game code
+# Link against all the static libraries we built
 target_link_libraries(subspace_full PRIVATE
     CommonGame
+    SubspaceNetworkLibrary
+    SubspaceLVZ
     ${SDL2_LIBRARIES}
     ${SDL2_IMAGE_LIBRARIES}
     ${OPENGL_LIBRARIES}

@@ -3,10 +3,22 @@
 #include <assert.h>
 #include <iostream>
 #include <stdio.h>
+#include <cstring>  // for memcpy
+#ifdef _WIN32
 #include <windows.h>
+#include <direct.h>  // for _mkdir
+#else
+// Linux compatibility for LVZ
+#include <stdint.h>
+#include <sys/stat.h>  // for mkdir
+typedef uint32_t DWORD;
+typedef uint16_t WORD;
+typedef uint8_t BYTE;
+#endif
 using namespace std;
 
-#include "zlib.h"
+// Use system zlib, not the Windows-specific local copy
+#include <zlib.h>
 
 const SubspaceLVZ::TypeName SubspaceLVZ::contTypeName = {'C','O','N','T'};
 const SubspaceLVZ::TypeName SubspaceLVZ::objectTypeCLV1 = {'C','L','V','1'};
@@ -194,7 +206,11 @@ bool SubspaceLVZ::readFileObject(FILE* file, bool saveOnExtract)
 			path = outputPath_;*/
 		string path = outputPath_;
 
+#ifdef _WIN32
 		CreateDirectory(path.c_str(), 0);
+#else
+		mkdir(path.c_str(), 0755);  // Linux directory creation
+#endif
 		if(!saveData(path + filename, data, size))
 		{
 			return false;
@@ -240,7 +256,7 @@ size_t SubspaceLVZ::loadCLVObject(unsigned char* data)
 
 size_t SubspaceLVZ::loadImageObject(unsigned char* data)
 {
-	static imgID = 0;
+	static int imgID = 0;  // Fix: missing type declaration
 	size_t offset = 0;
 	LVZImageObject* img = (LVZImageObject*)&data[0];
 	imageObjects_.push_back(*img);
